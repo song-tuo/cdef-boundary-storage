@@ -1,0 +1,28 @@
+{
+  "checked_utc": "2026-10-01T06:38:33.543956+00:00",
+  "python_version": "3.14.6",
+  "scope": "Finite event model only, R=1..10 and W=1..4; not an implementation benchmark or general proof.",
+  "supplied_original_sha256": "2f0dd66b416e3f152de723eec4c90b34ed95d77d56f1d107ecb4435e320d2d68",
+  "maintained_sha256": "b889d8378c3aaccf1093a11004cd290675bb34222f8fbd6fc725a14ed5bf5fdf",
+  "changes": [
+    "Rename printed unique-live-set count from states_livesets to distinct_live_sets",
+    "Exit with status 1 when any model check fails; no event or coloring logic changes"
+  ],
+  "runs": {
+    "original": {
+      "exit_code": 0,
+      "checked_cases": 40,
+      "stdout_sha256": "8f27c8088c61845f76b6840b4f6a1f57bf648a55d115c91b13ffeab0d1ce1fe4"
+    },
+    "maintained": {
+      "exit_code": 0,
+      "checked_cases": 40,
+      "stdout_sha256": "cbd1dd1529dd48107c4ee8fef1f2c6ef519566d081af288e7a854353f15d0059"
+    }
+  },
+  "failure_exit_test": {
+    "injected_check": "compare peak against K+1 instead of K in a separate process",
+    "exit_code": 1,
+    "research_output": false
+  }
+}

@@ -1,0 +1,12 @@
+--- original/static_placement_check.py
++++ static_placement_check.py
+@@ -78,6 +78,8 @@
+         exp_static = (2 * R - 2) if (W >= 2 or R <= 2) else min(2 * R - 2, 3)
+         good = peak == K and simul and chi == exp_static and (allpairs == (W >= 2 or R <= 2))
+         ok &= good
+-        print(f"W={W} R={R:2d} states_livesets={len(LS):4d} peak={peak:2d} K={K:2d} simul={simul} "
++        print(f"W={W} R={R:2d} distinct_live_sets={len(LS):4d} peak={peak:2d} K={K:2d} simul={simul} "
+               f"all_pairs_conflict={allpairs} static_slots={chi:2d} expected={exp_static:2d} {'OK' if good else 'FAIL'}")
+ print("ALL OK" if ok else "SOME FAIL")
++
++sys.exit(0 if ok else 1)

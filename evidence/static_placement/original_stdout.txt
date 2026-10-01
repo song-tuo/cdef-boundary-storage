@@ -1,0 +1,41 @@
+W=1 R= 1 states_livesets=   1 peak= 0 K= 0 simul=True all_pairs_conflict=True static_slots= 0 expected= 0 OK
+W=1 R= 2 states_livesets=   3 peak= 2 K= 2 simul=True all_pairs_conflict=True static_slots= 2 expected= 2 OK
+W=1 R= 3 states_livesets=   5 peak= 3 K= 3 simul=True all_pairs_conflict=False static_slots= 3 expected= 3 OK
+W=1 R= 4 states_livesets=   7 peak= 3 K= 3 simul=True all_pairs_conflict=False static_slots= 3 expected= 3 OK
+W=1 R= 5 states_livesets=   9 peak= 3 K= 3 simul=True all_pairs_conflict=False static_slots= 3 expected= 3 OK
+W=1 R= 6 states_livesets=  11 peak= 3 K= 3 simul=True all_pairs_conflict=False static_slots= 3 expected= 3 OK
+W=1 R= 7 states_livesets=  13 peak= 3 K= 3 simul=True all_pairs_conflict=False static_slots= 3 expected= 3 OK
+W=1 R= 8 states_livesets=  15 peak= 3 K= 3 simul=True all_pairs_conflict=False static_slots= 3 expected= 3 OK
+W=1 R= 9 states_livesets=  17 peak= 3 K= 3 simul=True all_pairs_conflict=False static_slots= 3 expected= 3 OK
+W=1 R=10 states_livesets=  19 peak= 3 K= 3 simul=True all_pairs_conflict=False static_slots= 3 expected= 3 OK
+W=2 R= 1 states_livesets=   1 peak= 0 K= 0 simul=True all_pairs_conflict=True static_slots= 0 expected= 0 OK
+W=2 R= 2 states_livesets=   4 peak= 2 K= 2 simul=True all_pairs_conflict=True static_slots= 2 expected= 2 OK
+W=2 R= 3 states_livesets=  10 peak= 4 K= 4 simul=True all_pairs_conflict=True static_slots= 4 expected= 4 OK
+W=2 R= 4 states_livesets=  18 peak= 5 K= 5 simul=True all_pairs_conflict=True static_slots= 6 expected= 6 OK
+W=2 R= 5 states_livesets=  28 peak= 5 K= 5 simul=True all_pairs_conflict=True static_slots= 8 expected= 8 OK
+W=2 R= 6 states_livesets=  40 peak= 5 K= 5 simul=True all_pairs_conflict=True static_slots=10 expected=10 OK
+W=2 R= 7 states_livesets=  54 peak= 5 K= 5 simul=True all_pairs_conflict=True static_slots=12 expected=12 OK
+W=2 R= 8 states_livesets=  70 peak= 5 K= 5 simul=True all_pairs_conflict=True static_slots=14 expected=14 OK
+W=2 R= 9 states_livesets=  88 peak= 5 K= 5 simul=True all_pairs_conflict=True static_slots=16 expected=16 OK
+W=2 R=10 states_livesets= 108 peak= 5 K= 5 simul=True all_pairs_conflict=True static_slots=18 expected=18 OK
+W=3 R= 1 states_livesets=   1 peak= 0 K= 0 simul=True all_pairs_conflict=True static_slots= 0 expected= 0 OK
+W=3 R= 2 states_livesets=   4 peak= 2 K= 2 simul=True all_pairs_conflict=True static_slots= 2 expected= 2 OK
+W=3 R= 3 states_livesets=  12 peak= 4 K= 4 simul=True all_pairs_conflict=True static_slots= 4 expected= 4 OK
+W=3 R= 4 states_livesets=  29 peak= 6 K= 6 simul=True all_pairs_conflict=True static_slots= 6 expected= 6 OK
+W=3 R= 5 states_livesets=  56 peak= 7 K= 7 simul=True all_pairs_conflict=True static_slots= 8 expected= 8 OK
+W=3 R= 6 states_livesets=  95 peak= 7 K= 7 simul=True all_pairs_conflict=True static_slots=10 expected=10 OK
+W=3 R= 7 states_livesets= 148 peak= 7 K= 7 simul=True all_pairs_conflict=True static_slots=12 expected=12 OK
+W=3 R= 8 states_livesets= 217 peak= 7 K= 7 simul=True all_pairs_conflict=True static_slots=14 expected=14 OK
+W=3 R= 9 states_livesets= 304 peak= 7 K= 7 simul=True all_pairs_conflict=True static_slots=16 expected=16 OK
+W=3 R=10 states_livesets= 411 peak= 7 K= 7 simul=True all_pairs_conflict=True static_slots=18 expected=18 OK
+W=4 R= 1 states_livesets=   1 peak= 0 K= 0 simul=True all_pairs_conflict=True static_slots= 0 expected= 0 OK
+W=4 R= 2 states_livesets=   4 peak= 2 K= 2 simul=True all_pairs_conflict=True static_slots= 2 expected= 2 OK
+W=4 R= 3 states_livesets=  12 peak= 4 K= 4 simul=True all_pairs_conflict=True static_slots= 4 expected= 4 OK
+W=4 R= 4 states_livesets=  33 peak= 6 K= 6 simul=True all_pairs_conflict=True static_slots= 6 expected= 6 OK
+W=4 R= 5 states_livesets=  80 peak= 8 K= 8 simul=True all_pairs_conflict=True static_slots= 8 expected= 8 OK
+W=4 R= 6 states_livesets= 164 peak= 9 K= 9 simul=True all_pairs_conflict=True static_slots=10 expected=10 OK
+W=4 R= 7 states_livesets= 299 peak= 9 K= 9 simul=True all_pairs_conflict=True static_slots=12 expected=12 OK
+W=4 R= 8 states_livesets= 501 peak= 9 K= 9 simul=True all_pairs_conflict=True static_slots=14 expected=14 OK
+W=4 R= 9 states_livesets= 788 peak= 9 K= 9 simul=True all_pairs_conflict=True static_slots=16 expected=16 OK
+W=4 R=10 states_livesets=1180 peak= 9 K= 9 simul=True all_pairs_conflict=True static_slots=18 expected=18 OK
+ALL OK

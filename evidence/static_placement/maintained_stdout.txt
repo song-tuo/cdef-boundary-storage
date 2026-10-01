@@ -1,0 +1,41 @@
+W=1 R= 1 distinct_live_sets=   1 peak= 0 K= 0 simul=True all_pairs_conflict=True static_slots= 0 expected= 0 OK
+W=1 R= 2 distinct_live_sets=   3 peak= 2 K= 2 simul=True all_pairs_conflict=True static_slots= 2 expected= 2 OK
+W=1 R= 3 distinct_live_sets=   5 peak= 3 K= 3 simul=True all_pairs_conflict=False static_slots= 3 expected= 3 OK
+W=1 R= 4 distinct_live_sets=   7 peak= 3 K= 3 simul=True all_pairs_conflict=False static_slots= 3 expected= 3 OK
+W=1 R= 5 distinct_live_sets=   9 peak= 3 K= 3 simul=True all_pairs_conflict=False static_slots= 3 expected= 3 OK
+W=1 R= 6 distinct_live_sets=  11 peak= 3 K= 3 simul=True all_pairs_conflict=False static_slots= 3 expected= 3 OK
+W=1 R= 7 distinct_live_sets=  13 peak= 3 K= 3 simul=True all_pairs_conflict=False static_slots= 3 expected= 3 OK
+W=1 R= 8 distinct_live_sets=  15 peak= 3 K= 3 simul=True all_pairs_conflict=False static_slots= 3 expected= 3 OK
+W=1 R= 9 distinct_live_sets=  17 peak= 3 K= 3 simul=True all_pairs_conflict=False static_slots= 3 expected= 3 OK
+W=1 R=10 distinct_live_sets=  19 peak= 3 K= 3 simul=True all_pairs_conflict=False static_slots= 3 expected= 3 OK
+W=2 R= 1 distinct_live_sets=   1 peak= 0 K= 0 simul=True all_pairs_conflict=True static_slots= 0 expected= 0 OK
+W=2 R= 2 distinct_live_sets=   4 peak= 2 K= 2 simul=True all_pairs_conflict=True static_slots= 2 expected= 2 OK
+W=2 R= 3 distinct_live_sets=  10 peak= 4 K= 4 simul=True all_pairs_conflict=True static_slots= 4 expected= 4 OK
+W=2 R= 4 distinct_live_sets=  18 peak= 5 K= 5 simul=True all_pairs_conflict=True static_slots= 6 expected= 6 OK
+W=2 R= 5 distinct_live_sets=  28 peak= 5 K= 5 simul=True all_pairs_conflict=True static_slots= 8 expected= 8 OK
+W=2 R= 6 distinct_live_sets=  40 peak= 5 K= 5 simul=True all_pairs_conflict=True static_slots=10 expected=10 OK
+W=2 R= 7 distinct_live_sets=  54 peak= 5 K= 5 simul=True all_pairs_conflict=True static_slots=12 expected=12 OK
+W=2 R= 8 distinct_live_sets=  70 peak= 5 K= 5 simul=True all_pairs_conflict=True static_slots=14 expected=14 OK
+W=2 R= 9 distinct_live_sets=  88 peak= 5 K= 5 simul=True all_pairs_conflict=True static_slots=16 expected=16 OK
+W=2 R=10 distinct_live_sets= 108 peak= 5 K= 5 simul=True all_pairs_conflict=True static_slots=18 expected=18 OK
+W=3 R= 1 distinct_live_sets=   1 peak= 0 K= 0 simul=True all_pairs_conflict=True static_slots= 0 expected= 0 OK
+W=3 R= 2 distinct_live_sets=   4 peak= 2 K= 2 simul=True all_pairs_conflict=True static_slots= 2 expected= 2 OK
+W=3 R= 3 distinct_live_sets=  12 peak= 4 K= 4 simul=True all_pairs_conflict=True static_slots= 4 expected= 4 OK
+W=3 R= 4 distinct_live_sets=  29 peak= 6 K= 6 simul=True all_pairs_conflict=True static_slots= 6 expected= 6 OK
+W=3 R= 5 distinct_live_sets=  56 peak= 7 K= 7 simul=True all_pairs_conflict=True static_slots= 8 expected= 8 OK
+W=3 R= 6 distinct_live_sets=  95 peak= 7 K= 7 simul=True all_pairs_conflict=True static_slots=10 expected=10 OK
+W=3 R= 7 distinct_live_sets= 148 peak= 7 K= 7 simul=True all_pairs_conflict=True static_slots=12 expected=12 OK
+W=3 R= 8 distinct_live_sets= 217 peak= 7 K= 7 simul=True all_pairs_conflict=True static_slots=14 expected=14 OK
+W=3 R= 9 distinct_live_sets= 304 peak= 7 K= 7 simul=True all_pairs_conflict=True static_slots=16 expected=16 OK
+W=3 R=10 distinct_live_sets= 411 peak= 7 K= 7 simul=True all_pairs_conflict=True static_slots=18 expected=18 OK
+W=4 R= 1 distinct_live_sets=   1 peak= 0 K= 0 simul=True all_pairs_conflict=True static_slots= 0 expected= 0 OK
+W=4 R= 2 distinct_live_sets=   4 peak= 2 K= 2 simul=True all_pairs_conflict=True static_slots= 2 expected= 2 OK
+W=4 R= 3 distinct_live_sets=  12 peak= 4 K= 4 simul=True all_pairs_conflict=True static_slots= 4 expected= 4 OK
+W=4 R= 4 distinct_live_sets=  33 peak= 6 K= 6 simul=True all_pairs_conflict=True static_slots= 6 expected= 6 OK
+W=4 R= 5 distinct_live_sets=  80 peak= 8 K= 8 simul=True all_pairs_conflict=True static_slots= 8 expected= 8 OK
+W=4 R= 6 distinct_live_sets= 164 peak= 9 K= 9 simul=True all_pairs_conflict=True static_slots=10 expected=10 OK
+W=4 R= 7 distinct_live_sets= 299 peak= 9 K= 9 simul=True all_pairs_conflict=True static_slots=12 expected=12 OK
+W=4 R= 8 distinct_live_sets= 501 peak= 9 K= 9 simul=True all_pairs_conflict=True static_slots=14 expected=14 OK
+W=4 R= 9 distinct_live_sets= 788 peak= 9 K= 9 simul=True all_pairs_conflict=True static_slots=16 expected=16 OK
+W=4 R=10 distinct_live_sets=1180 peak= 9 K= 9 simul=True all_pairs_conflict=True static_slots=18 expected=18 OK
+ALL OK

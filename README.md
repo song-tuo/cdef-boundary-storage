@@ -2,6 +2,14 @@
 
 This research artifact provides the two separate libaom v3.12.1 patches, the recorded measurements behind the two paper tables, and tools for recalculation and new core correctness/allocation runs. It preserves the strong comparison: **type-fix versus token**. The pointer-size correction is a separate baseline change.
 
+## Check the static-placement proposition
+
+```sh
+python3 tools/static_placement_check.py
+```
+
+This standard-library-only finite model checks 40 configurations, R=1..10 and W=1..4: simultaneous peak capacity, both pool maxima in one state, and the exact static address count from the union conflict graph. The supplied original, maintained version provenance, and successful outputs are documented in `evidence/static_placement/README.md`. The general proof remains the mathematical basis of the result.
+
 ## Start with offline recalculation
 
 Requires Python 3.12+ and NumPy; the recorded reference analysis used Python 3.14 and NumPy 2.5.3. From this directory:
