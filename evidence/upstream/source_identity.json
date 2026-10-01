@@ -1,0 +1,72 @@
+[
+  {
+    "version": "v3.15.1",
+    "ref": "v3.15.1",
+    "commit": "44d0a57786f432d933ff64b653347c66f4d0fa1d",
+    "tree": "1083b6eece30f9d8279a057b9cc05bded50c5ed8",
+    "archive_sha256": "ab485d98769744ea282cf527b1b3aa6084085b51a9efbf6e9d2c260a0247e0fb",
+    "retrieved": "2026-09-29T22:11:49Z",
+    "url": "https://aomedia.googlesource.com/aom/",
+    "patches": [
+      {
+        "variant": "type_fix",
+        "command": [
+          "patch",
+          "-p1",
+          "--fuzz=0",
+          "-i",
+          "${FULLSOURCE_ROOT}/patches/baseline_to_type_fix.patch"
+        ],
+        "exit": 0,
+        "patch_sha256": "d95f9d3f1283305d1adc1cd7aeea3bf98a7e0be4bb8ec307a33aaf06e77593be"
+      },
+      {
+        "variant": "token",
+        "command": [
+          "patch",
+          "-p1",
+          "--fuzz=0",
+          "-i",
+          "${FULLSOURCE_ROOT}/patches/type_fix_to_token.patch"
+        ],
+        "exit": 0,
+        "patch_sha256": "60bd3874132ba8cdb451c6b547ec801757568734eceae8951a5d3f657975c85e"
+      }
+    ]
+  },
+  {
+    "version": "main",
+    "ref": "9f9c3f7475793f1a80fc8fb811dbff84549a91df",
+    "commit": "9f9c3f7475793f1a80fc8fb811dbff84549a91df",
+    "tree": "24c738725b284c6895c2d39cc7b91af5627742d9",
+    "archive_sha256": "16f433ba6df15707e05e8ec1444bf798383224dfe3933ee08a67e360bbb6d875",
+    "retrieved": "2026-09-29T22:11:50Z",
+    "url": "https://aomedia.googlesource.com/aom/",
+    "patches": [
+      {
+        "variant": "type_fix",
+        "command": [
+          "patch",
+          "-p1",
+          "--fuzz=0",
+          "-i",
+          "${FULLSOURCE_ROOT}/patches/baseline_to_type_fix.patch"
+        ],
+        "exit": 0,
+        "patch_sha256": "d95f9d3f1283305d1adc1cd7aeea3bf98a7e0be4bb8ec307a33aaf06e77593be"
+      },
+      {
+        "variant": "token",
+        "command": [
+          "patch",
+          "-p1",
+          "--fuzz=0",
+          "-i",
+          "${FULLSOURCE_ROOT}/patches/type_fix_to_token.patch"
+        ],
+        "exit": 0,
+        "patch_sha256": "60bd3874132ba8cdb451c6b547ec801757568734eceae8951a5d3f657975c85e"
+      }
+    ]
+  }
+]

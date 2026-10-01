@@ -1,0 +1,34 @@
+{
+  "id": "timing_b-1_c08_p1_A",
+  "command": [
+    "${FULLSOURCE_ROOT}/builds/type_fix_release/ivf_gate",
+    "${NATURAL_ROOT}/media/HoneyBee_1920x1080_first60.ivf",
+    "8",
+    "1"
+  ],
+  "start_unix": 1790720602.101313,
+  "end_unix": 1790720602.279302,
+  "exit_code": 0,
+  "load_average": [
+    3.728515625,
+    8.01513671875,
+    7.38720703125
+  ],
+  "output": {
+    "status": 0,
+    "destroy_status": 0,
+    "input_packets": 60,
+    "decoded_packets": 60,
+    "output_frames": 60,
+    "output_bytes": 186624000,
+    "pixel_sha256": "39e9de40ccf6a82c055bdd90f66114bf3cdf15863e9137d952b732e04717abc3",
+    "decode_ns": 107482000,
+    "elapsed_with_hash_ns": 169127000,
+    "peak_rss_bytes": 199671808,
+    "truncated_input": 0,
+    "bit_depth": 8,
+    "subsampling_x": 1,
+    "subsampling_y": 1,
+    "monochrome": 0
+  }
+}

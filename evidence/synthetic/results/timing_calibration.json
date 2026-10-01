@@ -1,0 +1,236 @@
+[
+  {
+    "workload": "pilot_waves_960x540",
+    "output": {
+      "status": 0,
+      "destroy_status": 0,
+      "input_packets": 6,
+      "decoded_packets": 6,
+      "output_frames": 6,
+      "output_bytes": 4665600,
+      "pixel_sha256": "2de577f0abf68c01eaef79661ce358957f35a99c2ea76bd71b2d36bb96f70dba",
+      "decode_ns": 10909000,
+      "elapsed_with_hash_ns": 12878000,
+      "peak_rss_bytes": 58195968,
+      "truncated_input": 0,
+      "bit_depth": 8,
+      "subsampling_x": 1,
+      "subsampling_y": 1,
+      "monochrome": 0,
+      "wall_timestamp": 1790694739.823116,
+      "loadavg": [
+        16.095703125,
+        11.9580078125,
+        9.30859375
+      ]
+    }
+  },
+  {
+    "workload": "pilot_checker_960x540",
+    "output": {
+      "status": 0,
+      "destroy_status": 0,
+      "input_packets": 6,
+      "decoded_packets": 6,
+      "output_frames": 6,
+      "output_bytes": 4665600,
+      "pixel_sha256": "d7d489e1bddd05d832b9f8699ce55614a2661aa6adaaddee7a339a8c9a10144d",
+      "decode_ns": 57006000,
+      "elapsed_with_hash_ns": 58840000,
+      "peak_rss_bytes": 58982400,
+      "truncated_input": 0,
+      "bit_depth": 8,
+      "subsampling_x": 1,
+      "subsampling_y": 1,
+      "monochrome": 0,
+      "wall_timestamp": 1790694739.844816,
+      "loadavg": [
+        16.095703125,
+        11.9580078125,
+        9.30859375
+      ]
+    }
+  },
+  {
+    "workload": "pilot_texture_960x540",
+    "output": {
+      "status": 0,
+      "destroy_status": 0,
+      "input_packets": 6,
+      "decoded_packets": 6,
+      "output_frames": 6,
+      "output_bytes": 4665600,
+      "pixel_sha256": "a7532df4c5783f3dced0a40707e879b84ae0a1464babdc79677ff66194821c44",
+      "decode_ns": 70351000,
+      "elapsed_with_hash_ns": 73328000,
+      "peak_rss_bytes": 59097088,
+      "truncated_input": 0,
+      "bit_depth": 8,
+      "subsampling_x": 1,
+      "subsampling_y": 1,
+      "monochrome": 0,
+      "wall_timestamp": 1790694739.911857,
+      "loadavg": [
+        16.095703125,
+        11.9580078125,
+        9.30859375
+      ]
+    }
+  },
+  {
+    "workload": "timing_waves_1920x1080",
+    "output": {
+      "status": 0,
+      "destroy_status": 0,
+      "input_packets": 18,
+      "decoded_packets": 18,
+      "output_frames": 18,
+      "output_bytes": 55987200,
+      "pixel_sha256": "5b240bade583b6108c28e7111a10ab6e4344840f2037644f17398993f180e001",
+      "decode_ns": 113993000,
+      "elapsed_with_hash_ns": 139041000,
+      "peak_rss_bytes": 199868416,
+      "truncated_input": 0,
+      "bit_depth": 8,
+      "subsampling_x": 1,
+      "subsampling_y": 1,
+      "monochrome": 0,
+      "wall_timestamp": 1790694739.993535,
+      "loadavg": [
+        16.095703125,
+        11.9580078125,
+        9.30859375
+      ]
+    }
+  },
+  {
+    "workload": "timing_waves_3840x2160",
+    "output": {
+      "status": 0,
+      "destroy_status": 0,
+      "input_packets": 18,
+      "decoded_packets": 18,
+      "output_frames": 18,
+      "output_bytes": 223948800,
+      "pixel_sha256": "7043f1c7f5acb5e07e6a59ab9b785b85a1816f7dc06a2f9139765c0065bd686f",
+      "decode_ns": 401627000,
+      "elapsed_with_hash_ns": 501193000,
+      "peak_rss_bytes": 374013952,
+      "truncated_input": 0,
+      "bit_depth": 8,
+      "subsampling_x": 1,
+      "subsampling_y": 1,
+      "monochrome": 0,
+      "wall_timestamp": 1790694740.14914,
+      "loadavg": [
+        16.095703125,
+        11.9580078125,
+        9.30859375
+      ]
+    }
+  },
+  {
+    "workload": "timing_checker_1920x1080",
+    "output": {
+      "status": 0,
+      "destroy_status": 0,
+      "input_packets": 18,
+      "decoded_packets": 18,
+      "output_frames": 18,
+      "output_bytes": 55987200,
+      "pixel_sha256": "0831d2c97efdf0a5debc5f95e271f976cda71c92becc1b043e09c63df573fdb7",
+      "decode_ns": 677811000,
+      "elapsed_with_hash_ns": 705297000,
+      "peak_rss_bytes": 208977920,
+      "truncated_input": 0,
+      "bit_depth": 8,
+      "subsampling_x": 1,
+      "subsampling_y": 1,
+      "monochrome": 0,
+      "wall_timestamp": 1790694740.666394,
+      "loadavg": [
+        16.087890625,
+        12.02490234375,
+        9.34765625
+      ]
+    }
+  },
+  {
+    "workload": "timing_checker_3840x2160",
+    "output": {
+      "status": 0,
+      "destroy_status": 0,
+      "input_packets": 18,
+      "decoded_packets": 18,
+      "output_frames": 18,
+      "output_bytes": 223948800,
+      "pixel_sha256": "2d3d6be11ce1bf83660c4faf1412661bbfdf072e47bae39c4a1cc4f2e70b3fbb",
+      "decode_ns": 2543909000,
+      "elapsed_with_hash_ns": 2648063000,
+      "peak_rss_bytes": 410025984,
+      "truncated_input": 0,
+      "bit_depth": 8,
+      "subsampling_x": 1,
+      "subsampling_y": 1,
+      "monochrome": 0,
+      "wall_timestamp": 1790694741.399394,
+      "loadavg": [
+        16.087890625,
+        12.02490234375,
+        9.34765625
+      ]
+    }
+  },
+  {
+    "workload": "timing_texture_1920x1080",
+    "output": {
+      "status": 0,
+      "destroy_status": 0,
+      "input_packets": 18,
+      "decoded_packets": 18,
+      "output_frames": 18,
+      "output_bytes": 55987200,
+      "pixel_sha256": "c08ef6260ad5c1e5e0e17e67132a1af330ac18ed3580cbf26d5403f2fa01d102",
+      "decode_ns": 796816000,
+      "elapsed_with_hash_ns": 820526000,
+      "peak_rss_bytes": 212287488,
+      "truncated_input": 0,
+      "bit_depth": 8,
+      "subsampling_x": 1,
+      "subsampling_y": 1,
+      "monochrome": 0,
+      "wall_timestamp": 1790694744.0712051,
+      "loadavg": [
+        16.087890625,
+        12.02490234375,
+        9.34765625
+      ]
+    }
+  },
+  {
+    "workload": "timing_texture_3840x2160",
+    "output": {
+      "status": 0,
+      "destroy_status": 0,
+      "input_packets": 18,
+      "decoded_packets": 18,
+      "output_frames": 18,
+      "output_bytes": 223948800,
+      "pixel_sha256": "2aec47e05c3b8514915af2cb0d4b3f43878b8a0bff9e8cfe4cb501c3a509f061",
+      "decode_ns": 2943684000,
+      "elapsed_with_hash_ns": 3044007000,
+      "peak_rss_bytes": 423870464,
+      "truncated_input": 0,
+      "bit_depth": 8,
+      "subsampling_x": 1,
+      "subsampling_y": 1,
+      "monochrome": 0,
+      "wall_timestamp": 1790694744.905157,
+      "loadavg": [
+        16.08056640625,
+        12.0908203125,
+        9.38623046875
+      ]
+    }
+  }
+]

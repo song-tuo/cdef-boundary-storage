@@ -1,0 +1,12 @@
+[
+  {
+    "group": "conformance",
+    "command": [
+      "${FULLSOURCE_ROOT}/builds/type_fix_release/test_libaom",
+      "--gtest_filter=*TestVectorTest*:*InvalidFileTest*:*ExternalFrameBuffer*:*DecodeScalabilityTest*",
+      "--gtest_output=xml:${FULLSOURCE_ROOT}/results/type_fix_release_upstream_conformance.xml"
+    ],
+    "exit": 0,
+    "seconds": 17.85956120491028
+  }
+]

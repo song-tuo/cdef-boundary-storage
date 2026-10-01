@@ -1,0 +1,48 @@
+{
+  "validation_date": "2026-10-01",
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "python": "3.14.6",
+  "source_archive_hash_checked": true,
+  "three_original_packaging_patches_applied": true,
+  "two_research_patches_applied_with_zero_fuzz": true,
+  "all_prepared_pure_source_files_match_historical_source": {
+    "baseline": 1347,
+    "type_fix": 1347,
+    "token": 1347
+  },
+  "cmake_configure_passed": [
+    "baseline",
+    "token"
+  ],
+  "portable_harness_compiled_and_linked": 6,
+  "link_validation_used_existing_historical_static_libraries": true,
+  "fresh_full_library_build_in_this_packaging_step": false,
+  "lightweight_smoke_processes": 12,
+  "smoke_stream": "two-frame 3840x2160 8-bit 4:2:0",
+  "smoke_purpose": "correctness and allocation only",
+  "offline_recompute": {
+    "export_files_verified": 2313,
+    "natural_process_records_verified": 624,
+    "natural_audit_records_verified": 72,
+    "natural_pairs_including_warmup": 312,
+    "synthetic_pairs_including_controls_warmup": 312,
+    "memory_rows": 90,
+    "natural_primary_bootstrap_matches": 12,
+    "synthetic_primary_and_control_bootstrap_matches": 24,
+    "table_1_rows": 6,
+    "table_2_rows": 12,
+    "numpy_version": "2.5.3",
+    "new_performance_measurements": false
+  },
+  "relocated_package_recompute_from_unrelated_cwd": true,
+  "linux_portability_branch_tested": false,
+  "network_download_repeated_in_packaging_step": false,
+  "new_performance_campaign": false,
+  "raw_data_modified": false,
+  "final_tool_version_relocated_recompute_passed": true,
+  "final_all_24_synthetic_statuses_and_control_doses_recomputed": true,
+  "private_path_runtime_and_binary_scan_passed": true,
+  "dav1d_notice_retained": true,
+  "root_patents_retained": true,
+  "bytecode_caches_excluded": true
+}

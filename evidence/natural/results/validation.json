@@ -1,0 +1,11 @@
+{
+  "all_312_pairs_match_frozen_schedule": true,
+  "every_block_cell_exactly_one_AB_one_BA": true,
+  "all_624_timing_outputs_match_audit_baseline": true,
+  "all_timing_processes_follow_GO": true,
+  "all_audit_processes_follow_input_lock": true,
+  "all_raw_ratios_recomputed_exactly": true,
+  "unique_timing_run_ids": 624,
+  "timing_start_unix": 1790720571.033801,
+  "timing_end_unix": 1790721269.713602
+}

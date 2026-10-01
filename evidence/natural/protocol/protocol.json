@@ -1,0 +1,138 @@
+{
+  "id": "UVG-CDEF-EXTERNAL-VALIDITY-20260930-v1",
+  "frozen_at_utc": "2026-09-29T22:12:45.864949+00:00",
+  "scope": "Supplementary external-validity replication; original synthetic protocol and evidence unchanged.",
+  "selection": {
+    "dataset": "UVG 4K",
+    "official_url": "https://tie-ultravideo.rd.tuni.fi/dataset.html",
+    "license": "CC BY-NC 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc/3.0/",
+    "sequences": [
+      "Beauty",
+      "Jockey",
+      "HoneyBee"
+    ],
+    "selection_rationale": {
+      "Beauty": "hair texture with smooth face and dark background",
+      "Jockey": "horse and rider motion with panning camera",
+      "HoneyBee": "localized bee and flower with low-texture defocused background"
+    },
+    "frames": "zero-based first 60 consecutive frames, no temporal subsampling",
+    "source": "official 3840x2160 120fps 8-bit 4:2:0 raw YUV archives",
+    "acquisition": "HTTP range-seekable 7z extraction of exact raw prefix. Archive metadata and fetched compressed blocks retained. Whole-archive integrity is not claimed when partial; raw prefix length and SHA-256 recorded.",
+    "availability_failure": "Retries up to 3 per HTTP range; no replacement sequences. If any of the three cannot be obtained exactly, report incomplete and consult parent before any change.",
+    "exclusions": "No outcome-based exclusion, no re-encode after observing activity or performance. Failed cells remain failures."
+  },
+  "derived_1080p": {
+    "method": "per-plane nonoverlapping 2x2 box mean, round by (sum+2)//4, 8-bit planar 4:2:0",
+    "source_relation": "1080p and 4K are paired derivatives of the same scene, not independent source sequences"
+  },
+  "encoding": {
+    "binary": "${FULLSOURCE_ROOT}/builds/baseline_release/aomenc",
+    "flags": [
+      "--ivf",
+      "--passes=1",
+      "--good",
+      "--cpu-used=6",
+      "--end-usage=q",
+      "--cq-level=44",
+      "--lag-in-frames=0",
+      "--threads=4",
+      "--row-mt=1",
+      "--enable-cdef=1",
+      "--kf-max-dist=60",
+      "--bit-depth=8",
+      "--input-bit-depth=8",
+      "--profile=0",
+      "--i420",
+      "--tile-columns=1",
+      "--frame-parallel=1",
+      "--fps=120/1",
+      "--limit=60"
+    ],
+    "adaptive_tuning": false
+  },
+  "matrix": {
+    "resolutions": [
+      [
+        1920,
+        1080
+      ],
+      [
+        3840,
+        2160
+      ]
+    ],
+    "workers": [
+      8,
+      16
+    ],
+    "row_mt": 1,
+    "cells": 12
+  },
+  "correctness": {
+    "builds": [
+      "baseline_release",
+      "type_fix_release",
+      "token_release"
+    ],
+    "criterion": "all 60 output frames, no status error, identical SHA-256 of all visible planar pixel bytes across variants within each cell",
+    "runs": 36
+  },
+  "activity_allocation": {
+    "builds": [
+      "baseline_audit_release",
+      "type_fix_audit_release",
+      "token_audit_release"
+    ],
+    "runs": 36,
+    "activity": "count instrumented cdef_frame events / 60 output frames, with actual max workers; an event means full CDEF stage entered, not fraction of pixels modified",
+    "criterion": "at least one CDEF-active frame in each encoded stream; record zero-active failure without exclusion or re-encode. Allocation verifies requested bytes against R/W formula and reports usable bytes separately.",
+    "timing_from_instrumented_builds": "diagnostic only; excluded from performance endpoint"
+  },
+  "timing": {
+    "builds": [
+      "type_fix_release",
+      "token_release"
+    ],
+    "endpoint": "sum of CLOCK_MONOTONIC wall time spent inside aom_codec_decode calls including final flush; preloading, setup, image retrieval/hashing and destruction excluded. No internal CDEF stage attribution.",
+    "delay_ns": 0,
+    "warmup_pairs_per_cell": 2,
+    "analyzed_pairs_per_cell": 24,
+    "blocks": 12,
+    "pairs_per_block": 2,
+    "balance": "each block/cell has exactly one AB and one BA pair; randomize which comes first. Randomize cell order independently per block, including warmup block.",
+    "random_seed": 2026093001,
+    "inter_process_cooldown_seconds": 0.15,
+    "before_timing": "wait parent GO after all competing build/encode/check activity has ceased; capture process snapshot; report host limitations, no claim exclusive machine",
+    "session_failure": "record and stop on nonzero exit, missing output, frame count or pixel mismatch, timeout120s. No replacement measurement or outlier deletion; all earlier rows preserved. Resume only by recording a new explicitly labeled campaign, not pooling silently."
+  },
+  "statistics": {
+    "unit": "within-cell pair ratio token/type_fix; not individual frames",
+    "estimand": "median of 24 analyzed within-cell ratios",
+    "primary_interval": "two-pair block bootstrap: sample 12 whole adjacent balanced-order blocks with replacement, compute median of 24 ratios, 50000 replicates, np.quantile linear 0.025/0.975",
+    "bootstrap_seed": "2026093002 + zero-based canonical cell index",
+    "threshold": 1.02,
+    "decision": "PASS_NONINFERIOR_SCREEN if upper<=1.02; MATERIAL_SLOWDOWN if lower>1.02; INCONCLUSIVE otherwise. All cells must PASS for a nominal all-cell screening claim.",
+    "multiplicity": "95% intervals are cellwise, not simultaneous. Report all 12 cells; do not claim familywise 95% noninferiority or universal <=2%.",
+    "secondary": "median decode milliseconds, RSS descriptive context, observed min/max ratios; no new post-hoc alternative may replace primary."
+  },
+  "resources": {
+    "download_max_bytes": 15000000000,
+    "source_disk_budget_bytes": 30000000000,
+    "paid_compute": false
+  },
+  "lineage": {
+    "input_lock": "After encoding, inputs.json records raw/encoded/binary/script hashes and is frozen before any decoder outcome observation; protocol settings never overwritten.",
+    "scripts": "code debugging before measurements allowed with retained change log; after measurement changes require separate disclosed amendment, no silent refreeze."
+  },
+  "original_binaries_sha256": {
+    "baseline_release": "11c756ae1d95f41371418ec9a9b1b4d3475ee6a09adbc740565a3d7619dfa38d",
+    "type_fix_release": "9431912ae8d999292ce9e491089f6d8be4521380c9f6c7f07361f788af49af8b",
+    "token_release": "c6df2f52bb5c3a341e0c4b28936d2890be50bc8f2ad2397353243e76ca5087af",
+    "baseline_audit_release": "bf7bdc30d10a35bd493f46b9625e16e77d7efb78917b3260fb8d783d5acdd926",
+    "type_fix_audit_release": "8a01b30334629f0d9ebf807033f08ed9145b5faf95d05d9ac3c75f0a9d3a0a16",
+    "token_audit_release": "29c0e4c1cb43510465852cb45d49339d238e3732fdbcf7be8a921346bf7d319d"
+  },
+  "encoder_sha256": "2eae49bb483fe1d3b39496bd8bda07d213fb1a9bdbe63840bc10f6baccc1f0b6"
+}

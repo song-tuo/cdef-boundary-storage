@@ -1,0 +1,9 @@
+{
+  "upstream_commit": "10aece4157eb79315da205f39e19bf6ab3ee30d0",
+  "upstream_tree": "f401599b7be4c53cbcc2735969a4970c744dd372",
+  "matched_blobs": 1347,
+  "different": [],
+  "missing": [],
+  "gitlinks": [],
+  "comparison": "Debian orig tar contents before packaging patches vs official tag blobs; debian/ added by source-package extraction is excluded."
+}

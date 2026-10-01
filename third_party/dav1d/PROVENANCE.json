@@ -1,0 +1,13 @@
+{
+  "source": "https://code.videolan.org/videolan/dav1d/-/blob/9a275d0c9296f2c0ded9d0dd28f99cf22dea2572/src/decode.c",
+  "source_sha256": "2acdee23ed5c6e59300bcb8cbd22ad61252f2d1aaaf7c42f79b993472fff5d4a",
+  "notice_lines": [
+    1,
+    26
+  ],
+  "notice_sha256": "7978a5d4b649a893e17878447e3aa2b4e90482964b7cdf22a7cc40996a3e48be",
+  "applies_to": [
+    "evidence/dav1d/verify_formula.py: snippets, source_sbh, source_request",
+    "tools/dav1d_formula.py: imported source-derived expressions"
+  ]
+}

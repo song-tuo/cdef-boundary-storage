@@ -1,0 +1,9 @@
+{
+  "go_at_utc": "2026-09-29T22:22:25.136314+00:00",
+  "upstream_heavy_jobs_complete": true,
+  "natural_encoding_audit_complete": true,
+  "parent_representative_pair_complete": true,
+  "parent_will_hold_compilation_and_rendering": true,
+  "process_snapshot": "../../protocol/pre_timing_process_snapshot.txt",
+  "scope": "No competing project builds/encodes remain. Ordinary macOS desktop services remain; no exclusive-host claim."
+}

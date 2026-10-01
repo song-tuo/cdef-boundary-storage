@@ -1,0 +1,4 @@
+{"status":0,"destroy_status":0,"input_packets":18,"decoded_packets":18,"output_frames":18,"output_bytes":223948800,"pixel_sha256":"2aec47e05c3b8514915af2cb0d4b3f43878b8a0bff9e8cfe4cb501c3a509f061","decode_ns":2517415000,"elapsed_with_hash_ns":2604366000,"peak_rss_bytes":421314560,"truncated_input":0,"bit_depth":8,"subsampling_x":1,"subsampling_y":1,"monochrome":0}
+{"event":"cdef_frame","workers":4,"rows":34,"requested_bytes":276480,"usable_bytes":311296,"stage_ns":3546000,"row_sync_wait_ns":6000,"pool_wait_count":0}
+{"event":"cdef_frame","workers":4,"rows":34,"requested_bytes":276480,"usable_bytes":311296,"stage_ns":3604000,"row_sync_wait_ns":14000,"pool_wait_count":0}
+{"event":"cdef_pool_freed"}

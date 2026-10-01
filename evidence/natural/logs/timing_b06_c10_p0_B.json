@@ -1,0 +1,34 @@
+{
+  "id": "timing_b06_c10_p0_B",
+  "command": [
+    "${FULLSOURCE_ROOT}/builds/token_release/ivf_gate",
+    "${NATURAL_ROOT}/media/HoneyBee_3840x2160_first60.ivf",
+    "8",
+    "1"
+  ],
+  "start_unix": 1790720967.566129,
+  "end_unix": 1790720968.6816452,
+  "exit_code": 0,
+  "load_average": [
+    3.677734375,
+    5.34619140625,
+    6.30615234375
+  ],
+  "output": {
+    "status": 0,
+    "destroy_status": 0,
+    "input_packets": 60,
+    "decoded_packets": 60,
+    "output_frames": 60,
+    "output_bytes": 746496000,
+    "pixel_sha256": "e162c43519d065e57a24747c40d2279d394fad25eb1015608580480635958ff2",
+    "decode_ns": 870535000,
+    "elapsed_with_hash_ns": 1101942000,
+    "peak_rss_bytes": 382222336,
+    "truncated_input": 0,
+    "bit_depth": 8,
+    "subsampling_x": 1,
+    "subsampling_y": 1,
+    "monochrome": 0
+  }
+}

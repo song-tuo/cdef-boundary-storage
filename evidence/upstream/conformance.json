@@ -1,0 +1,92 @@
+[
+  {
+    "version": "v3.15.1",
+    "variant": "baseline",
+    "command": [
+      "${UPSTREAM_ROOT}/builds/v3.15.1_baseline/test_libaom",
+      "--gtest_filter=AV1/TestVectorTest.MD5Match/*",
+      "--gtest_output=xml:${UPSTREAM_ROOT}/results/conformance_v3.15.1_baseline.xml"
+    ],
+    "exit": 0,
+    "seconds": 1.9188270568847656,
+    "tests": 242,
+    "failed": [],
+    "xml": "${UPSTREAM_ROOT}/results/conformance_v3.15.1_baseline.xml",
+    "pass": true
+  },
+  {
+    "version": "v3.15.1",
+    "variant": "type_fix",
+    "command": [
+      "${UPSTREAM_ROOT}/builds/v3.15.1_type_fix/test_libaom",
+      "--gtest_filter=AV1/TestVectorTest.MD5Match/*",
+      "--gtest_output=xml:${UPSTREAM_ROOT}/results/conformance_v3.15.1_type_fix.xml"
+    ],
+    "exit": 0,
+    "seconds": 1.9588348865509033,
+    "tests": 242,
+    "failed": [],
+    "xml": "${UPSTREAM_ROOT}/results/conformance_v3.15.1_type_fix.xml",
+    "pass": true
+  },
+  {
+    "version": "v3.15.1",
+    "variant": "token",
+    "command": [
+      "${UPSTREAM_ROOT}/builds/v3.15.1_token/test_libaom",
+      "--gtest_filter=AV1/TestVectorTest.MD5Match/*",
+      "--gtest_output=xml:${UPSTREAM_ROOT}/results/conformance_v3.15.1_token.xml"
+    ],
+    "exit": 0,
+    "seconds": 1.971776008605957,
+    "tests": 242,
+    "failed": [],
+    "xml": "${UPSTREAM_ROOT}/results/conformance_v3.15.1_token.xml",
+    "pass": true
+  },
+  {
+    "version": "main",
+    "variant": "baseline",
+    "command": [
+      "${UPSTREAM_ROOT}/builds/main_baseline/test_libaom",
+      "--gtest_filter=AV1/TestVectorTest.MD5Match/*",
+      "--gtest_output=xml:${UPSTREAM_ROOT}/results/conformance_main_baseline.xml"
+    ],
+    "exit": 0,
+    "seconds": 2.0261611938476562,
+    "tests": 242,
+    "failed": [],
+    "xml": "${UPSTREAM_ROOT}/results/conformance_main_baseline.xml",
+    "pass": true
+  },
+  {
+    "version": "main",
+    "variant": "type_fix",
+    "command": [
+      "${UPSTREAM_ROOT}/builds/main_type_fix/test_libaom",
+      "--gtest_filter=AV1/TestVectorTest.MD5Match/*",
+      "--gtest_output=xml:${UPSTREAM_ROOT}/results/conformance_main_type_fix.xml"
+    ],
+    "exit": 0,
+    "seconds": 1.992969036102295,
+    "tests": 242,
+    "failed": [],
+    "xml": "${UPSTREAM_ROOT}/results/conformance_main_type_fix.xml",
+    "pass": true
+  },
+  {
+    "version": "main",
+    "variant": "token",
+    "command": [
+      "${UPSTREAM_ROOT}/builds/main_token/test_libaom",
+      "--gtest_filter=AV1/TestVectorTest.MD5Match/*",
+      "--gtest_output=xml:${UPSTREAM_ROOT}/results/conformance_main_token.xml"
+    ],
+    "exit": 0,
+    "seconds": 1.9919512271881104,
+    "tests": 242,
+    "failed": [],
+    "xml": "${UPSTREAM_ROOT}/results/conformance_main_token.xml",
+    "pass": true
+  }
+]

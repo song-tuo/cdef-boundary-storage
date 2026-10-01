@@ -1,0 +1,34 @@
+{
+  "id": "cell11_HoneyBee_3840x2160_first60_w16_token_release",
+  "command": [
+    "${FULLSOURCE_ROOT}/builds/token_release/ivf_gate",
+    "${NATURAL_ROOT}/media/HoneyBee_3840x2160_first60.ivf",
+    "16",
+    "1"
+  ],
+  "start_unix": 1790720468.343488,
+  "end_unix": 1790720469.4300978,
+  "exit_code": 0,
+  "load_average": [
+    6.6005859375,
+    10.845703125,
+    8.142578125
+  ],
+  "output": {
+    "status": 0,
+    "destroy_status": 0,
+    "input_packets": 60,
+    "decoded_packets": 60,
+    "output_frames": 60,
+    "output_bytes": 746496000,
+    "pixel_sha256": "e162c43519d065e57a24747c40d2279d394fad25eb1015608580480635958ff2",
+    "decode_ns": 846994000,
+    "elapsed_with_hash_ns": 1077083000,
+    "peak_rss_bytes": 387432448,
+    "truncated_input": 0,
+    "bit_depth": 8,
+    "subsampling_x": 1,
+    "subsampling_y": 1,
+    "monochrome": 0
+  }
+}

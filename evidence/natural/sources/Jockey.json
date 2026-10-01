@@ -1,0 +1,142 @@
+{
+  "name": "Jockey",
+  "url": "https://tie-ultravideo.rd.tuni.fi/video/Jockey_3840x2160_120fps_420_8bit_YUV_RAW.7z",
+  "archive_bytes": 3453463918,
+  "archive_members": [
+    {
+      "filename": "Jockey_3840x2160.yuv",
+      "uncompressed": 7464960000,
+      "compressed": 3453463499,
+      "is_directory": false
+    },
+    {
+      "filename": "Jockey_Copyright.txt",
+      "uncompressed": 249,
+      "compressed": 195,
+      "is_directory": false
+    }
+  ],
+  "selected_member": "Jockey_3840x2160.yuv",
+  "prefix_frames": 60,
+  "width": 3840,
+  "height": 2160,
+  "pixel_format": "yuv420p8",
+  "raw_bytes": 746496000,
+  "raw_sha256": "b87aac94fd9f83f154bdf3a4b45f4f30b0441304d92887c4fb74d582090889af",
+  "raw_path": "${NATURAL_ROOT}/media/Jockey_3840x2160_first60.yuv",
+  "full_archive_crc_verified": false,
+  "integrity_scope": "7z header parsed and prefix decompressed; full archive stream/member CRC requires all 600 frames and was not tested",
+  "compressed_ranges": [
+    {
+      "path": "${NATURAL_ROOT}/media/Jockey_ranges/000000000000-000016777215.bin",
+      "bytes": 16777216,
+      "sha256": "6693b0a06b73d937d8270f4bb7ec435d2c06e0c10c1a72d03ff4a6bab9ed0962"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Jockey_ranges/000016777216-000033554431.bin",
+      "bytes": 16777216,
+      "sha256": "0ba62ce4e5fb5168a698c32f0c1008e454c3034d529bf6deca39078e9333e452"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Jockey_ranges/000033554432-000050331647.bin",
+      "bytes": 16777216,
+      "sha256": "ff2a1b2ccf9a6ba0ea413423e41c6a6c624bd485bb5ddbe7e15248aa706739a9"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Jockey_ranges/000050331648-000067108863.bin",
+      "bytes": 16777216,
+      "sha256": "fb32fb714e833de57692582db09cfee43c7dec41b0a826b1d33d983a1650893a"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Jockey_ranges/000067108864-000083886079.bin",
+      "bytes": 16777216,
+      "sha256": "2c5c92bbdb3757acd489ddcd480587f76a6f23673d5e3588b66d4052af0d8bdc"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Jockey_ranges/000083886080-000100663295.bin",
+      "bytes": 16777216,
+      "sha256": "99fa2a0f9628c373ad91ac9010c4f7982b88a6a886eaf59882ecc4e8ad83b23d"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Jockey_ranges/000100663296-000117440511.bin",
+      "bytes": 16777216,
+      "sha256": "22f00fc1129f53f7b4c183798804f5e391e97f521ab3809524828b21a58f8a5d"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Jockey_ranges/000117440512-000134217727.bin",
+      "bytes": 16777216,
+      "sha256": "86e9541014ee2a7e199747dcdc7be55d6bbf85ea94e4db38cc1c8a6997e13f7f"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Jockey_ranges/000134217728-000150994943.bin",
+      "bytes": 16777216,
+      "sha256": "028a88d24ed1dd912e988f6b2633c86de36d94f0e6ccfbac305aecf982e5514d"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Jockey_ranges/000150994944-000167772159.bin",
+      "bytes": 16777216,
+      "sha256": "fab0b97b70bb277ae5c424bfa2e42a85ca955f2f42edd0aef29ea03fecc2dd69"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Jockey_ranges/000167772160-000184549375.bin",
+      "bytes": 16777216,
+      "sha256": "1e9de100e7da44404305cc993ac3a9481a61eb2a005a482e01218d0dfed09485"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Jockey_ranges/000184549376-000201326591.bin",
+      "bytes": 16777216,
+      "sha256": "b1c9adfe4011add97d05d098acc6997e055807991bc4f75d03bdef78e1672799"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Jockey_ranges/000201326592-000218103807.bin",
+      "bytes": 16777216,
+      "sha256": "0d9b32fe5667a8bad17076f62d34371f2c59444a5e8645c246653c75dcdc873a"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Jockey_ranges/000218103808-000234881023.bin",
+      "bytes": 16777216,
+      "sha256": "1d4d773ad023c0bb940bf3bc974d78cc6cefcb406c5796ded622098c63b3997b"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Jockey_ranges/000234881024-000251658239.bin",
+      "bytes": 16777216,
+      "sha256": "53b3a5094f3854146f1de96381c15b8c42c42ff6c35490ab229ea8d7f8981bc1"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Jockey_ranges/000251658240-000268435455.bin",
+      "bytes": 16777216,
+      "sha256": "68463dadc1270299af0ac9777cc4e39ca8f421ef8848734a3f6c56794ca452a4"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Jockey_ranges/000268435456-000285212671.bin",
+      "bytes": 16777216,
+      "sha256": "3345d32cd750838f0dcd52ce3a01ee66d388944f6593687c2e25f85b3fa5512e"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Jockey_ranges/000285212672-000301989887.bin",
+      "bytes": 16777216,
+      "sha256": "89298db98f594bc1e1ed58fd9d8825a9ddc2b1b334c4050cbac1bd31000e4a01"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Jockey_ranges/000301989888-000318767103.bin",
+      "bytes": 16777216,
+      "sha256": "9fd21f32cd887cee4565ec87b0f1c8eb914cce168d968df105bc7e04245cc194"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Jockey_ranges/000318767104-000335544319.bin",
+      "bytes": 16777216,
+      "sha256": "7bf4e00ead3a515fba6981c80bead0d2b08790b69d464a2ee659371c8c6caace"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Jockey_ranges/000335544320-000352321535.bin",
+      "bytes": 16777216,
+      "sha256": "a916ff5fe2121756e0fa69f77dd739f175b916e7e7df79be44846accca562f48"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Jockey_ranges/003439329280-003453463917.bin",
+      "bytes": 14134638,
+      "sha256": "9d1693e9bad286d70bc7834d68e0cd662b8907aea39fad4b577f5eccb5a67377"
+    }
+  ],
+  "retrieved_at_unix": 1790720215.545247
+}

@@ -1,0 +1,99 @@
+From: Boyuan Yang <byang@debian.org>
+Date: Sat, 27 Jan 2024 16:27:44 -0500
+Subject: use system libwebm
+
+---
+ CMakeLists.txt    | 19 +++++++++++--------
+ common/webmdec.cc |  4 ++--
+ common/webmenc.cc |  6 +++---
+ test/test.cmake   |  3 ++-
+ 4 files changed, 18 insertions(+), 14 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 801ed6d..a30ed3f 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -754,26 +754,29 @@ if(ENABLE_EXAMPLES OR ENABLE_TESTS OR ENABLE_TOOLS)
+   endif()
+ 
+   if(CONFIG_WEBM_IO)
+-    add_library(webm OBJECT ${AOM_LIBWEBM_SOURCES})
+-    include_directories("${AOM_ROOT}/third_party/libwebm")
+-    target_compile_definitions(webm PRIVATE __STDC_CONSTANT_MACROS)
+-    target_compile_definitions(webm PRIVATE __STDC_LIMIT_MACROS)
+-
+-    if(NOT MSVC)
+-      target_compile_options(webm PRIVATE -Wno-shadow)
++    target_link_libraries(aom ${AOM_LIB_LINK_TYPE} webm)
++    target_include_directories(aom PRIVATE /usr/include/webm)
++    if(BUILD_SHARED_LIBS)
++      target_link_libraries(aom_static ${AOM_LIB_LINK_TYPE} webm)
++      target_include_directories(aom_static PRIVATE /usr/include/webm)
+     endif()
+ 
+     # Add to existing targets.
+     if(CONFIG_AV1_DECODER)
++      target_link_libraries(aom_decoder_app_util ${AOM_LIB_LINK_TYPE} webm)
++      target_include_directories(aom_decoder_app_util PRIVATE /usr/include/webm)
+       target_sources(aom_decoder_app_util PRIVATE ${AOM_WEBM_DECODER_SOURCES})
+     endif()
+ 
+     if(CONFIG_AV1_ENCODER)
++      target_link_libraries(aom_encoder_app_util ${AOM_LIB_LINK_TYPE} webm)
++      target_include_directories(aom_encoder_app_util PRIVATE /usr/include/webm)
+       target_sources(aom_encoder_app_util PRIVATE ${AOM_WEBM_ENCODER_SOURCES})
+     endif()
+ 
+     foreach(aom_app ${AOM_APP_TARGETS})
+-      target_sources(${aom_app} PRIVATE $<TARGET_OBJECTS:webm>)
++        target_include_directories(${aom_app} PRIVATE /usr/include/webm)
++        target_link_libraries(${aom_app} PRIVATE webm)
+       set_property(TARGET ${aom_app} PROPERTY LINKER_LANGUAGE CXX)
+     endforeach()
+   endif()
+diff --git a/common/webmdec.cc b/common/webmdec.cc
+index 2a953ae..aa9997d 100644
+--- a/common/webmdec.cc
++++ b/common/webmdec.cc
+@@ -15,8 +15,8 @@
+ #include <cstring>
+ #include <cstdio>
+ 
+-#include "third_party/libwebm/mkvparser/mkvparser.h"
+-#include "third_party/libwebm/mkvparser/mkvreader.h"
++#include <webm/mkvparser/mkvparser.h>
++#include <webm/mkvparser/mkvreader.h>
+ 
+ namespace {
+ 
+diff --git a/common/webmenc.cc b/common/webmenc.cc
+index 0b0ff65..e05d104 100644
+--- a/common/webmenc.cc
++++ b/common/webmenc.cc
+@@ -19,9 +19,9 @@
+ #include <string>
+ 
+ #include "common/av1_config.h"
+-#include "third_party/libwebm/mkvmuxer/mkvmuxer.h"
+-#include "third_party/libwebm/mkvmuxer/mkvmuxerutil.h"
+-#include "third_party/libwebm/mkvmuxer/mkvwriter.h"
++#include <webm/mkvmuxer/mkvmuxer.h>
++#include <webm/mkvmuxer/mkvmuxerutil.h>
++#include <webm/mkvmuxer/mkvwriter.h>
+ 
+ namespace {
+ const uint64_t kDebugTrackUid = 0xDEADBEEF;
+diff --git a/test/test.cmake b/test/test.cmake
+index 55fcc14..cfa4d0b 100644
+--- a/test/test.cmake
++++ b/test/test.cmake
+@@ -510,7 +510,8 @@ function(setup_aom_test_targets)
+   endif()
+ 
+   if(CONFIG_WEBM_IO)
+-    target_sources(test_libaom PRIVATE $<TARGET_OBJECTS:webm>)
++    target_include_directories(test_libaom PRIVATE /usr/include/webm)
++    target_link_libraries(test_libaom ${AOM_LIB_LINK_TYPE} webm)
+   endif()
+   if(HAVE_SSE2)
+     add_intrinsics_source_to_target("-msse2" "test_libaom"

@@ -1,0 +1,152 @@
+{
+  "name": "HoneyBee",
+  "url": "https://tie-ultravideo.rd.tuni.fi/video/HoneyBee_3840x2160_120fps_420_8bit_YUV_RAW.7z",
+  "archive_bytes": 3766406267,
+  "archive_members": [
+    {
+      "filename": "HoneyBee_3840x2160.yuv",
+      "uncompressed": 7464960000,
+      "compressed": 3766405849,
+      "is_directory": false
+    },
+    {
+      "filename": "HoneyBee_Copyright.txt",
+      "uncompressed": 249,
+      "compressed": 195,
+      "is_directory": false
+    }
+  ],
+  "selected_member": "HoneyBee_3840x2160.yuv",
+  "prefix_frames": 60,
+  "width": 3840,
+  "height": 2160,
+  "pixel_format": "yuv420p8",
+  "raw_bytes": 746496000,
+  "raw_sha256": "2eaff33059c67cd980fa7a96ba74c79c928c484512c388cd58bf4d699068d622",
+  "raw_path": "${NATURAL_ROOT}/media/HoneyBee_3840x2160_first60.yuv",
+  "full_archive_crc_verified": false,
+  "integrity_scope": "7z header parsed and prefix decompressed; full archive stream/member CRC requires all 600 frames and was not tested",
+  "compressed_ranges": [
+    {
+      "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000000000000-000016777215.bin",
+      "bytes": 16777216,
+      "sha256": "ce8008ca0e2f492db3e72db5281d8c9370ac5a4e3c1002179d448938d7452234"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000016777216-000033554431.bin",
+      "bytes": 16777216,
+      "sha256": "94bf653d0d51fc573c549b19d40303b57c24294f6a1f06eae735eb1ec4c2e225"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000033554432-000050331647.bin",
+      "bytes": 16777216,
+      "sha256": "bb3fb9caf403d0e047e1f4e6f639fc17746a8041b7caddb07c611136bc04dde7"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000050331648-000067108863.bin",
+      "bytes": 16777216,
+      "sha256": "f7495cb5ae6a7d6b9186297131f1b2892cb7207e7eea56b203c1de6596e02f4a"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000067108864-000083886079.bin",
+      "bytes": 16777216,
+      "sha256": "65c2e7b1b0306e7c92b20be253a0383e02cb9972378cb2b8e10ad43e4ce270de"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000083886080-000100663295.bin",
+      "bytes": 16777216,
+      "sha256": "77a8592fdbee63ae9f730285df09dd00c1a7ae503652e9d9873027fb8bd7c1a3"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000100663296-000117440511.bin",
+      "bytes": 16777216,
+      "sha256": "941289d52b491e4767e561dd7eab44f16df2da71e84d00b1fe09796913ab5eb5"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000117440512-000134217727.bin",
+      "bytes": 16777216,
+      "sha256": "1b859e3bb416fff0eb653b5c69846a2bd5435ff68507f5b6389328290bd76bd2"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000134217728-000150994943.bin",
+      "bytes": 16777216,
+      "sha256": "9b49fa3c4d45b99db56300110d6fcd654f4e8861f87a397d24f2589f504d1a64"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000150994944-000167772159.bin",
+      "bytes": 16777216,
+      "sha256": "9833faf7cdaa2773ccc6c7ff4c3b89ecf8a31a2e5613b18a23d5454f05f22a84"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000167772160-000184549375.bin",
+      "bytes": 16777216,
+      "sha256": "65d87b6e1b9f30b2e2fe525ec6f214b9749282b99333204f35b374b7f45adfea"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000184549376-000201326591.bin",
+      "bytes": 16777216,
+      "sha256": "a77751441cebbf17969abe0b545478e4fff071743e8129f4c5a696cfd5586062"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000201326592-000218103807.bin",
+      "bytes": 16777216,
+      "sha256": "26b7a1dea1a7466d061e933f43afb88d2d68b8908a44acd073a80d459fee1ed0"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000218103808-000234881023.bin",
+      "bytes": 16777216,
+      "sha256": "a59bd34c60d694374132ba025e15912798c8ba4b120c27feb6417f15c8ca02ba"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000234881024-000251658239.bin",
+      "bytes": 16777216,
+      "sha256": "3d9724e51b3fb39f03535009070370e8832af096099325266bd8810e54b1a15a"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000251658240-000268435455.bin",
+      "bytes": 16777216,
+      "sha256": "0d107b5fec2fc76cab47d3e15d000902bc995d388c226350b1e61b6da10e3055"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000268435456-000285212671.bin",
+      "bytes": 16777216,
+      "sha256": "aa1bcf65373c3385a7b0940d50743a9632c96f428a3c95d015fa4a0abbd45c5d"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000285212672-000301989887.bin",
+      "bytes": 16777216,
+      "sha256": "5ccb29325366a2a51650830262efd9a98aa3be343c5f55a659f47b495aff1728"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000301989888-000318767103.bin",
+      "bytes": 16777216,
+      "sha256": "4527a775ad40be768a94eb9b045fc75ebce32f23b3dbf2790a4f70a380c05490"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000318767104-000335544319.bin",
+      "bytes": 16777216,
+      "sha256": "5b018fcbfdd5cee86dedd9b441219621217ff0879f0eb6e9d4d6c2ddf6c75bfb"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000335544320-000352321535.bin",
+      "bytes": 16777216,
+      "sha256": "c2fa79a962f21a6ac50baceb9d3b5abe479a195b1d8533abc91cfeb327c36feb"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000352321536-000369098751.bin",
+      "bytes": 16777216,
+      "sha256": "2cb7c82f3e127ad2d112d143a5ea74f4ec5158c18a8342af79dd6669531caf44"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000369098752-000385875967.bin",
+      "bytes": 16777216,
+      "sha256": "5da619be366d67cebbe8da23cab1cbc6c12ecf647b5c9194960a18b1c96c5da0"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/003758096384-003766406266.bin",
+      "bytes": 8309883,
+      "sha256": "737df75f2bdd9d8eb7103449ce67a8c054ae9d07c0789ca80205cde94fc9b94d"
+    }
+  ],
+  "retrieved_at_unix": 1790720210.344085
+}

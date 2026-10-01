@@ -1,0 +1,1850 @@
+[
+  {
+    "version": "v3.15.1",
+    "variant": "baseline",
+    "threads": 8,
+    "command": [
+      "${UPSTREAM_ROOT}/builds/v3.15.1_baseline_audit/ivf_gate",
+      "${FULLSOURCE_ROOT}/testdata/generated/timing_waves_3840x2160.ivf",
+      "8",
+      "1"
+    ],
+    "exit": 0,
+    "cdef_active_frames": 17,
+    "requested_bytes": 8355840,
+    "expected_bytes": 8355840,
+    "events": [
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      }
+    ],
+    "output": {
+      "status": 0,
+      "destroy_status": 0,
+      "input_packets": 18,
+      "decoded_packets": 18,
+      "output_frames": 18,
+      "output_bytes": 223948800,
+      "pixel_sha256": "7043f1c7f5acb5e07e6a59ab9b785b85a1816f7dc06a2f9139765c0065bd686f",
+      "decode_ns": 273427000,
+      "elapsed_with_hash_ns": 355075000,
+      "peak_rss_bytes": 375242752,
+      "truncated_input": 0,
+      "bit_depth": 8,
+      "subsampling_x": 1,
+      "subsampling_y": 1,
+      "monochrome": 0
+    },
+    "pass": true
+  },
+  {
+    "version": "v3.15.1",
+    "variant": "type_fix",
+    "threads": 8,
+    "command": [
+      "${UPSTREAM_ROOT}/builds/v3.15.1_type_fix_audit/ivf_gate",
+      "${FULLSOURCE_ROOT}/testdata/generated/timing_waves_3840x2160.ivf",
+      "8",
+      "1"
+    ],
+    "exit": 0,
+    "cdef_active_frames": 17,
+    "requested_bytes": 2088960,
+    "expected_bytes": 2088960,
+    "events": [
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      }
+    ],
+    "output": {
+      "status": 0,
+      "destroy_status": 0,
+      "input_packets": 18,
+      "decoded_packets": 18,
+      "output_frames": 18,
+      "output_bytes": 223948800,
+      "pixel_sha256": "7043f1c7f5acb5e07e6a59ab9b785b85a1816f7dc06a2f9139765c0065bd686f",
+      "decode_ns": 281619000,
+      "elapsed_with_hash_ns": 363366000,
+      "peak_rss_bytes": 375209984,
+      "truncated_input": 0,
+      "bit_depth": 8,
+      "subsampling_x": 1,
+      "subsampling_y": 1,
+      "monochrome": 0
+    },
+    "pass": true
+  },
+  {
+    "version": "v3.15.1",
+    "variant": "token",
+    "threads": 8,
+    "command": [
+      "${UPSTREAM_ROOT}/builds/v3.15.1_token_audit/ivf_gate",
+      "${FULLSOURCE_ROOT}/testdata/generated/timing_waves_3840x2160.ivf",
+      "8",
+      "1"
+    ],
+    "exit": 0,
+    "cdef_active_frames": 17,
+    "requested_bytes": 522240,
+    "expected_bytes": 522240,
+    "events": [
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      }
+    ],
+    "output": {
+      "status": 0,
+      "destroy_status": 0,
+      "input_packets": 18,
+      "decoded_packets": 18,
+      "output_frames": 18,
+      "output_bytes": 223948800,
+      "pixel_sha256": "7043f1c7f5acb5e07e6a59ab9b785b85a1816f7dc06a2f9139765c0065bd686f",
+      "decode_ns": 270007000,
+      "elapsed_with_hash_ns": 349286000,
+      "peak_rss_bytes": 373702656,
+      "truncated_input": 0,
+      "bit_depth": 8,
+      "subsampling_x": 1,
+      "subsampling_y": 1,
+      "monochrome": 0
+    },
+    "pass": true
+  },
+  {
+    "version": "v3.15.1",
+    "variant": "baseline",
+    "threads": 16,
+    "command": [
+      "${UPSTREAM_ROOT}/builds/v3.15.1_baseline_audit/ivf_gate",
+      "${FULLSOURCE_ROOT}/testdata/generated/timing_waves_3840x2160.ivf",
+      "16",
+      "1"
+    ],
+    "exit": 0,
+    "cdef_active_frames": 17,
+    "requested_bytes": 8355840,
+    "expected_bytes": 8355840,
+    "events": [
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      }
+    ],
+    "output": {
+      "status": 0,
+      "destroy_status": 0,
+      "input_packets": 18,
+      "decoded_packets": 18,
+      "output_frames": 18,
+      "output_bytes": 223948800,
+      "pixel_sha256": "7043f1c7f5acb5e07e6a59ab9b785b85a1816f7dc06a2f9139765c0065bd686f",
+      "decode_ns": 231526000,
+      "elapsed_with_hash_ns": 302620000,
+      "peak_rss_bytes": 379994112,
+      "truncated_input": 0,
+      "bit_depth": 8,
+      "subsampling_x": 1,
+      "subsampling_y": 1,
+      "monochrome": 0
+    },
+    "pass": true
+  },
+  {
+    "version": "v3.15.1",
+    "variant": "type_fix",
+    "threads": 16,
+    "command": [
+      "${UPSTREAM_ROOT}/builds/v3.15.1_type_fix_audit/ivf_gate",
+      "${FULLSOURCE_ROOT}/testdata/generated/timing_waves_3840x2160.ivf",
+      "16",
+      "1"
+    ],
+    "exit": 0,
+    "cdef_active_frames": 17,
+    "requested_bytes": 2088960,
+    "expected_bytes": 2088960,
+    "events": [
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      }
+    ],
+    "output": {
+      "status": 0,
+      "destroy_status": 0,
+      "input_packets": 18,
+      "decoded_packets": 18,
+      "output_frames": 18,
+      "output_bytes": 223948800,
+      "pixel_sha256": "7043f1c7f5acb5e07e6a59ab9b785b85a1816f7dc06a2f9139765c0065bd686f",
+      "decode_ns": 227211000,
+      "elapsed_with_hash_ns": 298294000,
+      "peak_rss_bytes": 379961344,
+      "truncated_input": 0,
+      "bit_depth": 8,
+      "subsampling_x": 1,
+      "subsampling_y": 1,
+      "monochrome": 0
+    },
+    "pass": true
+  },
+  {
+    "version": "v3.15.1",
+    "variant": "token",
+    "threads": 16,
+    "command": [
+      "${UPSTREAM_ROOT}/builds/v3.15.1_token_audit/ivf_gate",
+      "${FULLSOURCE_ROOT}/testdata/generated/timing_waves_3840x2160.ivf",
+      "16",
+      "1"
+    ],
+    "exit": 0,
+    "cdef_active_frames": 17,
+    "requested_bytes": 1013760,
+    "expected_bytes": 1013760,
+    "events": [
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      }
+    ],
+    "output": {
+      "status": 0,
+      "destroy_status": 0,
+      "input_packets": 18,
+      "decoded_packets": 18,
+      "output_frames": 18,
+      "output_bytes": 223948800,
+      "pixel_sha256": "7043f1c7f5acb5e07e6a59ab9b785b85a1816f7dc06a2f9139765c0065bd686f",
+      "decode_ns": 226477000,
+      "elapsed_with_hash_ns": 296385000,
+      "peak_rss_bytes": 378929152,
+      "truncated_input": 0,
+      "bit_depth": 8,
+      "subsampling_x": 1,
+      "subsampling_y": 1,
+      "monochrome": 0
+    },
+    "pass": true
+  },
+  {
+    "version": "main",
+    "variant": "baseline",
+    "threads": 8,
+    "command": [
+      "${UPSTREAM_ROOT}/builds/main_baseline_audit/ivf_gate",
+      "${FULLSOURCE_ROOT}/testdata/generated/timing_waves_3840x2160.ivf",
+      "8",
+      "1"
+    ],
+    "exit": 0,
+    "cdef_active_frames": 17,
+    "requested_bytes": 8355840,
+    "expected_bytes": 8355840,
+    "events": [
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      }
+    ],
+    "output": {
+      "status": 0,
+      "destroy_status": 0,
+      "input_packets": 18,
+      "decoded_packets": 18,
+      "output_frames": 18,
+      "output_bytes": 223948800,
+      "pixel_sha256": "7043f1c7f5acb5e07e6a59ab9b785b85a1816f7dc06a2f9139765c0065bd686f",
+      "decode_ns": 250610000,
+      "elapsed_with_hash_ns": 323142000,
+      "peak_rss_bytes": 375275520,
+      "truncated_input": 0,
+      "bit_depth": 8,
+      "subsampling_x": 1,
+      "subsampling_y": 1,
+      "monochrome": 0
+    },
+    "pass": true
+  },
+  {
+    "version": "main",
+    "variant": "type_fix",
+    "threads": 8,
+    "command": [
+      "${UPSTREAM_ROOT}/builds/main_type_fix_audit/ivf_gate",
+      "${FULLSOURCE_ROOT}/testdata/generated/timing_waves_3840x2160.ivf",
+      "8",
+      "1"
+    ],
+    "exit": 0,
+    "cdef_active_frames": 17,
+    "requested_bytes": 2088960,
+    "expected_bytes": 2088960,
+    "events": [
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      }
+    ],
+    "output": {
+      "status": 0,
+      "destroy_status": 0,
+      "input_packets": 18,
+      "decoded_packets": 18,
+      "output_frames": 18,
+      "output_bytes": 223948800,
+      "pixel_sha256": "7043f1c7f5acb5e07e6a59ab9b785b85a1816f7dc06a2f9139765c0065bd686f",
+      "decode_ns": 247649000,
+      "elapsed_with_hash_ns": 320141000,
+      "peak_rss_bytes": 375226368,
+      "truncated_input": 0,
+      "bit_depth": 8,
+      "subsampling_x": 1,
+      "subsampling_y": 1,
+      "monochrome": 0
+    },
+    "pass": true
+  },
+  {
+    "version": "main",
+    "variant": "token",
+    "threads": 8,
+    "command": [
+      "${UPSTREAM_ROOT}/builds/main_token_audit/ivf_gate",
+      "${FULLSOURCE_ROOT}/testdata/generated/timing_waves_3840x2160.ivf",
+      "8",
+      "1"
+    ],
+    "exit": 0,
+    "cdef_active_frames": 17,
+    "requested_bytes": 522240,
+    "expected_bytes": 522240,
+    "events": [
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 8,
+        "rows": 34,
+        "requested_bytes": 522240,
+        "luma_stride": 3840
+      }
+    ],
+    "output": {
+      "status": 0,
+      "destroy_status": 0,
+      "input_packets": 18,
+      "decoded_packets": 18,
+      "output_frames": 18,
+      "output_bytes": 223948800,
+      "pixel_sha256": "7043f1c7f5acb5e07e6a59ab9b785b85a1816f7dc06a2f9139765c0065bd686f",
+      "decode_ns": 246190000,
+      "elapsed_with_hash_ns": 318532000,
+      "peak_rss_bytes": 373735424,
+      "truncated_input": 0,
+      "bit_depth": 8,
+      "subsampling_x": 1,
+      "subsampling_y": 1,
+      "monochrome": 0
+    },
+    "pass": true
+  },
+  {
+    "version": "main",
+    "variant": "baseline",
+    "threads": 16,
+    "command": [
+      "${UPSTREAM_ROOT}/builds/main_baseline_audit/ivf_gate",
+      "${FULLSOURCE_ROOT}/testdata/generated/timing_waves_3840x2160.ivf",
+      "16",
+      "1"
+    ],
+    "exit": 0,
+    "cdef_active_frames": 17,
+    "requested_bytes": 8355840,
+    "expected_bytes": 8355840,
+    "events": [
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 8355840,
+        "luma_stride": 3840
+      }
+    ],
+    "output": {
+      "status": 0,
+      "destroy_status": 0,
+      "input_packets": 18,
+      "decoded_packets": 18,
+      "output_frames": 18,
+      "output_bytes": 223948800,
+      "pixel_sha256": "7043f1c7f5acb5e07e6a59ab9b785b85a1816f7dc06a2f9139765c0065bd686f",
+      "decode_ns": 222248000,
+      "elapsed_with_hash_ns": 290129000,
+      "peak_rss_bytes": 379994112,
+      "truncated_input": 0,
+      "bit_depth": 8,
+      "subsampling_x": 1,
+      "subsampling_y": 1,
+      "monochrome": 0
+    },
+    "pass": true
+  },
+  {
+    "version": "main",
+    "variant": "type_fix",
+    "threads": 16,
+    "command": [
+      "${UPSTREAM_ROOT}/builds/main_type_fix_audit/ivf_gate",
+      "${FULLSOURCE_ROOT}/testdata/generated/timing_waves_3840x2160.ivf",
+      "16",
+      "1"
+    ],
+    "exit": 0,
+    "cdef_active_frames": 17,
+    "requested_bytes": 2088960,
+    "expected_bytes": 2088960,
+    "events": [
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 2088960,
+        "luma_stride": 3840
+      }
+    ],
+    "output": {
+      "status": 0,
+      "destroy_status": 0,
+      "input_packets": 18,
+      "decoded_packets": 18,
+      "output_frames": 18,
+      "output_bytes": 223948800,
+      "pixel_sha256": "7043f1c7f5acb5e07e6a59ab9b785b85a1816f7dc06a2f9139765c0065bd686f",
+      "decode_ns": 222519000,
+      "elapsed_with_hash_ns": 290672000,
+      "peak_rss_bytes": 379977728,
+      "truncated_input": 0,
+      "bit_depth": 8,
+      "subsampling_x": 1,
+      "subsampling_y": 1,
+      "monochrome": 0
+    },
+    "pass": true
+  },
+  {
+    "version": "main",
+    "variant": "token",
+    "threads": 16,
+    "command": [
+      "${UPSTREAM_ROOT}/builds/main_token_audit/ivf_gate",
+      "${FULLSOURCE_ROOT}/testdata/generated/timing_waves_3840x2160.ivf",
+      "16",
+      "1"
+    ],
+    "exit": 0,
+    "cdef_active_frames": 17,
+    "requested_bytes": 1013760,
+    "expected_bytes": 1013760,
+    "events": [
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      },
+      {
+        "event": "cdef_allocation",
+        "workers": 16,
+        "rows": 34,
+        "requested_bytes": 1013760,
+        "luma_stride": 3840
+      }
+    ],
+    "output": {
+      "status": 0,
+      "destroy_status": 0,
+      "input_packets": 18,
+      "decoded_packets": 18,
+      "output_frames": 18,
+      "output_bytes": 223948800,
+      "pixel_sha256": "7043f1c7f5acb5e07e6a59ab9b785b85a1816f7dc06a2f9139765c0065bd686f",
+      "decode_ns": 224735000,
+      "elapsed_with_hash_ns": 293159000,
+      "peak_rss_bytes": 378929152,
+      "truncated_input": 0,
+      "bit_depth": 8,
+      "subsampling_x": 1,
+      "subsampling_y": 1,
+      "monochrome": 0
+    },
+    "pass": true
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "recorded_unix": 1790720403.8003461,
+  "decoder_runs_observed": 0,
+  "event": "Additional geometry assertion was edited after input lock finished concurrently. No decoder execution occurred. Proposed unused version retained; active runner restored byte-for-byte to frozen hash. Protocol and input lock were not refrozen. Geometry can still be checked descriptively from raw output bytes after runs.",
+  "restored_runner_sha256": "7bd8f95b829a7c26dc9ea158178564d67e94a9ed28f146088a1f18e361b3f9ae"
+}

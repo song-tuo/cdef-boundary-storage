@@ -1,0 +1,38 @@
+[
+  {
+    "shard": 0,
+    "exit": 0,
+    "command": [
+      "${FULLSOURCE_ROOT}/builds/token_fpmt/test_libaom",
+      "--gtest_filter=*FrameParallelThreadEncode*Large*",
+      "--gtest_output=xml:${FULLSOURCE_ROOT}/results/token_fpmt_large_shard0.xml"
+    ]
+  },
+  {
+    "shard": 1,
+    "exit": 0,
+    "command": [
+      "${FULLSOURCE_ROOT}/builds/token_fpmt/test_libaom",
+      "--gtest_filter=*FrameParallelThreadEncode*Large*",
+      "--gtest_output=xml:${FULLSOURCE_ROOT}/results/token_fpmt_large_shard1.xml"
+    ]
+  },
+  {
+    "shard": 2,
+    "exit": 0,
+    "command": [
+      "${FULLSOURCE_ROOT}/builds/token_fpmt/test_libaom",
+      "--gtest_filter=*FrameParallelThreadEncode*Large*",
+      "--gtest_output=xml:${FULLSOURCE_ROOT}/results/token_fpmt_large_shard2.xml"
+    ]
+  },
+  {
+    "shard": 3,
+    "exit": 0,
+    "command": [
+      "${FULLSOURCE_ROOT}/builds/token_fpmt/test_libaom",
+      "--gtest_filter=*FrameParallelThreadEncode*Large*",
+      "--gtest_output=xml:${FULLSOURCE_ROOT}/results/token_fpmt_large_shard3.xml"
+    ]
+  }
+]

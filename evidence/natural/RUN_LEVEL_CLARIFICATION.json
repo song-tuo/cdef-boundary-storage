@@ -1,0 +1,23 @@
+{
+  "addendum_type": "RUN_LEVEL_METADATA_CLARIFICATION",
+  "created_at_utc": "2026-09-29T22:40:06.066293+00:00",
+  "original_run_level": "INDEPENDENT_REPLICATION_ON_NEW_NATURAL_CONTENT_SAME_IMPLEMENTATION_AND_HOST",
+  "normalized_run_level": "PROSPECTIVE_SUPPLEMENTARY_REPLICATION_NEW_CONTENT_SAME_IMPLEMENTATION_AND_HOST",
+  "meaning": "A prospectively specified supplementary experiment on newly selected natural-video content using the same existing v3.12.1 implementation and the same host.",
+  "does_not_mean": [
+    "independent implementation",
+    "independent research team",
+    "independent host or cross-platform replication"
+  ],
+  "preservation": "The original frozen execution record, artifact manifest, protocols, raw data and analyses are unchanged. This metadata-only addendum clarifies terminology; it does not revise experimental methods, evidence, results or decisions.",
+  "bound_original_artifact_sha256": {
+    "execution.json": "6768bfdf5c70bf113996cdeea418bc4588ac80949e56a651f3a9997bde7eded5",
+    "artifact_manifest.json": "79094e7a669f386027f74c46cf017e169404c5746592ba62010f8f380172ced0",
+    "protocol/protocol.json": "e7217138d13af548edf92eff8c9a8b985affee7919721e14cb3b5b56b410e020",
+    "protocol/inputs.json": "1e3078de1938b948682e541bda29a50a85d0e0cd263b3accd8b752062848584f",
+    "results/timing_pairs.jsonl": "b2bff22c6a34a3107e8808a69b8879deff00d025eb2c7a87444ca9e2920a1c44",
+    "results/timing_summary.json": "e939f298c5a932b35a3523eb7a1996490430cef92854d5067ded6ee3260ac484",
+    "results/correctness_allocation.jsonl": "c2d230ff21a42c573e58c179c85251093cdf8ce6db5926d258260807d2b088a6",
+    "results/correctness_allocation_summary.json": "e4c3e4dc934bba8065e93b1ff46f2c7179be6dd12bca6bc07d6372221d5fc9fb"
+  }
+}

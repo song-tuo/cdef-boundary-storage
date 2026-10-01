@@ -1,0 +1,4 @@
+upstream operand bytes: 8
+sample element bytes: 2
+4K row-indexed requested bytes: 8355840
+4K type-corrected requested bytes: 2088960

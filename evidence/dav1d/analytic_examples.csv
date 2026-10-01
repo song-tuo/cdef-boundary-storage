@@ -1,0 +1,5 @@
+coded_width,height,bit_depth,chroma,superblock_pixels,S,y_stride_bytes_assumed,uv_stride_bytes_assumed,has_resize,n_tc_assumed,r,requested_bytes_analytic,KiB_analytic,measurement
+1920,1080,8,4:2:0,64,17,1920,960,False,2,0,261184,255.0625,False
+1920,1080,8,4:2:0,128,9,1920,960,False,2,0,138304,135.0625,False
+3840,2160,8,4:2:0,64,34,3840,1920,False,2,0,1044544,1020.0625,False
+3840,2160,8,4:2:0,128,17,3840,1920,False,2,0,522304,510.0625,False

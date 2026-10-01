@@ -1,0 +1,8 @@
+{
+  "kind": "ARITHMETIC_RECHECK",
+  "height_cases": 262144,
+  "allocation_cases": 2016,
+  "source_files_checked": 0,
+  "codec_execution": false,
+  "allocation_measurement": false
+}

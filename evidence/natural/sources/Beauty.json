@@ -1,0 +1,162 @@
+{
+  "name": "Beauty",
+  "url": "https://tie-ultravideo.rd.tuni.fi/video/Beauty_3840x2160_120fps_420_8bit_YUV_RAW.7z",
+  "archive_bytes": 4154000064,
+  "archive_members": [
+    {
+      "filename": "Beauty_3840x2160.yuv",
+      "uncompressed": 7464960000,
+      "compressed": 4153999645,
+      "is_directory": false
+    },
+    {
+      "filename": "Beauty_Copyright.txt",
+      "uncompressed": 249,
+      "compressed": 195,
+      "is_directory": false
+    }
+  ],
+  "selected_member": "Beauty_3840x2160.yuv",
+  "prefix_frames": 60,
+  "width": 3840,
+  "height": 2160,
+  "pixel_format": "yuv420p8",
+  "raw_bytes": 746496000,
+  "raw_sha256": "8c964cf5d7653705f012b4baca117285f45b0164bffa189e12a5412ad5f21ce7",
+  "raw_path": "${NATURAL_ROOT}/media/Beauty_3840x2160_first60.yuv",
+  "full_archive_crc_verified": false,
+  "integrity_scope": "7z header parsed and prefix decompressed; full archive stream/member CRC requires all 600 frames and was not tested",
+  "compressed_ranges": [
+    {
+      "path": "${NATURAL_ROOT}/media/Beauty_ranges/000000000000-000016777215.bin",
+      "bytes": 16777216,
+      "sha256": "1ce9fb442790ded3f369f083d6cb79cfd55091c9ef728d9480aaefb68c4ee021"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Beauty_ranges/000016777216-000033554431.bin",
+      "bytes": 16777216,
+      "sha256": "87ad4971e29843e22e79ef0909e6ee087df043e47880637490e9fe718a63d351"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Beauty_ranges/000033554432-000050331647.bin",
+      "bytes": 16777216,
+      "sha256": "65dad2a650a5e40db2752f1c52333105da015981b269d61e806426e2eb2f1728"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Beauty_ranges/000050331648-000067108863.bin",
+      "bytes": 16777216,
+      "sha256": "ceca555dd217612fb4fe0690f5e903210e8b8835fdbb34d6d877783b586512fa"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Beauty_ranges/000067108864-000083886079.bin",
+      "bytes": 16777216,
+      "sha256": "73ed8779ecd09814ea876f82aefefc6898f2cae6abc98c1144936bd74c80d4c6"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Beauty_ranges/000083886080-000100663295.bin",
+      "bytes": 16777216,
+      "sha256": "fedfbc7cce9d9687df74c0db2918fdfe5642268032c93de7e60821c49f55f7a1"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Beauty_ranges/000100663296-000117440511.bin",
+      "bytes": 16777216,
+      "sha256": "60c864daa23e7685d08684acfc46ca53227151dbb1b472e2b8ca3500ba66db35"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Beauty_ranges/000117440512-000134217727.bin",
+      "bytes": 16777216,
+      "sha256": "fe4afbdacf05912a76b2252faebe7ca7b967e314273c6d0563fcd279a34fb531"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Beauty_ranges/000134217728-000150994943.bin",
+      "bytes": 16777216,
+      "sha256": "98023ee6b260bc8c841e35c7f52fa95d2dcd3b71540ccf3267eedbdb42a97c1d"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Beauty_ranges/000150994944-000167772159.bin",
+      "bytes": 16777216,
+      "sha256": "8ebcfba9412687339b962cb797aa554e159fa4deecdd3585b1b4913deecc2415"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Beauty_ranges/000167772160-000184549375.bin",
+      "bytes": 16777216,
+      "sha256": "32c5be72dbe566fd997ddd87accd0b6b91975234e85ff6ab92f15173c458c57e"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Beauty_ranges/000184549376-000201326591.bin",
+      "bytes": 16777216,
+      "sha256": "722a2a285e7196120c62344cba1072a7389f339a605ddaf15a2db4eeb31f8b8f"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Beauty_ranges/000201326592-000218103807.bin",
+      "bytes": 16777216,
+      "sha256": "4460ceef94e148b67c58cfbd1b89601f499deaa467fa502aa4006c77d99f2ced"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Beauty_ranges/000218103808-000234881023.bin",
+      "bytes": 16777216,
+      "sha256": "ad942982197235b832ecc0b0e7d4ad90098049ca09b2d7b78209ba421d9c5c1b"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Beauty_ranges/000234881024-000251658239.bin",
+      "bytes": 16777216,
+      "sha256": "a8f8fbb0c33ea1a30b8668394148ca12e5b47b2b257b084076bdb4030a515288"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Beauty_ranges/000251658240-000268435455.bin",
+      "bytes": 16777216,
+      "sha256": "902b20028ec594df2333dbce89c5005e9daf7c34f11c12d9dbd4c3788e97dc24"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Beauty_ranges/000268435456-000285212671.bin",
+      "bytes": 16777216,
+      "sha256": "4b0c8bbe1406ad6a50c879393b1c802fa673dc7e233d504c0b7591d79df3751a"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Beauty_ranges/000285212672-000301989887.bin",
+      "bytes": 16777216,
+      "sha256": "38b29be95ca7ecd0287d71034fb4458b44047efb82db3aac94a8f626a040503b"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Beauty_ranges/000301989888-000318767103.bin",
+      "bytes": 16777216,
+      "sha256": "e571511cb6a67eb3c226f56d6959a2109ad1749f6e8636c4670ad1b5b1ac6e6e"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Beauty_ranges/000318767104-000335544319.bin",
+      "bytes": 16777216,
+      "sha256": "39d64af1d52e47be02bb737c7a24113355581b5710deeb9df57979493323ca28"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Beauty_ranges/000335544320-000352321535.bin",
+      "bytes": 16777216,
+      "sha256": "4c13b5b3b934e1bb03143ffb8806596e854834a3f906c44fa5b980d0974e63a0"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Beauty_ranges/000352321536-000369098751.bin",
+      "bytes": 16777216,
+      "sha256": "57edb3b5cd4aa6a460693173b3f5e73ecd7fd51de87b6b02769c0223cceacf7d"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Beauty_ranges/000369098752-000385875967.bin",
+      "bytes": 16777216,
+      "sha256": "d311b1cd55a0f5d720960b5f78035c8498e514b360f8813e4ea670a86e507819"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Beauty_ranges/000385875968-000402653183.bin",
+      "bytes": 16777216,
+      "sha256": "d5f62e92331b1e0d0b353b180b4ba2441aad5d874c84c25a5540e2a4f53c75d2"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Beauty_ranges/000402653184-000419430399.bin",
+      "bytes": 16777216,
+      "sha256": "8c9bb5f463e9d7ee2f6a7a9f29cbf7ba9fd24688106c62feddf3ebaaa6e15837"
+    },
+    {
+      "path": "${NATURAL_ROOT}/media/Beauty_ranges/004143972352-004154000063.bin",
+      "bytes": 10027712,
+      "sha256": "03aba78a5aa0602c7ad3021c0b7fa59d025bbbc8fbab621c1ab2fdd23b8f5b52"
+    }
+  ],
+  "retrieved_at_unix": 1790720212.934124
+}

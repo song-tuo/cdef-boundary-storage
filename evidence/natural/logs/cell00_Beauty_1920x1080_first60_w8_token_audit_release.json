@@ -1,0 +1,34 @@
+{
+  "id": "cell00_Beauty_1920x1080_first60_w8_token_audit_release",
+  "command": [
+    "${FULLSOURCE_ROOT}/builds/token_audit_release/ivf_gate",
+    "${NATURAL_ROOT}/media/Beauty_1920x1080_first60.ivf",
+    "8",
+    "1"
+  ],
+  "start_unix": 1790720405.437568,
+  "end_unix": 1790720405.7519062,
+  "exit_code": 0,
+  "load_average": [
+    8.1220703125,
+    12.05810546875,
+    8.34912109375
+  ],
+  "output": {
+    "status": 0,
+    "destroy_status": 0,
+    "input_packets": 60,
+    "decoded_packets": 60,
+    "output_frames": 60,
+    "output_bytes": 186624000,
+    "pixel_sha256": "05555e039078addc4127f673a8876c0d27de3a526d080ac1f733ded4952429dc",
+    "decode_ns": 246669000,
+    "elapsed_with_hash_ns": 304088000,
+    "peak_rss_bytes": 202784768,
+    "truncated_input": 0,
+    "bit_depth": 8,
+    "subsampling_x": 1,
+    "subsampling_y": 1,
+    "monochrome": 0
+  }
+}

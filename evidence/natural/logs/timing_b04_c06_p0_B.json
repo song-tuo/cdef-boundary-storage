@@ -1,0 +1,34 @@
+{
+  "id": "timing_b04_c06_p0_B",
+  "command": [
+    "${FULLSOURCE_ROOT}/builds/token_release/ivf_gate",
+    "${NATURAL_ROOT}/media/Jockey_3840x2160_first60.ivf",
+    "8",
+    "1"
+  ],
+  "start_unix": 1790720888.783919,
+  "end_unix": 1790720889.7519622,
+  "exit_code": 0,
+  "load_average": [
+    4.16455078125,
+    5.85693359375,
+    6.564453125
+  ],
+  "output": {
+    "status": 0,
+    "destroy_status": 0,
+    "input_packets": 60,
+    "decoded_packets": 60,
+    "output_frames": 60,
+    "output_bytes": 746496000,
+    "pixel_sha256": "42bf308f4614423744441a7cda33afa9aa76a8806932e53d9563903d79e6123f",
+    "decode_ns": 728772000,
+    "elapsed_with_hash_ns": 955957000,
+    "peak_rss_bytes": 378929152,
+    "truncated_input": 0,
+    "bit_depth": 8,
+    "subsampling_x": 1,
+    "subsampling_y": 1,
+    "monochrome": 0
+  }
+}

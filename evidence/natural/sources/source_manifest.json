@@ -1,0 +1,458 @@
+[
+  {
+    "name": "Beauty",
+    "url": "https://tie-ultravideo.rd.tuni.fi/video/Beauty_3840x2160_120fps_420_8bit_YUV_RAW.7z",
+    "archive_bytes": 4154000064,
+    "archive_members": [
+      {
+        "filename": "Beauty_3840x2160.yuv",
+        "uncompressed": 7464960000,
+        "compressed": 4153999645,
+        "is_directory": false
+      },
+      {
+        "filename": "Beauty_Copyright.txt",
+        "uncompressed": 249,
+        "compressed": 195,
+        "is_directory": false
+      }
+    ],
+    "selected_member": "Beauty_3840x2160.yuv",
+    "prefix_frames": 60,
+    "width": 3840,
+    "height": 2160,
+    "pixel_format": "yuv420p8",
+    "raw_bytes": 746496000,
+    "raw_sha256": "8c964cf5d7653705f012b4baca117285f45b0164bffa189e12a5412ad5f21ce7",
+    "raw_path": "${NATURAL_ROOT}/media/Beauty_3840x2160_first60.yuv",
+    "full_archive_crc_verified": false,
+    "integrity_scope": "7z header parsed and prefix decompressed; full archive stream/member CRC requires all 600 frames and was not tested",
+    "compressed_ranges": [
+      {
+        "path": "${NATURAL_ROOT}/media/Beauty_ranges/000000000000-000016777215.bin",
+        "bytes": 16777216,
+        "sha256": "1ce9fb442790ded3f369f083d6cb79cfd55091c9ef728d9480aaefb68c4ee021"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Beauty_ranges/000016777216-000033554431.bin",
+        "bytes": 16777216,
+        "sha256": "87ad4971e29843e22e79ef0909e6ee087df043e47880637490e9fe718a63d351"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Beauty_ranges/000033554432-000050331647.bin",
+        "bytes": 16777216,
+        "sha256": "65dad2a650a5e40db2752f1c52333105da015981b269d61e806426e2eb2f1728"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Beauty_ranges/000050331648-000067108863.bin",
+        "bytes": 16777216,
+        "sha256": "ceca555dd217612fb4fe0690f5e903210e8b8835fdbb34d6d877783b586512fa"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Beauty_ranges/000067108864-000083886079.bin",
+        "bytes": 16777216,
+        "sha256": "73ed8779ecd09814ea876f82aefefc6898f2cae6abc98c1144936bd74c80d4c6"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Beauty_ranges/000083886080-000100663295.bin",
+        "bytes": 16777216,
+        "sha256": "fedfbc7cce9d9687df74c0db2918fdfe5642268032c93de7e60821c49f55f7a1"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Beauty_ranges/000100663296-000117440511.bin",
+        "bytes": 16777216,
+        "sha256": "60c864daa23e7685d08684acfc46ca53227151dbb1b472e2b8ca3500ba66db35"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Beauty_ranges/000117440512-000134217727.bin",
+        "bytes": 16777216,
+        "sha256": "fe4afbdacf05912a76b2252faebe7ca7b967e314273c6d0563fcd279a34fb531"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Beauty_ranges/000134217728-000150994943.bin",
+        "bytes": 16777216,
+        "sha256": "98023ee6b260bc8c841e35c7f52fa95d2dcd3b71540ccf3267eedbdb42a97c1d"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Beauty_ranges/000150994944-000167772159.bin",
+        "bytes": 16777216,
+        "sha256": "8ebcfba9412687339b962cb797aa554e159fa4deecdd3585b1b4913deecc2415"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Beauty_ranges/000167772160-000184549375.bin",
+        "bytes": 16777216,
+        "sha256": "32c5be72dbe566fd997ddd87accd0b6b91975234e85ff6ab92f15173c458c57e"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Beauty_ranges/000184549376-000201326591.bin",
+        "bytes": 16777216,
+        "sha256": "722a2a285e7196120c62344cba1072a7389f339a605ddaf15a2db4eeb31f8b8f"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Beauty_ranges/000201326592-000218103807.bin",
+        "bytes": 16777216,
+        "sha256": "4460ceef94e148b67c58cfbd1b89601f499deaa467fa502aa4006c77d99f2ced"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Beauty_ranges/000218103808-000234881023.bin",
+        "bytes": 16777216,
+        "sha256": "ad942982197235b832ecc0b0e7d4ad90098049ca09b2d7b78209ba421d9c5c1b"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Beauty_ranges/000234881024-000251658239.bin",
+        "bytes": 16777216,
+        "sha256": "a8f8fbb0c33ea1a30b8668394148ca12e5b47b2b257b084076bdb4030a515288"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Beauty_ranges/000251658240-000268435455.bin",
+        "bytes": 16777216,
+        "sha256": "902b20028ec594df2333dbce89c5005e9daf7c34f11c12d9dbd4c3788e97dc24"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Beauty_ranges/000268435456-000285212671.bin",
+        "bytes": 16777216,
+        "sha256": "4b0c8bbe1406ad6a50c879393b1c802fa673dc7e233d504c0b7591d79df3751a"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Beauty_ranges/000285212672-000301989887.bin",
+        "bytes": 16777216,
+        "sha256": "38b29be95ca7ecd0287d71034fb4458b44047efb82db3aac94a8f626a040503b"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Beauty_ranges/000301989888-000318767103.bin",
+        "bytes": 16777216,
+        "sha256": "e571511cb6a67eb3c226f56d6959a2109ad1749f6e8636c4670ad1b5b1ac6e6e"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Beauty_ranges/000318767104-000335544319.bin",
+        "bytes": 16777216,
+        "sha256": "39d64af1d52e47be02bb737c7a24113355581b5710deeb9df57979493323ca28"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Beauty_ranges/000335544320-000352321535.bin",
+        "bytes": 16777216,
+        "sha256": "4c13b5b3b934e1bb03143ffb8806596e854834a3f906c44fa5b980d0974e63a0"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Beauty_ranges/000352321536-000369098751.bin",
+        "bytes": 16777216,
+        "sha256": "57edb3b5cd4aa6a460693173b3f5e73ecd7fd51de87b6b02769c0223cceacf7d"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Beauty_ranges/000369098752-000385875967.bin",
+        "bytes": 16777216,
+        "sha256": "d311b1cd55a0f5d720960b5f78035c8498e514b360f8813e4ea670a86e507819"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Beauty_ranges/000385875968-000402653183.bin",
+        "bytes": 16777216,
+        "sha256": "d5f62e92331b1e0d0b353b180b4ba2441aad5d874c84c25a5540e2a4f53c75d2"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Beauty_ranges/000402653184-000419430399.bin",
+        "bytes": 16777216,
+        "sha256": "8c9bb5f463e9d7ee2f6a7a9f29cbf7ba9fd24688106c62feddf3ebaaa6e15837"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Beauty_ranges/004143972352-004154000063.bin",
+        "bytes": 10027712,
+        "sha256": "03aba78a5aa0602c7ad3021c0b7fa59d025bbbc8fbab621c1ab2fdd23b8f5b52"
+      }
+    ],
+    "retrieved_at_unix": 1790720212.934124
+  },
+  {
+    "name": "Jockey",
+    "url": "https://tie-ultravideo.rd.tuni.fi/video/Jockey_3840x2160_120fps_420_8bit_YUV_RAW.7z",
+    "archive_bytes": 3453463918,
+    "archive_members": [
+      {
+        "filename": "Jockey_3840x2160.yuv",
+        "uncompressed": 7464960000,
+        "compressed": 3453463499,
+        "is_directory": false
+      },
+      {
+        "filename": "Jockey_Copyright.txt",
+        "uncompressed": 249,
+        "compressed": 195,
+        "is_directory": false
+      }
+    ],
+    "selected_member": "Jockey_3840x2160.yuv",
+    "prefix_frames": 60,
+    "width": 3840,
+    "height": 2160,
+    "pixel_format": "yuv420p8",
+    "raw_bytes": 746496000,
+    "raw_sha256": "b87aac94fd9f83f154bdf3a4b45f4f30b0441304d92887c4fb74d582090889af",
+    "raw_path": "${NATURAL_ROOT}/media/Jockey_3840x2160_first60.yuv",
+    "full_archive_crc_verified": false,
+    "integrity_scope": "7z header parsed and prefix decompressed; full archive stream/member CRC requires all 600 frames and was not tested",
+    "compressed_ranges": [
+      {
+        "path": "${NATURAL_ROOT}/media/Jockey_ranges/000000000000-000016777215.bin",
+        "bytes": 16777216,
+        "sha256": "6693b0a06b73d937d8270f4bb7ec435d2c06e0c10c1a72d03ff4a6bab9ed0962"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Jockey_ranges/000016777216-000033554431.bin",
+        "bytes": 16777216,
+        "sha256": "0ba62ce4e5fb5168a698c32f0c1008e454c3034d529bf6deca39078e9333e452"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Jockey_ranges/000033554432-000050331647.bin",
+        "bytes": 16777216,
+        "sha256": "ff2a1b2ccf9a6ba0ea413423e41c6a6c624bd485bb5ddbe7e15248aa706739a9"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Jockey_ranges/000050331648-000067108863.bin",
+        "bytes": 16777216,
+        "sha256": "fb32fb714e833de57692582db09cfee43c7dec41b0a826b1d33d983a1650893a"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Jockey_ranges/000067108864-000083886079.bin",
+        "bytes": 16777216,
+        "sha256": "2c5c92bbdb3757acd489ddcd480587f76a6f23673d5e3588b66d4052af0d8bdc"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Jockey_ranges/000083886080-000100663295.bin",
+        "bytes": 16777216,
+        "sha256": "99fa2a0f9628c373ad91ac9010c4f7982b88a6a886eaf59882ecc4e8ad83b23d"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Jockey_ranges/000100663296-000117440511.bin",
+        "bytes": 16777216,
+        "sha256": "22f00fc1129f53f7b4c183798804f5e391e97f521ab3809524828b21a58f8a5d"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Jockey_ranges/000117440512-000134217727.bin",
+        "bytes": 16777216,
+        "sha256": "86e9541014ee2a7e199747dcdc7be55d6bbf85ea94e4db38cc1c8a6997e13f7f"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Jockey_ranges/000134217728-000150994943.bin",
+        "bytes": 16777216,
+        "sha256": "028a88d24ed1dd912e988f6b2633c86de36d94f0e6ccfbac305aecf982e5514d"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Jockey_ranges/000150994944-000167772159.bin",
+        "bytes": 16777216,
+        "sha256": "fab0b97b70bb277ae5c424bfa2e42a85ca955f2f42edd0aef29ea03fecc2dd69"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Jockey_ranges/000167772160-000184549375.bin",
+        "bytes": 16777216,
+        "sha256": "1e9de100e7da44404305cc993ac3a9481a61eb2a005a482e01218d0dfed09485"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Jockey_ranges/000184549376-000201326591.bin",
+        "bytes": 16777216,
+        "sha256": "b1c9adfe4011add97d05d098acc6997e055807991bc4f75d03bdef78e1672799"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Jockey_ranges/000201326592-000218103807.bin",
+        "bytes": 16777216,
+        "sha256": "0d9b32fe5667a8bad17076f62d34371f2c59444a5e8645c246653c75dcdc873a"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Jockey_ranges/000218103808-000234881023.bin",
+        "bytes": 16777216,
+        "sha256": "1d4d773ad023c0bb940bf3bc974d78cc6cefcb406c5796ded622098c63b3997b"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Jockey_ranges/000234881024-000251658239.bin",
+        "bytes": 16777216,
+        "sha256": "53b3a5094f3854146f1de96381c15b8c42c42ff6c35490ab229ea8d7f8981bc1"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Jockey_ranges/000251658240-000268435455.bin",
+        "bytes": 16777216,
+        "sha256": "68463dadc1270299af0ac9777cc4e39ca8f421ef8848734a3f6c56794ca452a4"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Jockey_ranges/000268435456-000285212671.bin",
+        "bytes": 16777216,
+        "sha256": "3345d32cd750838f0dcd52ce3a01ee66d388944f6593687c2e25f85b3fa5512e"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Jockey_ranges/000285212672-000301989887.bin",
+        "bytes": 16777216,
+        "sha256": "89298db98f594bc1e1ed58fd9d8825a9ddc2b1b334c4050cbac1bd31000e4a01"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Jockey_ranges/000301989888-000318767103.bin",
+        "bytes": 16777216,
+        "sha256": "9fd21f32cd887cee4565ec87b0f1c8eb914cce168d968df105bc7e04245cc194"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Jockey_ranges/000318767104-000335544319.bin",
+        "bytes": 16777216,
+        "sha256": "7bf4e00ead3a515fba6981c80bead0d2b08790b69d464a2ee659371c8c6caace"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Jockey_ranges/000335544320-000352321535.bin",
+        "bytes": 16777216,
+        "sha256": "a916ff5fe2121756e0fa69f77dd739f175b916e7e7df79be44846accca562f48"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/Jockey_ranges/003439329280-003453463917.bin",
+        "bytes": 14134638,
+        "sha256": "9d1693e9bad286d70bc7834d68e0cd662b8907aea39fad4b577f5eccb5a67377"
+      }
+    ],
+    "retrieved_at_unix": 1790720215.545247
+  },
+  {
+    "name": "HoneyBee",
+    "url": "https://tie-ultravideo.rd.tuni.fi/video/HoneyBee_3840x2160_120fps_420_8bit_YUV_RAW.7z",
+    "archive_bytes": 3766406267,
+    "archive_members": [
+      {
+        "filename": "HoneyBee_3840x2160.yuv",
+        "uncompressed": 7464960000,
+        "compressed": 3766405849,
+        "is_directory": false
+      },
+      {
+        "filename": "HoneyBee_Copyright.txt",
+        "uncompressed": 249,
+        "compressed": 195,
+        "is_directory": false
+      }
+    ],
+    "selected_member": "HoneyBee_3840x2160.yuv",
+    "prefix_frames": 60,
+    "width": 3840,
+    "height": 2160,
+    "pixel_format": "yuv420p8",
+    "raw_bytes": 746496000,
+    "raw_sha256": "2eaff33059c67cd980fa7a96ba74c79c928c484512c388cd58bf4d699068d622",
+    "raw_path": "${NATURAL_ROOT}/media/HoneyBee_3840x2160_first60.yuv",
+    "full_archive_crc_verified": false,
+    "integrity_scope": "7z header parsed and prefix decompressed; full archive stream/member CRC requires all 600 frames and was not tested",
+    "compressed_ranges": [
+      {
+        "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000000000000-000016777215.bin",
+        "bytes": 16777216,
+        "sha256": "ce8008ca0e2f492db3e72db5281d8c9370ac5a4e3c1002179d448938d7452234"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000016777216-000033554431.bin",
+        "bytes": 16777216,
+        "sha256": "94bf653d0d51fc573c549b19d40303b57c24294f6a1f06eae735eb1ec4c2e225"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000033554432-000050331647.bin",
+        "bytes": 16777216,
+        "sha256": "bb3fb9caf403d0e047e1f4e6f639fc17746a8041b7caddb07c611136bc04dde7"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000050331648-000067108863.bin",
+        "bytes": 16777216,
+        "sha256": "f7495cb5ae6a7d6b9186297131f1b2892cb7207e7eea56b203c1de6596e02f4a"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000067108864-000083886079.bin",
+        "bytes": 16777216,
+        "sha256": "65c2e7b1b0306e7c92b20be253a0383e02cb9972378cb2b8e10ad43e4ce270de"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000083886080-000100663295.bin",
+        "bytes": 16777216,
+        "sha256": "77a8592fdbee63ae9f730285df09dd00c1a7ae503652e9d9873027fb8bd7c1a3"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000100663296-000117440511.bin",
+        "bytes": 16777216,
+        "sha256": "941289d52b491e4767e561dd7eab44f16df2da71e84d00b1fe09796913ab5eb5"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000117440512-000134217727.bin",
+        "bytes": 16777216,
+        "sha256": "1b859e3bb416fff0eb653b5c69846a2bd5435ff68507f5b6389328290bd76bd2"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000134217728-000150994943.bin",
+        "bytes": 16777216,
+        "sha256": "9b49fa3c4d45b99db56300110d6fcd654f4e8861f87a397d24f2589f504d1a64"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000150994944-000167772159.bin",
+        "bytes": 16777216,
+        "sha256": "9833faf7cdaa2773ccc6c7ff4c3b89ecf8a31a2e5613b18a23d5454f05f22a84"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000167772160-000184549375.bin",
+        "bytes": 16777216,
+        "sha256": "65d87b6e1b9f30b2e2fe525ec6f214b9749282b99333204f35b374b7f45adfea"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000184549376-000201326591.bin",
+        "bytes": 16777216,
+        "sha256": "a77751441cebbf17969abe0b545478e4fff071743e8129f4c5a696cfd5586062"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000201326592-000218103807.bin",
+        "bytes": 16777216,
+        "sha256": "26b7a1dea1a7466d061e933f43afb88d2d68b8908a44acd073a80d459fee1ed0"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000218103808-000234881023.bin",
+        "bytes": 16777216,
+        "sha256": "a59bd34c60d694374132ba025e15912798c8ba4b120c27feb6417f15c8ca02ba"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000234881024-000251658239.bin",
+        "bytes": 16777216,
+        "sha256": "3d9724e51b3fb39f03535009070370e8832af096099325266bd8810e54b1a15a"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000251658240-000268435455.bin",
+        "bytes": 16777216,
+        "sha256": "0d107b5fec2fc76cab47d3e15d000902bc995d388c226350b1e61b6da10e3055"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000268435456-000285212671.bin",
+        "bytes": 16777216,
+        "sha256": "aa1bcf65373c3385a7b0940d50743a9632c96f428a3c95d015fa4a0abbd45c5d"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000285212672-000301989887.bin",
+        "bytes": 16777216,
+        "sha256": "5ccb29325366a2a51650830262efd9a98aa3be343c5f55a659f47b495aff1728"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000301989888-000318767103.bin",
+        "bytes": 16777216,
+        "sha256": "4527a775ad40be768a94eb9b045fc75ebce32f23b3dbf2790a4f70a380c05490"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000318767104-000335544319.bin",
+        "bytes": 16777216,
+        "sha256": "5b018fcbfdd5cee86dedd9b441219621217ff0879f0eb6e9d4d6c2ddf6c75bfb"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000335544320-000352321535.bin",
+        "bytes": 16777216,
+        "sha256": "c2fa79a962f21a6ac50baceb9d3b5abe479a195b1d8533abc91cfeb327c36feb"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000352321536-000369098751.bin",
+        "bytes": 16777216,
+        "sha256": "2cb7c82f3e127ad2d112d143a5ea74f4ec5158c18a8342af79dd6669531caf44"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/000369098752-000385875967.bin",
+        "bytes": 16777216,
+        "sha256": "5da619be366d67cebbe8da23cab1cbc6c12ecf647b5c9194960a18b1c96c5da0"
+      },
+      {
+        "path": "${NATURAL_ROOT}/media/HoneyBee_ranges/003758096384-003766406266.bin",
+        "bytes": 8309883,
+        "sha256": "737df75f2bdd9d8eb7103449ce67a8c054ae9d07c0789ca80205cde94fc9b94d"
+      }
+    ],
+    "retrieved_at_unix": 1790720210.344085
+  }
+]

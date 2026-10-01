@@ -1,0 +1,12 @@
+[
+  {
+    "group": "conformance",
+    "command": [
+      "${FULLSOURCE_ROOT}/builds/token_asan/test_libaom",
+      "--gtest_filter=*TestVectorTest*:*InvalidFileTest*:*ExternalFrameBuffer*:*DecodeScalabilityTest*",
+      "--gtest_output=xml:${FULLSOURCE_ROOT}/results/token_asan_upstream_conformance.xml"
+    ],
+    "exit": 0,
+    "seconds": 499.9066960811615
+  }
+]

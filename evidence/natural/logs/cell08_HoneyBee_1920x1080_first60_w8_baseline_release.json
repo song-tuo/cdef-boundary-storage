@@ -1,0 +1,34 @@
+{
+  "id": "cell08_HoneyBee_1920x1080_first60_w8_baseline_release",
+  "command": [
+    "${FULLSOURCE_ROOT}/builds/baseline_release/ivf_gate",
+    "${NATURAL_ROOT}/media/HoneyBee_1920x1080_first60.ivf",
+    "8",
+    "1"
+  ],
+  "start_unix": 1790720457.430646,
+  "end_unix": 1790720457.58307,
+  "exit_code": 0,
+  "load_average": [
+    6.615234375,
+    10.99365234375,
+    8.162109375
+  ],
+  "output": {
+    "status": 0,
+    "destroy_status": 0,
+    "input_packets": 60,
+    "decoded_packets": 60,
+    "output_frames": 60,
+    "output_bytes": 186624000,
+    "pixel_sha256": "39e9de40ccf6a82c055bdd90f66114bf3cdf15863e9137d952b732e04717abc3",
+    "decode_ns": 88907000,
+    "elapsed_with_hash_ns": 146514000,
+    "peak_rss_bytes": 199639040,
+    "truncated_input": 0,
+    "bit_depth": 8,
+    "subsampling_x": 1,
+    "subsampling_y": 1,
+    "monochrome": 0
+  }
+}

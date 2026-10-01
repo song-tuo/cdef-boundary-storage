@@ -1,0 +1,34 @@
+{
+  "id": "timing_b-1_c00_p0_B",
+  "command": [
+    "${FULLSOURCE_ROOT}/builds/token_release/ivf_gate",
+    "${NATURAL_ROOT}/media/Beauty_1920x1080_first60.ivf",
+    "8",
+    "1"
+  ],
+  "start_unix": 1790720588.802041,
+  "end_unix": 1790720589.126623,
+  "exit_code": 0,
+  "load_average": [
+    3.72314453125,
+    8.2392578125,
+    7.4541015625
+  ],
+  "output": {
+    "status": 0,
+    "destroy_status": 0,
+    "input_packets": 60,
+    "decoded_packets": 60,
+    "output_frames": 60,
+    "output_bytes": 186624000,
+    "pixel_sha256": "05555e039078addc4127f673a8876c0d27de3a526d080ac1f733ded4952429dc",
+    "decode_ns": 257134000,
+    "elapsed_with_hash_ns": 315531000,
+    "peak_rss_bytes": 202768384,
+    "truncated_input": 0,
+    "bit_depth": 8,
+    "subsampling_x": 1,
+    "subsampling_y": 1,
+    "monochrome": 0
+  }
+}

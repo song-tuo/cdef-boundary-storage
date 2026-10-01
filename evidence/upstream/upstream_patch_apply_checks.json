@@ -1,0 +1,50 @@
+[
+  {
+    "patch": "v3.15.1_baseline_to_type_fix.patch",
+    "command": [
+      "git",
+      "apply",
+      "--check",
+      "${UPSTREAM_ROOT}/patches/v3.15.1_baseline_to_type_fix.patch"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "patch": "v3.15.1_type_fix_to_token.patch",
+    "command": [
+      "git",
+      "apply",
+      "--check",
+      "${UPSTREAM_ROOT}/patches/v3.15.1_type_fix_to_token.patch"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "patch": "main_baseline_to_type_fix.patch",
+    "command": [
+      "git",
+      "apply",
+      "--check",
+      "${UPSTREAM_ROOT}/patches/main_baseline_to_type_fix.patch"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "patch": "main_type_fix_to_token.patch",
+    "command": [
+      "git",
+      "apply",
+      "--check",
+      "${UPSTREAM_ROOT}/patches/main_type_fix_to_token.patch"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,503 @@
+{
+  "status": "PASS_BOUNDED_UPSTREAM_COMPATIBILITY",
+  "completed_utc": "2026-09-29T22:20:11Z",
+  "scope": "SOURCE_PERSISTENCE_AND_PARTIAL_COMPUTATIONAL_COMPATIBILITY; separate from original v3.12.1 full campaign",
+  "source_identity": [
+    {
+      "version": "v3.15.1",
+      "ref": "v3.15.1",
+      "commit": "44d0a57786f432d933ff64b653347c66f4d0fa1d",
+      "tree": "1083b6eece30f9d8279a057b9cc05bded50c5ed8",
+      "archive_sha256": "ab485d98769744ea282cf527b1b3aa6084085b51a9efbf6e9d2c260a0247e0fb",
+      "retrieved": "2026-09-29T22:11:49Z",
+      "url": "https://aomedia.googlesource.com/aom/",
+      "patches": [
+        {
+          "variant": "type_fix",
+          "command": [
+            "patch",
+            "-p1",
+            "--fuzz=0",
+            "-i",
+            "${FULLSOURCE_ROOT}/patches/baseline_to_type_fix.patch"
+          ],
+          "exit": 0,
+          "patch_sha256": "d95f9d3f1283305d1adc1cd7aeea3bf98a7e0be4bb8ec307a33aaf06e77593be"
+        },
+        {
+          "variant": "token",
+          "command": [
+            "patch",
+            "-p1",
+            "--fuzz=0",
+            "-i",
+            "${FULLSOURCE_ROOT}/patches/type_fix_to_token.patch"
+          ],
+          "exit": 0,
+          "patch_sha256": "60bd3874132ba8cdb451c6b547ec801757568734eceae8951a5d3f657975c85e"
+        }
+      ]
+    },
+    {
+      "version": "main",
+      "ref": "9f9c3f7475793f1a80fc8fb811dbff84549a91df",
+      "commit": "9f9c3f7475793f1a80fc8fb811dbff84549a91df",
+      "tree": "24c738725b284c6895c2d39cc7b91af5627742d9",
+      "archive_sha256": "16f433ba6df15707e05e8ec1444bf798383224dfe3933ee08a67e360bbb6d875",
+      "retrieved": "2026-09-29T22:11:50Z",
+      "url": "https://aomedia.googlesource.com/aom/",
+      "patches": [
+        {
+          "variant": "type_fix",
+          "command": [
+            "patch",
+            "-p1",
+            "--fuzz=0",
+            "-i",
+            "${FULLSOURCE_ROOT}/patches/baseline_to_type_fix.patch"
+          ],
+          "exit": 0,
+          "patch_sha256": "d95f9d3f1283305d1adc1cd7aeea3bf98a7e0be4bb8ec307a33aaf06e77593be"
+        },
+        {
+          "variant": "token",
+          "command": [
+            "patch",
+            "-p1",
+            "--fuzz=0",
+            "-i",
+            "${FULLSOURCE_ROOT}/patches/type_fix_to_token.patch"
+          ],
+          "exit": 0,
+          "patch_sha256": "60bd3874132ba8cdb451c6b547ec801757568734eceae8951a5d3f657975c85e"
+        }
+      ]
+    }
+  ],
+  "source_audit": [
+    {
+      "version": "v3.15.1",
+      "commit": "44d0a57786f432d933ff64b653347c66f4d0fa1d",
+      "tracked_blobs": 1520,
+      "all_materialized_writable": true,
+      "source_matches_official_tree": true,
+      "mismatches": [],
+      "patch_differences": {
+        "type_fix": {
+          "changed_files": [
+            "av1/common/alloccommon.c"
+          ],
+          "patch": "v3.15.1_baseline_to_type_fix.patch",
+          "patch_sha256": "5b4ec2ff6402dc546d63e5adaa0479836d20fe1b5c3d9ae067a8b00d85242d30"
+        },
+        "token": {
+          "changed_files": [
+            "av1/common/alloccommon.c",
+            "av1/common/thread_common.c",
+            "av1/common/thread_common.h"
+          ],
+          "patch": "v3.15.1_type_fix_to_token.patch",
+          "patch_sha256": "dc3ec5803399cd36e8d291fb47d1e66e64315978862a8605ef6ada830e862370"
+        }
+      },
+      "key_files": {
+        "av1/common/alloccommon.c": {
+          "sha256": "f4a65a29fa87fab19691152ec30a4ff9bcc0ca348a858e97e1837da7c5f9e043",
+          "upstream_blob": "38b9e6464bcd890287cd08f0c1b49024f874f4c6"
+        },
+        "av1/common/thread_common.c": {
+          "sha256": "b05274b70a61e2b5a136800848986c2419e9372777384c5b6a0b285f725d51bc",
+          "upstream_blob": "dee45b44c2def5ec01cb8a20f3e103d15a51770f"
+        },
+        "av1/common/thread_common.h": {
+          "sha256": "02063f362089a24988565088e79642ca75fc558bedd3e2081560c1713d7f81c8",
+          "upstream_blob": "5d467c5d00b4c3d93e2438e7c68c15d5b90763b9"
+        },
+        "av1/common/cdef.c": {
+          "sha256": "a2832163c6041efb3085b8322b55b3d531a69a4641db14bdb4a6e01189c2fb3f",
+          "upstream_blob": "c39fca30837ddfd93bbf1a8ff66bf5b001f7c334"
+        },
+        "av1/common/av1_common_int.h": {
+          "sha256": "1a75cd0d1ab8ab54f8d3bded02cf047e8bb43a364633c94aa989f3c2519e5dc1",
+          "upstream_blob": "e083c2b0d5021d115b5fa72300333c865fbe93ff"
+        }
+      }
+    },
+    {
+      "version": "main",
+      "commit": "9f9c3f7475793f1a80fc8fb811dbff84549a91df",
+      "tracked_blobs": 1523,
+      "all_materialized_writable": true,
+      "source_matches_official_tree": true,
+      "mismatches": [],
+      "patch_differences": {
+        "type_fix": {
+          "changed_files": [
+            "av1/common/alloccommon.c"
+          ],
+          "patch": "main_baseline_to_type_fix.patch",
+          "patch_sha256": "5b4ec2ff6402dc546d63e5adaa0479836d20fe1b5c3d9ae067a8b00d85242d30"
+        },
+        "token": {
+          "changed_files": [
+            "av1/common/alloccommon.c",
+            "av1/common/thread_common.c",
+            "av1/common/thread_common.h"
+          ],
+          "patch": "main_type_fix_to_token.patch",
+          "patch_sha256": "dc3ec5803399cd36e8d291fb47d1e66e64315978862a8605ef6ada830e862370"
+        }
+      },
+      "key_files": {
+        "av1/common/alloccommon.c": {
+          "sha256": "f4a65a29fa87fab19691152ec30a4ff9bcc0ca348a858e97e1837da7c5f9e043",
+          "upstream_blob": "38b9e6464bcd890287cd08f0c1b49024f874f4c6"
+        },
+        "av1/common/thread_common.c": {
+          "sha256": "b05274b70a61e2b5a136800848986c2419e9372777384c5b6a0b285f725d51bc",
+          "upstream_blob": "dee45b44c2def5ec01cb8a20f3e103d15a51770f"
+        },
+        "av1/common/thread_common.h": {
+          "sha256": "02063f362089a24988565088e79642ca75fc558bedd3e2081560c1713d7f81c8",
+          "upstream_blob": "5d467c5d00b4c3d93e2438e7c68c15d5b90763b9"
+        },
+        "av1/common/cdef.c": {
+          "sha256": "a2832163c6041efb3085b8322b55b3d531a69a4641db14bdb4a6e01189c2fb3f",
+          "upstream_blob": "c39fca30837ddfd93bbf1a8ff66bf5b001f7c334"
+        },
+        "av1/common/av1_common_int.h": {
+          "sha256": "1a75cd0d1ab8ab54f8d3bded02cf047e8bb43a364633c94aa989f3c2519e5dc1",
+          "upstream_blob": "e083c2b0d5021d115b5fa72300333c865fbe93ff"
+        }
+      }
+    }
+  ],
+  "builds": [
+    {
+      "name": "v3.15.1_baseline",
+      "audit": false,
+      "compile_units_in_database": 488,
+      "library_sha256": "669ceb8bf375c9fdc02f2cba3ae6d047bd57ddc25fad0c0794b0964a7fb35e19",
+      "all_commands_exit_zero": true
+    },
+    {
+      "name": "v3.15.1_type_fix",
+      "audit": false,
+      "compile_units_in_database": 488,
+      "library_sha256": "b0ad59ac7402b9e0c640e1f6cbd4c97df4a62e240901f4c8c587b3376a441c59",
+      "all_commands_exit_zero": true
+    },
+    {
+      "name": "v3.15.1_token",
+      "audit": false,
+      "compile_units_in_database": 488,
+      "library_sha256": "442e73b2f1557a513d51d6a99aeb6eddc3dbebcecfce32320cbde5175373541b",
+      "all_commands_exit_zero": true
+    },
+    {
+      "name": "main_baseline",
+      "audit": false,
+      "compile_units_in_database": 489,
+      "library_sha256": "0aec3042f3febf63596dfbd853461041fd99075f4063cf943c7ea3088340d2fe",
+      "all_commands_exit_zero": true
+    },
+    {
+      "name": "main_type_fix",
+      "audit": false,
+      "compile_units_in_database": 489,
+      "library_sha256": "5a82b494b6b52f11df8dfb15d8c10febd4bea56f6410c641677d41e4fc8666bf",
+      "all_commands_exit_zero": true
+    },
+    {
+      "name": "main_token",
+      "audit": false,
+      "compile_units_in_database": 489,
+      "library_sha256": "685e9c7200a7b4667aac0191f8f457e32a2c497b6750addfbaf8eab3defa3d15",
+      "all_commands_exit_zero": true
+    },
+    {
+      "name": "v3.15.1_baseline_audit",
+      "audit": true,
+      "compile_units_in_database": 488,
+      "library_sha256": "8cdc78dd039b004f7613ab8b6bb631d7bfd40846947a453b663f4cddf0ebe4a2",
+      "all_commands_exit_zero": true
+    },
+    {
+      "name": "v3.15.1_type_fix_audit",
+      "audit": true,
+      "compile_units_in_database": 488,
+      "library_sha256": "5425256ee4b48f6eb36d0ed1ec75bd32830d78e08af8cd3605d30d02fcfc1e9e",
+      "all_commands_exit_zero": true
+    },
+    {
+      "name": "v3.15.1_token_audit",
+      "audit": true,
+      "compile_units_in_database": 488,
+      "library_sha256": "4a989efa05eb66197ceb923b0df2c1e3f5457110acb7a0ff77950c9029ea2dc5",
+      "all_commands_exit_zero": true
+    },
+    {
+      "name": "main_baseline_audit",
+      "audit": true,
+      "compile_units_in_database": 489,
+      "library_sha256": "3e1772df24ddbcbd768a7231995109cb3497069756e51f2795e67ca7426bb02c",
+      "all_commands_exit_zero": true
+    },
+    {
+      "name": "main_type_fix_audit",
+      "audit": true,
+      "compile_units_in_database": 489,
+      "library_sha256": "3176349dabac731665aef0af22c3817f7fc28f53cc08c7bbb9b1f640276a3c0a",
+      "all_commands_exit_zero": true
+    },
+    {
+      "name": "main_token_audit",
+      "audit": true,
+      "compile_units_in_database": 489,
+      "library_sha256": "5828f31b48985b70706391500c2d28d5a7b2e8bf33788fcaec33459489e3b6f1",
+      "all_commands_exit_zero": true
+    }
+  ],
+  "smoke": {
+    "runs": 228,
+    "passed": 228,
+    "inputs": 19,
+    "threads": [
+      8,
+      16
+    ],
+    "row_mt": 1,
+    "reference": "archived v3.12.1 baseline pixel digests and frame counts",
+    "timing_claim": false
+  },
+  "conformance": {
+    "group": "AV1/TestVectorTest.MD5Match/*",
+    "profiles": 6,
+    "tests_per_profile": [
+      242,
+      242,
+      242,
+      242,
+      242,
+      242
+    ],
+    "executions": 1452,
+    "failures": 0,
+    "official_asset_files": 480,
+    "assets_passing_hash": 480,
+    "test_threads": 1
+  },
+  "allocation": [
+    {
+      "version": "v3.15.1",
+      "variant": "baseline",
+      "threads": 8,
+      "cdef_active_frames": 17,
+      "requested_bytes": 8355840,
+      "expected_bytes": 8355840,
+      "pass": true
+    },
+    {
+      "version": "v3.15.1",
+      "variant": "type_fix",
+      "threads": 8,
+      "cdef_active_frames": 17,
+      "requested_bytes": 2088960,
+      "expected_bytes": 2088960,
+      "pass": true
+    },
+    {
+      "version": "v3.15.1",
+      "variant": "token",
+      "threads": 8,
+      "cdef_active_frames": 17,
+      "requested_bytes": 522240,
+      "expected_bytes": 522240,
+      "pass": true
+    },
+    {
+      "version": "v3.15.1",
+      "variant": "baseline",
+      "threads": 16,
+      "cdef_active_frames": 17,
+      "requested_bytes": 8355840,
+      "expected_bytes": 8355840,
+      "pass": true
+    },
+    {
+      "version": "v3.15.1",
+      "variant": "type_fix",
+      "threads": 16,
+      "cdef_active_frames": 17,
+      "requested_bytes": 2088960,
+      "expected_bytes": 2088960,
+      "pass": true
+    },
+    {
+      "version": "v3.15.1",
+      "variant": "token",
+      "threads": 16,
+      "cdef_active_frames": 17,
+      "requested_bytes": 1013760,
+      "expected_bytes": 1013760,
+      "pass": true
+    },
+    {
+      "version": "main",
+      "variant": "baseline",
+      "threads": 8,
+      "cdef_active_frames": 17,
+      "requested_bytes": 8355840,
+      "expected_bytes": 8355840,
+      "pass": true
+    },
+    {
+      "version": "main",
+      "variant": "type_fix",
+      "threads": 8,
+      "cdef_active_frames": 17,
+      "requested_bytes": 2088960,
+      "expected_bytes": 2088960,
+      "pass": true
+    },
+    {
+      "version": "main",
+      "variant": "token",
+      "threads": 8,
+      "cdef_active_frames": 17,
+      "requested_bytes": 522240,
+      "expected_bytes": 522240,
+      "pass": true
+    },
+    {
+      "version": "main",
+      "variant": "baseline",
+      "threads": 16,
+      "cdef_active_frames": 17,
+      "requested_bytes": 8355840,
+      "expected_bytes": 8355840,
+      "pass": true
+    },
+    {
+      "version": "main",
+      "variant": "type_fix",
+      "threads": 16,
+      "cdef_active_frames": 17,
+      "requested_bytes": 2088960,
+      "expected_bytes": 2088960,
+      "pass": true
+    },
+    {
+      "version": "main",
+      "variant": "token",
+      "threads": 16,
+      "cdef_active_frames": 17,
+      "requested_bytes": 1013760,
+      "expected_bytes": 1013760,
+      "pass": true
+    }
+  ],
+  "environment": {
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "macos": "26.6.2",
+    "clang": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin",
+    "cmake": "cmake version 4.4.2\n\nCMake suite maintained and supported by Kitware (kitware.com/cmake).",
+    "machine": "Apple M5 Pro",
+    "pointer_bytes": 8,
+    "uint16_bytes": 2
+  },
+  "not_run": [
+    "new upstream sanitizer campaign",
+    "current-upstream full original conformance/fault/leak/timing protocol",
+    "Gerrit upload or maintainer review",
+    "CLA or human-author signoff",
+    "future submission-date main audit"
+  ],
+  "failures_preserved": [
+    {
+      "stage": "initial sandbox git remote read",
+      "exit": 128,
+      "reason": "configured localhost proxy inaccessible inside sandbox; succeeded after approved network escalation"
+    },
+    {
+      "stage": "official archive endpoints",
+      "exit": 56,
+      "http_status": 503,
+      "recovery": "official Git clone and git archive; all tracked source blobs compared to official trees"
+    },
+    {
+      "stage": "allocation instrumentation setup attempt1",
+      "exit": 1,
+      "reason": "asserted old superres_post_decode marker was absent; no test run occurred",
+      "recovery": "adapt only diagnostic insertion marker to current superres_post_decode(pbi), before freeze/build; failed script retained in logs/make_allocation_audit_failed_marker.py"
+    },
+    {
+      "stage": "first report finalization",
+      "exit": 1,
+      "reason": "sandbox sysctl CPU model read denied",
+      "recovery": "approved read-only host metadata escalation; no research tests affected"
+    }
+  ],
+  "upstream_submission": {
+    "status": "LOCAL_PATCHES_PREPARED_NOT_UPLOADED",
+    "missing_human_items": [
+      "review/approval",
+      "verified author email and Gerrit identity",
+      "contributor agreement status"
+    ],
+    "changes": [
+      "patches/main_baseline_to_type_fix.patch",
+      "patches/main_type_fix_to_token.patch"
+    ]
+  },
+  "upstream_patch_apply_checks": [
+    {
+      "patch": "v3.15.1_baseline_to_type_fix.patch",
+      "command": [
+        "git",
+        "apply",
+        "--check",
+        "${UPSTREAM_ROOT}/patches/v3.15.1_baseline_to_type_fix.patch"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "patch": "v3.15.1_type_fix_to_token.patch",
+      "command": [
+        "git",
+        "apply",
+        "--check",
+        "${UPSTREAM_ROOT}/patches/v3.15.1_type_fix_to_token.patch"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "patch": "main_baseline_to_type_fix.patch",
+      "command": [
+        "git",
+        "apply",
+        "--check",
+        "${UPSTREAM_ROOT}/patches/main_baseline_to_type_fix.patch"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "patch": "main_type_fix_to_token.patch",
+      "command": [
+        "git",
+        "apply",
+        "--check",
+        "${UPSTREAM_ROOT}/patches/main_type_fix_to_token.patch"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}
