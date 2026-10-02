@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "commit": "9a275d0c9296f2c0ded9d0dd28f99cf22dea2572",
+  "source_hashes": {
+    "code/dav1d_src_cdef_apply_tmpl.c": {
+      "sha256": "ab485983a776086a2e5427fe79315ed8393e5cd06dbb4b154673376dcc1e4a72",
+      "matches_old_ledger": true
+    },
+    "code/dav1d_src_lf_apply_tmpl.c": {
+      "sha256": "a0efdebfe0439a0c045f0ad6b482636d52edde509c7d343358ae0e2198d39e27",
+      "matches_old_ledger": true
+    },
+    "code/dav1d_README.md": {
+      "sha256": "392f5b97fef0590409a372fac6dc6dc99284f0e05b189131973812fca3f0c1b9",
+      "matches_old_ledger": true
+    },
+    "code/dav1d_src_thread_task.c": {
+      "sha256": "562f68abacdd92246e1b1cb66f9a7edb9f0a2ac6136257d1d8b7ed2763b8d744",
+      "matches_old_ledger": true
+    },
+    "code/dav1d_src_decode.c": {
+      "sha256": "2acdee23ed5c6e59300bcb8cbd22ad61252f2d1aaaf7c42f79b993472fff5d4a",
+      "matches_old_ledger": true
+    },
+    "code/dav1d_src_cdef_tmpl.c": {
+      "sha256": "28c0d5f8a5d60d4822483211f9e61e57af4a7d053ef5dea7484415e01d193bdd",
+      "matches_old_ledger": true
+    },
+    "code/dav1d_src_internal.h": {
+      "sha256": "f4eebbbf726f974a14b79f93f31553cfbacdcf676b0c84103e79937cb25bd3ee",
+      "matches_old_ledger": true
+    },
+    "code/dav1d_src_recon_tmpl.c": {
+      "sha256": "c398aca47e59eaba6959a3ca1c8ec04358c94f19663efc73068e6ddaaf07b9bf",
+      "matches_old_ledger": true
+    }
+  },
+  "formula": "A_bytes = 64 + 2^r * S * (4*abs(s_Y) + 8*abs(s_UV))",
+  "S": "ceil(H/(64*2^b)), b=seq_hdr->sb128 in {0,1}",
+  "r": "int(n_tc > 1 and width[0] != width[1])",
+  "height_cases_checked": 262144,
+  "allocation_cases_checked": 2016,
+  "source_literal_expressions_checked": 7,
+  "example_rows": 4,
+  "domains": "Valid positive dimensions; arithmetic equality checked without machine overflow",
+  "checks": [
+    "Nested height rounding",
+    "Literal shifts versus closed formula",
+    "Independent buffer-region decomposition",
+    "Signed-stride invariance",
+    "Task/resize branch truth table",
+    "Packed 8-bit 4:2:0 specialization"
+  ],
+  "not_performed": [
+    "Network access",
+    "HEAD refresh",
+    "Download",
+    "Codec build",
+    "Codec execution",
+    "Allocation measurement",
+    "Benchmark",
+    "dav1d lifetime optimality proof",
+    "Cross-codec superiority comparison"
+  ],
+  "script_sha256": "df1fd76c73c405fdf11d6b232b29b10631a77b5f33d8d7162adbd991c5e65ab0"
+}

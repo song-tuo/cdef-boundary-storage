@@ -1,0 +1,40 @@
+{
+  "revision": "artifact-v4 final wording only",
+  "files": [
+    {
+      "path": "DAV1D_SOURCE_IDENTITY.json",
+      "bytes": 2378,
+      "sha256": "2c23ad432be25bc549572bd372c2172261fbf069da2bcaa62aef1cdbdf0008a2"
+    },
+    {
+      "path": "DAV1D_SOURCE_NOTES.md",
+      "bytes": 1280,
+      "sha256": "469abee7bea390b3df63896bc02dc1d4f9be1d0943967e601f988e0ffa72e1da"
+    },
+    {
+      "path": "EVIDENCE_BASE.json",
+      "bytes": 508,
+      "sha256": "ebd9d1591a15fe121f7dc6970a40a4028802c21117037d6eefa0f7a4300cb398"
+    },
+    {
+      "path": "EVIDENCE_MAP.csv",
+      "bytes": 4932,
+      "sha256": "4988c98bf1cbcfe518247cbe4fea3c664d0146f0196efc5ad5a345a9b9a3ac9e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2755,
+      "sha256": "48b9c113f918d22e8086d53c6ec1f8130d8198ffe1704017fafe61d18dc78fca"
+    },
+    {
+      "path": "manuscript_identity.json",
+      "bytes": 521,
+      "sha256": "e559f69d97163c1bd11595a6e61d03917936a1ddc5f0ccb833d62dc9bce9ece7"
+    },
+    {
+      "path": "verify.py",
+      "bytes": 1238,
+      "sha256": "9ee376f6c0c315c0a926bd1a288dae738d312ec85bdb1ab043a7fdb3dade0350"
+    }
+  ]
+}

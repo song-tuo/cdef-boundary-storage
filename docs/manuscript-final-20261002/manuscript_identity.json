@@ -1,0 +1,14 @@
+{
+  "title": "An Exact Storage Bound for Row-Parallel CDEF in the AV1 Decoder",
+  "revision": "2026-10-02 final wording",
+  "author": "Song Dong",
+  "pdf_sha256": "b1bedac176b3363f0638930a42543baed7d609a3a574c765ec625ffdf97a8342",
+  "tex_sha256": "e4f3819bc7b22e82465cd17e49e29f307d5cdc172edb07c132dbe1d771d7cc4f",
+  "pages": 5,
+  "technical_content_ends_page": 4,
+  "references_start_page": 4,
+  "artifact_tag": "artifact-v4",
+  "paper_distributed_here": false,
+  "new_experiments": 0,
+  "new_statistical_analyses": 0
+}
