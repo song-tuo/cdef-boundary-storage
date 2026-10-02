@@ -1,0 +1,23 @@
+{
+  "variant": "token_audit",
+  "profile": "asan",
+  "configure": [
+    "cmake",
+    "-S",
+    "${WORKSPACE}/CDEF_full_source_gate/src/token_audit",
+    "-B",
+    "${WORKSPACE}/CDEF_full_source_gate/builds/token_audit_asan",
+    "-DCMAKE_POLICY_VERSION_MINIMUM=3.5",
+    "-DENABLE_DOCS=OFF",
+    "-DCONFIG_LIBYUV=0",
+    "-DCONFIG_WEBM_IO=0",
+    "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+    "-DCMAKE_BUILD_TYPE=Debug",
+    "-DSANITIZE=address,undefined"
+  ],
+  "started": 1790693727.177517,
+  "configure_exit": 0,
+  "build_exit": 0,
+  "harness_exit": 0,
+  "finished": 1790693780.098228
+}

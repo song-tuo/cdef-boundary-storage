@@ -1,0 +1,152 @@
+--- dual_token/av1/common/alloccommon.c
++++ hybrid/av1/common/alloccommon.c
+@@ -133,8 +133,8 @@
+   free_cdef_bufs(cdef_info->colbuf, &cdef_info->srcbuf);
+ 
+   free_cdef_row_sync(&cdef_sync->cdef_row_mt, num_mi_rows);
+-  aom_free(cdef_sync->boundary_owner);
+-  cdef_sync->boundary_owner = NULL;
++  aom_free(cdef_sync->top_owner);
++  cdef_sync->top_owner = NULL;
+   cdef_sync->top_slots = cdef_sync->bottom_slots = 0;
+ 
+   if (cdef_info->allocated_num_workers < 2) return;
+@@ -221,8 +221,8 @@
+   const size_t strips = num_workers > 1 ? (size_t)top_slots + bottom_slots
+                                       : (size_t)num_bufs * 2;
+   if (cdef_sync->top_slots != top_slots || cdef_sync->bottom_slots != bottom_slots) {
+-    aom_free(cdef_sync->boundary_owner);
+-    cdef_sync->boundary_owner = NULL;
++    aom_free(cdef_sync->top_owner);
++    cdef_sync->top_owner = NULL;
+   }
+   cdef_sync->top_slots = top_slots;
+   cdef_sync->bottom_slots = bottom_slots;
+@@ -297,9 +297,9 @@
+ 
+   if (num_workers < 2) return;
+ 
+-  if (strips && cdef_sync->boundary_owner == NULL)
+-    CHECK_MEM_ERROR(cm, cdef_sync->boundary_owner,
+-                    aom_calloc(strips, sizeof(*cdef_sync->boundary_owner)));
++  if (strips && cdef_sync->top_owner == NULL)
++    CHECK_MEM_ERROR(cm, cdef_sync->top_owner,
++                    aom_calloc(top_slots, sizeof(*cdef_sync->top_owner)));
+ 
+   if (init_worker) {
+     if (*cdef_worker == NULL)
+--- dual_token/av1/common/thread_common.c
++++ hybrid/av1/common/thread_common.c
+@@ -1072,15 +1072,12 @@
+   if (row > 0) {
+     const int slot = sync->cdef_row_mt[row].top_slot;
+     assert(slot >= 0 && slot < sync->top_slots);
+-    assert(sync->boundary_owner[slot] == row);
+-    sync->boundary_owner[slot] = -1;
+-  }
+-  if (row < rows - 1) {
+-    const int slot = sync->cdef_row_mt[row].bottom_slot;
+-    assert(slot >= 0 && slot < sync->bottom_slots);
+-    assert(sync->boundary_owner[sync->top_slots + slot] == row);
+-    sync->boundary_owner[sync->top_slots + slot] = -1;
+-  }
++    assert(sync->top_owner[slot] == row);
++    sync->top_owner[slot] = -1;
++  }
++  (void)rows;
++  // Bottom is worker-private (or unique to the row in a short frame).
++  // Worker sequential execution ends its lifetime here; no pool state to free.
+ #if CONFIG_MULTITHREAD
+   pthread_mutex_unlock(sync->mutex_);
+ #endif
+@@ -1089,7 +1086,8 @@
+ // Checks if a job is available. Returns -1 on an ownership invariant error.
+ // There is no token-pool condition variable and no token-capacity wait.
+ static inline int get_cdef_row_next_job(AV1CdefSync *const cdef_sync,
+-                                        volatile int *cur_fbr, const int nvfb) {
++                                        volatile int *cur_fbr, const int nvfb,
++                                        const int bottom_worker_slot) {
+ #if CONFIG_MULTITHREAD
+   pthread_mutex_lock(cdef_sync->mutex_);
+ #endif  // CONFIG_MULTITHREAD
+@@ -1102,12 +1100,10 @@
+     // Dispatch is ordered. The previous dispatch has already reserved our
+     // incoming top. Reserve the chain tail and our bottom before issuing.
+     if (*cur_fbr < nvfb - 1) {
+-      const int top = cdef_take_boundary(cdef_sync->boundary_owner,
++      const int top = cdef_take_boundary(cdef_sync->top_owner,
+                                          cdef_sync->top_slots, *cur_fbr + 1);
+-      const int bottom = cdef_take_boundary(
+-          cdef_sync->boundary_owner + cdef_sync->top_slots,
+-          cdef_sync->bottom_slots, *cur_fbr);
+-      if (top < 0 || bottom < 0) {
++      const int bottom = bottom_worker_slot >= 0 ? bottom_worker_slot : *cur_fbr;
++      if (top < 0 || bottom < 0 || bottom >= cdef_sync->bottom_slots) {
+         cdef_sync->cdef_mt_exit = true;
+         do_next_row = -1;
+       } else {
+@@ -1162,7 +1158,8 @@
+   volatile int cur_fbr;
+   const int num_planes = av1_num_planes(cm);
+   int job_status;
+-  while ((job_status = get_cdef_row_next_job(cdef_sync, &cur_fbr, nvfb))) {
++  while ((job_status = get_cdef_row_next_job(cdef_sync, &cur_fbr, nvfb,
++                                              cdef_worker->bottom_worker_slot))) {
+     if (job_status < 0)
+       aom_internal_error(error_info, AOM_CODEC_ERROR, "CDEF token exhaustion");
+     MACROBLOCKD *xd = cdef_worker->xd;
+@@ -1200,6 +1197,8 @@
+     cdef_worker[0].colbuf[plane] = cm->cdef_info.colbuf[plane];
+   for (int i = num_workers - 1; i >= 0; i--) {
+     AVxWorker *const worker = &workers[i];
++    cdef_worker[i].bottom_worker_slot =
++        cm->cdef_info.allocated_mi_rows - 1 >= num_workers ? i : -1;
+     cdef_worker[i].cm = cm;
+     cdef_worker[i].xd = xd;
+     cdef_worker[i].cdef_init_fb_row_fn = cdef_init_fb_row_fn;
+@@ -1301,8 +1300,8 @@
+   // an error as well as normal frame completion; destruction frees the same
+   // backing allocations regardless of the ownership state at longjmp.
+   const int rows = cm->cdef_info.allocated_mi_rows;
+-  for (int i = 0; i < cdef_sync->top_slots + cdef_sync->bottom_slots; ++i)
+-    cdef_sync->boundary_owner[i] = -1;
++  for (int i = 0; i < cdef_sync->top_slots; ++i)
++    cdef_sync->top_owner[i] = -1;
+   for (int i = 0; i < rows; ++i) {
+     cdef_sync->cdef_row_mt[i].top_slot = -1;
+     cdef_sync->cdef_row_mt[i].bottom_slot = -1;
+@@ -1315,8 +1314,8 @@
+   launch_cdef_workers(workers, num_workers);
+   sync_cdef_workers(workers, cm, num_workers);
+ #ifndef NDEBUG
+-  for (int i = 0; i < cdef_sync->top_slots + cdef_sync->bottom_slots; ++i)
+-    assert(cdef_sync->boundary_owner[i] == -1);
++  for (int i = 0; i < cdef_sync->top_slots; ++i)
++    assert(cdef_sync->top_owner[i] == -1);
+ #endif
+ }
+ 
+--- dual_token/av1/common/thread_common.h
++++ hybrid/av1/common/thread_common.h
+@@ -117,6 +117,8 @@
+   uint16_t *linebuf[MAX_MB_PLANE];
+   cdef_init_fb_row_t cdef_init_fb_row_fn;
+   int do_extend_border;
++  // Persistent worker-local bottom slot; -1 selects direct short-frame indexing.
++  int bottom_worker_slot;
+   struct aom_internal_error_info error_info;
+ } AV1CdefWorkerData;
+ 
+@@ -139,9 +141,9 @@
+ #endif  // CONFIG_MULTITHREAD
+   // Data related to CDEF row mt sync information
+   AV1CdefRowSync *cdef_row_mt;
+-  // Pool entries contain the consuming row, or -1 when free. The existing
+-  // job mutex protects ownership; pixel copies retain the row-sync contract.
+-  int *boundary_owner;
++  // Top-only dynamic ownership. Bottom storage has no owner array or free scan.
++  // The existing job mutex protects top reservation/release.
++  int *top_owner;
+   int top_slots;
+   int bottom_slots;
+   // Flag to indicate all blocks are processed and end of frame is reached

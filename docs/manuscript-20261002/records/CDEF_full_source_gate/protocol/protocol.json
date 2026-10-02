@@ -1,0 +1,147 @@
+{
+  "version": "full-source-v1",
+  "frozen_before_confirmatory_measurements": "2026-09-29T14:59:03.330684+00:00",
+  "source": "Debian aom 3.12.1-1, native macOS arm64; independent of archive POC",
+  "primary_comparison": [
+    "type_fix",
+    "token"
+  ],
+  "baseline": "unmodified Debian patched source; sizeof-only type_fix is a separate contrast",
+  "correctness": {
+    "depths": [
+      8,
+      10,
+      12
+    ],
+    "chroma": [
+      "mono",
+      "420",
+      "422",
+      "444"
+    ],
+    "threads": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "row_mt": [
+      0,
+      1
+    ],
+    "mismatch_rule": "Any token-attributable mismatch stops; invalid-input statuses and produced visible hashes must agree.",
+    "upstream": "CDEF/common, decoder API, test vectors with expected MD5, invalid input, multithread decode, tile, resize/superres, frame size, error resilience; all configured cases in selected groups; exclusions explicit."
+  },
+  "memory": {
+    "measurement": "source diagnostic builds; requested boundary bytes and underlying malloc_size including allocator padding; separately report owner/row metadata; harness getrusage ru_maxrss is bytes on macOS",
+    "materiality": "At 3840x2160 with actual W=8 and W=16, each family must reduce boundary requested bytes by at least 25% versus type_fix; near R~W cases descriptive.",
+    "instrumented_time": "source CDEF-stage monotonic wall; sum of row synchronization wait intervals including mutex acquisition; pool wait count zero by nonwaiting allocator; not primary timing"
+  },
+  "timing": {
+    "families": [
+      "waves",
+      "checker",
+      "texture"
+    ],
+    "geometries": [
+      [
+        1920,
+        1080
+      ],
+      [
+        3840,
+        2160
+      ]
+    ],
+    "frames": 18,
+    "threads": [
+      2,
+      8,
+      16
+    ],
+    "row_mt": 1,
+    "pairs_per_cell": 12,
+    "warmup_pairs": 1,
+    "order": "AB/BA alternating by cell index plus pair index; type_fix=A, token=B",
+    "primary_metric": "sum of time around aom_codec_decode calls including flush; excludes preload and pixel hashing",
+    "threshold_ratio": 1.02,
+    "analysis": "median paired token/type_fix ratio; deterministic percentile bootstrap of median, 50000 resamples, seed 192929 plus cell index, 95% interval",
+    "pass": "Every primary cell upper 95% bound <=1.02, all hashes/frame counts match, positive CDEF activity.",
+    "failure": "Any cell lower 95% bound >1.02 => material slowdown STOP; other failure to establish noninferiority => NARROW, never claim no loss.",
+    "independent_units": "Six constructed workload-family/geometry cells; repetitions are technical, not independent content replications.",
+    "host": "Run primary timing only after builds, data transfers, correctness and sanitizer jobs finish. No affinity guarantee on macOS; log host load; no data-dependent repeat removal."
+  },
+  "sensitivity": {
+    "method": "same ivf_gate executable and timing region, token vs token with nanosleep after each packet; every packet is one frame for generated streams",
+    "calibration": "separate 960x540 pilot workloads before lock; choose one dose at least 10ms/frame and at least 50% of worst pilot per-frame decode time, rounded up to 1ms; verify predicted ideal dose effect exceeds 8% for each final workload in preconfirmation calibration, increase before freeze if necessary",
+    "pairs": 12,
+    "pass": "Each workload median delayed/token >1.08, lower bootstrap 95% bound >1.05, all ratios >1, median excess/dose in [0.5,2], hashes equal.",
+    "dose_and_hash_lock": "Write protocol.json including exact executable/stream hashes and dose after calibration; hash it BEFORE the first confirmatory pair."
+  },
+  "faults": {
+    "stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "stage_meaning": [
+      "after token dispatch reservation",
+      "after full copy before signal",
+      "after signal before wait",
+      "after filter before release",
+      "after release",
+      "after top copy before bottom copy",
+      "before boundary copy"
+    ],
+    "row": 1,
+    "threads": [
+      2,
+      4,
+      8,
+      16
+    ],
+    "workloads": [
+      "odd_8_420",
+      "odd_10_444",
+      "odd_12_422"
+    ],
+    "allocation": [
+      "each linebuf plane",
+      "owner metadata"
+    ],
+    "pass": "Expected decoder error, destroy succeeds, no deadlock/timeouts (30s), no sanitizer diagnostic, clean decode after each fault matches type_fix; unreachable row and stage negative controls."
+  },
+  "paper": "NOT_YET until every gate passes; do not write outline",
+  "scope": "No reference searching, hardware power/energy/area claims, or pooling old measurements.",
+  "confirmation_lock_unix": 1790694747.974665,
+  "delay_ns_per_packet": 82000000,
+  "workloads": [
+    "timing_waves_1920x1080",
+    "timing_waves_3840x2160",
+    "timing_checker_1920x1080",
+    "timing_checker_3840x2160",
+    "timing_texture_1920x1080",
+    "timing_texture_3840x2160"
+  ],
+  "sensitivity_threads": 8,
+  "sha256": {
+    "scripts/ivf_gate.c": "25b8d825da4be3afb5ce19087891e69b8f67d861106da825f62b36db3942c1d3",
+    "scripts/run_timing.py": "61cf3e6fbc2c293bf5fdad149167147b7cc1ab3df8213519410731207923c3c3",
+    "patches/baseline_to_type_fix.patch": "d95f9d3f1283305d1adc1cd7aeea3bf98a7e0be4bb8ec307a33aaf06e77593be",
+    "patches/type_fix_to_token.patch": "60bd3874132ba8cdb451c6b547ec801757568734eceae8951a5d3f657975c85e",
+    "builds/baseline_release/ivf_gate": "11c756ae1d95f41371418ec9a9b1b4d3475ee6a09adbc740565a3d7619dfa38d",
+    "builds/type_fix_release/ivf_gate": "9431912ae8d999292ce9e491089f6d8be4521380c9f6c7f07361f788af49af8b",
+    "builds/token_release/ivf_gate": "c6df2f52bb5c3a341e0c4b28936d2890be50bc8f2ad2397353243e76ca5087af",
+    "testdata/generated/timing_waves_1920x1080.ivf": "49a9d3318d331b3c461901f688f0844d113f0ac3780117aa5cd6802c3a933094",
+    "testdata/generated/timing_waves_3840x2160.ivf": "bbe929595f19cd69ff621dd32b9fbc2b960d314a76cadb0924648f06d1043446",
+    "testdata/generated/timing_checker_1920x1080.ivf": "6693b13328f76d16630ec0558a9bc287d0a0269eb107c74d0fa61a7f0fc4a31d",
+    "testdata/generated/timing_checker_3840x2160.ivf": "31bb5334795e5e5aed83873ccfaea6ed394de0ac57aefbbd85ae773f4546953e",
+    "testdata/generated/timing_texture_1920x1080.ivf": "73b4a09c4258e7354ee8a8772124ea8d72848b8ef63b40c876118b0c9c71a498",
+    "testdata/generated/timing_texture_3840x2160.ivf": "4e370aec6169292d45a684a12459d8623d5b9ab18d81fdcde76ae320a9580ebf"
+  }
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "name": "park_joy_90p_8_420.y4m",
+    "status": "PASS",
+    "sha1": "4e0eb61e76f0684188d9bc9f3ce61f6b6b77bb2c",
+    "sha256": "173d708eac89ba5e0bba49415a76555c0f291ed9cf69a9d67ae321319eaa8aff",
+    "bytes": 216117,
+    "url": "https://storage.googleapis.com/aom-test-data/park_joy_90p_8_420.y4m",
+    "source_path": "${WORKSPACE}/CDEF_full_source_gate/testdata/park_joy_90p_8_420.y4m",
+    "frames": 10,
+    "quality_settings": [
+      0,
+      24,
+      56
+    ],
+    "selection": "all three fixed contents at all three frozen quality settings; no output-based replacement"
+  },
+  {
+    "name": "crowd_run_360p_10_150f.y4m",
+    "status": "PASS",
+    "sha1": "ad9942a073e245585c93f764ea299382a65939a7",
+    "sha256": "6c0e5777d440d8b155318744d48f07aa2e08a297f4489ae63c4b7b9f9698190b",
+    "bytes": 103680956,
+    "url": "https://storage.googleapis.com/aom-test-data/crowd_run_360p_10_150f.y4m",
+    "source_path": "${WORKSPACE}/CDEF_full_source_gate/testdata/crowd_run_360p_10_150f.y4m",
+    "frames": 10,
+    "quality_settings": [
+      0,
+      24,
+      56
+    ],
+    "selection": "all three fixed contents at all three frozen quality settings; no output-based replacement"
+  },
+  {
+    "name": "wikipedia_420_360p_60f.y4m",
+    "status": "PASS",
+    "sha1": "9c2aa2d0f63f706f775bf661dfa81e8bb3089d8b",
+    "sha256": "6163c7adee85e7ac72b8b9ff59f8428d6dfe7e3b0e45ce6a4377be96ed76d547",
+    "bytes": 20736438,
+    "url": "https://storage.googleapis.com/aom-test-data/wikipedia_420_360p_60f.y4m",
+    "source_path": "${WORKSPACE}/CDEF_full_source_gate/testdata/wikipedia_420_360p_60f.y4m",
+    "frames": 10,
+    "quality_settings": [
+      0,
+      24,
+      56
+    ],
+    "selection": "all three fixed contents at all three frozen quality settings; no output-based replacement"
+  }
+]

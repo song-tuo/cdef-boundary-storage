@@ -1,0 +1,76 @@
+[
+  {
+    "profile": "asan",
+    "events": {
+      "alloc": 580,
+      "account": 1188,
+      "frame_begin": 956,
+      "dispatch": 1800,
+      "copy": 22944,
+      "signal": 1800,
+      "wait_done": 1800,
+      "activation": 13278,
+      "filter_done": 1800,
+      "release": 1800,
+      "frame_end": 956,
+      "free": 580
+    },
+    "frame_regimes": [
+      {
+        "R": 5,
+        "W": 1,
+        "frames": 596
+      },
+      {
+        "R": 5,
+        "W": 3,
+        "frames": 12
+      },
+      {
+        "R": 5,
+        "W": 4,
+        "frames": 348
+      }
+    ],
+    "violations": [],
+    "actual_MT_frames": 360,
+    "pass": true
+  },
+  {
+    "profile": "tsan",
+    "events": {
+      "alloc": 580,
+      "account": 1188,
+      "frame_begin": 956,
+      "dispatch": 1800,
+      "copy": 22944,
+      "signal": 1800,
+      "wait_done": 1800,
+      "activation": 13278,
+      "filter_done": 1800,
+      "release": 1800,
+      "frame_end": 956,
+      "free": 580
+    },
+    "frame_regimes": [
+      {
+        "R": 5,
+        "W": 1,
+        "frames": 596
+      },
+      {
+        "R": 5,
+        "W": 3,
+        "frames": 12
+      },
+      {
+        "R": 5,
+        "W": 4,
+        "frames": 348
+      }
+    ],
+    "violations": [],
+    "actual_MT_frames": 360,
+    "pass": true
+  }
+]

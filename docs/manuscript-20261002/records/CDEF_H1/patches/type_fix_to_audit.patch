@@ -1,0 +1,401 @@
+--- type_fix/av1/common/alloccommon.c
++++ type_fix_audit/av1/common/alloccommon.c
+@@ -11,6 +11,7 @@
+  */
+ 
+ #include "config/aom_config.h"
++#include "av1/common/h1_audit.h"
+ 
+ #include "aom_mem/aom_mem.h"
+ #include "aom_scale/yv12config.h"
+@@ -65,7 +66,7 @@
+   CdefInfo *cdef_info = &cm->cdef_info;
+   for (int plane = 0; plane < MAX_MB_PLANE; plane++) {
+     if (new_linebuf_size[plane] != cdef_info->allocated_linebuf_size[plane]) {
+-      aom_free(cdef_info->linebuf[plane]);
++      h1_free(cdef_info->linebuf[plane]);
+       cdef_info->linebuf[plane] = NULL;
+     }
+   }
+@@ -78,22 +79,22 @@
+                                               const size_t new_srcbuf_size) {
+   CdefInfo *cdef_info = &cm->cdef_info;
+   if (new_srcbuf_size != cdef_info->allocated_srcbuf_size) {
+-    aom_free(*srcbuf);
++    h1_free(*srcbuf);
+     *srcbuf = NULL;
+   }
+   for (int plane = 0; plane < MAX_MB_PLANE; plane++) {
+     if (new_colbuf_size[plane] != cdef_info->allocated_colbuf_size[plane]) {
+-      aom_free(colbuf[plane]);
++      h1_free(colbuf[plane]);
+       colbuf[plane] = NULL;
+     }
+   }
+ }
+ 
+ static inline void free_cdef_bufs(uint16_t **colbuf, uint16_t **srcbuf) {
+-  aom_free(*srcbuf);
++  h1_free(*srcbuf);
+   *srcbuf = NULL;
+   for (int plane = 0; plane < MAX_MB_PLANE; plane++) {
+-    aom_free(colbuf[plane]);
++    h1_free(colbuf[plane]);
+     colbuf[plane] = NULL;
+   }
+ }
+@@ -105,17 +106,17 @@
+   for (int row_idx = 0; row_idx < num_mi_rows; row_idx++) {
+     if ((*cdef_row_mt)[row_idx].row_mutex_ != NULL) {
+       pthread_mutex_destroy((*cdef_row_mt)[row_idx].row_mutex_);
+-      aom_free((*cdef_row_mt)[row_idx].row_mutex_);
++      h1_free((*cdef_row_mt)[row_idx].row_mutex_);
+     }
+     if ((*cdef_row_mt)[row_idx].row_cond_ != NULL) {
+       pthread_cond_destroy((*cdef_row_mt)[row_idx].row_cond_);
+-      aom_free((*cdef_row_mt)[row_idx].row_cond_);
++      h1_free((*cdef_row_mt)[row_idx].row_cond_);
+     }
+   }
+ #else
+   (void)num_mi_rows;
+ #endif  // CONFIG_MULTITHREAD
+-  aom_free(*cdef_row_mt);
++  h1_free(*cdef_row_mt);
+   *cdef_row_mt = NULL;
+ }
+ 
+@@ -126,7 +127,7 @@
+   const int num_mi_rows = cdef_info->allocated_mi_rows;
+ 
+   for (int plane = 0; plane < MAX_MB_PLANE; plane++) {
+-    aom_free(cdef_info->linebuf[plane]);
++    h1_free(cdef_info->linebuf[plane]);
+     cdef_info->linebuf[plane] = NULL;
+   }
+   // De-allocation of column buffer & source buffer (worker_0).
+@@ -140,7 +141,7 @@
+       // De-allocation of column buffer & source buffer for remaining workers.
+       free_cdef_bufs((*cdef_worker)[idx].colbuf, &(*cdef_worker)[idx].srcbuf);
+     }
+-    aom_free(*cdef_worker);
++    h1_free(*cdef_worker);
+     *cdef_worker = NULL;
+   }
+ }
+@@ -151,7 +152,7 @@
+   for (int plane = 0; plane < num_planes; plane++) {
+     if (linebuf[plane] == NULL)
+       CHECK_MEM_ERROR(cm, linebuf[plane],
+-                      aom_malloc(cdef_info->allocated_linebuf_size[plane]));
++                      (h1_env("H1_ALLOC_PLANE",-1)==plane ? NULL : h1_malloc(cdef_info->allocated_linebuf_size[plane])));
+   }
+ }
+ 
+@@ -160,12 +161,12 @@
+   CdefInfo *cdef_info = &cm->cdef_info;
+   if (*srcbuf == NULL)
+     CHECK_MEM_ERROR(cm, *srcbuf,
+-                    aom_memalign(16, cdef_info->allocated_srcbuf_size));
++                    h1_memalign(16, cdef_info->allocated_srcbuf_size));
+ 
+   for (int plane = 0; plane < num_planes; plane++) {
+     if (colbuf[plane] == NULL)
+       CHECK_MEM_ERROR(cm, colbuf[plane],
+-                      aom_malloc(cdef_info->allocated_colbuf_size[plane]));
++                      h1_malloc(cdef_info->allocated_colbuf_size[plane]));
+   }
+ }
+ 
+@@ -175,15 +176,15 @@
+   if (*cdef_row_mt != NULL) return;
+ 
+   CHECK_MEM_ERROR(cm, *cdef_row_mt,
+-                  aom_calloc(num_mi_rows, sizeof(**cdef_row_mt)));
++                  h1_calloc(num_mi_rows, sizeof(**cdef_row_mt)));
+ #if CONFIG_MULTITHREAD
+   for (int row_idx = 0; row_idx < num_mi_rows; row_idx++) {
+     CHECK_MEM_ERROR(cm, (*cdef_row_mt)[row_idx].row_mutex_,
+-                    aom_malloc(sizeof(*(*cdef_row_mt)[row_idx].row_mutex_)));
++                    h1_malloc(sizeof(*(*cdef_row_mt)[row_idx].row_mutex_)));
+     pthread_mutex_init((*cdef_row_mt)[row_idx].row_mutex_, NULL);
+ 
+     CHECK_MEM_ERROR(cm, (*cdef_row_mt)[row_idx].row_cond_,
+-                    aom_malloc(sizeof(*(*cdef_row_mt)[row_idx].row_cond_)));
++                    h1_malloc(sizeof(*(*cdef_row_mt)[row_idx].row_cond_)));
+     pthread_cond_init((*cdef_row_mt)[row_idx].row_cond_, NULL);
+   }
+ #endif  // CONFIG_MULTITHREAD
+@@ -248,7 +249,7 @@
+       for (int idx = cdef_info->allocated_num_workers - 1; idx >= 1; idx--)
+         free_cdef_bufs((*cdef_worker)[idx].colbuf, &(*cdef_worker)[idx].srcbuf);
+ 
+-      aom_free(*cdef_worker);
++      h1_free(*cdef_worker);
+       *cdef_worker = NULL;
+     } else if (num_workers > 1) {
+       // Free src and column buffers for remaining workers in case of
+@@ -271,18 +272,38 @@
+   cdef_info->allocated_mi_rows = num_mi_rows;
+   cdef_info->allocated_num_workers = num_workers;
+ 
+-  if (!is_cdef_enabled) return;
++  if (!is_cdef_enabled) {
++
++  {
++    size_t req=0,use=0;for(int p=0;p<num_planes;p++){req+=cdef_info->allocated_linebuf_size[p];use+=h1_usable(cdef_info->linebuf[p]);}
++    fprintf(stderr,"{\"h1\":\"account\",\"rows\":%d,\"workers\":%d,\"enabled\":%d,\"width\":%d,\"height\":%d,\"pixel_requested\":%zu,\"pixel_usable\":%zu,\"owner_requested\":%zu,\"owner_usable\":%zu,\"row_struct_requested\":%zu,\"row_struct_usable\":%zu,\"worker_requested\":%zu,\"worker_usable\":%zu,\"sync_struct_bytes\":%zu,\"top_slots\":%d,\"bottom_slots\":%d}\n",
++        num_mi_rows,num_workers,is_cdef_enabled,cm->width,cm->height,req,use,(size_t)0,(size_t)0,
++        cdef_sync->cdef_row_mt?(size_t)num_mi_rows*sizeof(*cdef_sync->cdef_row_mt):0,h1_usable(cdef_sync->cdef_row_mt),
++        *cdef_worker?(size_t)num_workers*sizeof(**cdef_worker):0,h1_usable(*cdef_worker),sizeof(*cdef_sync),num_bufs,num_bufs);
++  }
++    return;
++  }
+ 
+   // Memory allocation of column buffer & source buffer (worker_0).
+   alloc_cdef_bufs(cm, cdef_info->colbuf, &cdef_info->srcbuf, num_planes);
+   alloc_cdef_linebuf(cm, cdef_info->linebuf, num_planes);
+ 
+-  if (num_workers < 2) return;
++  if (num_workers < 2) {
++
++  {
++    size_t req=0,use=0;for(int p=0;p<num_planes;p++){req+=cdef_info->allocated_linebuf_size[p];use+=h1_usable(cdef_info->linebuf[p]);}
++    fprintf(stderr,"{\"h1\":\"account\",\"rows\":%d,\"workers\":%d,\"enabled\":%d,\"width\":%d,\"height\":%d,\"pixel_requested\":%zu,\"pixel_usable\":%zu,\"owner_requested\":%zu,\"owner_usable\":%zu,\"row_struct_requested\":%zu,\"row_struct_usable\":%zu,\"worker_requested\":%zu,\"worker_usable\":%zu,\"sync_struct_bytes\":%zu,\"top_slots\":%d,\"bottom_slots\":%d}\n",
++        num_mi_rows,num_workers,is_cdef_enabled,cm->width,cm->height,req,use,(size_t)0,(size_t)0,
++        cdef_sync->cdef_row_mt?(size_t)num_mi_rows*sizeof(*cdef_sync->cdef_row_mt):0,h1_usable(cdef_sync->cdef_row_mt),
++        *cdef_worker?(size_t)num_workers*sizeof(**cdef_worker):0,h1_usable(*cdef_worker),sizeof(*cdef_sync),num_bufs,num_bufs);
++  }
++    return;
++  }
+ 
+   if (init_worker) {
+     if (*cdef_worker == NULL)
+       CHECK_MEM_ERROR(cm, *cdef_worker,
+-                      aom_calloc(num_workers, sizeof(**cdef_worker)));
++                      h1_calloc(num_workers, sizeof(**cdef_worker)));
+ 
+     // Memory allocation of column buffer & source buffer for remaining workers.
+     for (int idx = num_workers - 1; idx >= 1; idx--)
+@@ -292,6 +313,14 @@
+ 
+   alloc_cdef_row_sync(cm, &cdef_sync->cdef_row_mt,
+                       cdef_info->allocated_mi_rows);
++  {
++    size_t req=0,use=0;for(int p=0;p<num_planes;p++){req+=cdef_info->allocated_linebuf_size[p];use+=h1_usable(cdef_info->linebuf[p]);}
++    fprintf(stderr,"{\"h1\":\"account\",\"rows\":%d,\"workers\":%d,\"enabled\":%d,\"width\":%d,\"height\":%d,\"pixel_requested\":%zu,\"pixel_usable\":%zu,\"owner_requested\":%zu,\"owner_usable\":%zu,\"row_struct_requested\":%zu,\"row_struct_usable\":%zu,\"worker_requested\":%zu,\"worker_usable\":%zu,\"sync_struct_bytes\":%zu,\"top_slots\":%d,\"bottom_slots\":%d}\n",
++        num_mi_rows,num_workers,is_cdef_enabled,cm->width,cm->height,req,use,(size_t)0,(size_t)0,
++        cdef_sync->cdef_row_mt?(size_t)num_mi_rows*sizeof(*cdef_sync->cdef_row_mt):0,h1_usable(cdef_sync->cdef_row_mt),
++        *cdef_worker?(size_t)num_workers*sizeof(**cdef_worker):0,h1_usable(*cdef_worker),sizeof(*cdef_sync),num_bufs,num_bufs);
++  }
++
+ }
+ 
+ #if !CONFIG_REALTIME_ONLY || CONFIG_AV1_DECODER
+--- type_fix/av1/common/cdef.c
++++ type_fix_audit/av1/common/cdef.c
+@@ -25,6 +25,7 @@
+ #include "av1/common/enums.h"
+ #include "av1/common/reconinter.h"
+ #include "av1/common/thread_common.h"
++#include "av1/common/h1_audit.h"
+ 
+ static int is_8x8_block_skip(MB_MODE_INFO **grid, int mi_row, int mi_col,
+                              int mi_stride) {
+@@ -358,6 +359,7 @@
+       cdef_left[plane] = 0;
+       continue;
+     }
++    fprintf(stderr,"{\"h1\":\"activation\",\"row\":%d,\"col\":%d,\"plane\":%d,\"blocks\":%d,\"primary\":%d,\"secondary\":%d}\n",fbr,fbc,plane,fb_info->cdef_count,level[get_plane_type(plane)],sec_strength[get_plane_type(plane)]);
+     cdef_init_fb_col(xd, fb_info, level, sec_strength, fbc, fbr, plane);
+     cdef_prepare_fb(cm, fb_info, colbuf, cdef_left[plane], fbc, fbr, plane);
+     cdef_filter_fb(fb_info, plane, cm->seq_params->use_highbitdepth);
+@@ -413,6 +415,7 @@
+       av1_cdef_copy_sb8_16(cm, top_linebuf, stride, xd->plane[plane].dst.buf,
+                            offset - CDEF_VBORDER, 0,
+                            xd->plane[plane].dst.stride, CDEF_VBORDER, stride);
++    if(fbr!=nvfb-1)h1_copy(fbr,plane,0,top_linebuf,(size_t)CDEF_VBORDER*stride);
+     fb_info->top_linebuf[plane] =
+         &linebuf[plane][(!ping_pong) * CDEF_VBORDER * stride];
+ 
+@@ -420,6 +423,7 @@
+       av1_cdef_copy_sb8_16(cm, fb_info->bot_linebuf[plane], stride,
+                            xd->plane[plane].dst.buf, offset, 0,
+                            xd->plane[plane].dst.stride, CDEF_VBORDER, stride);
++    if(fbr!=nvfb-1)h1_copy(fbr,plane,1,fb_info->bot_linebuf[plane],(size_t)CDEF_VBORDER*stride);
+   }
+ }
+ 
+@@ -472,8 +476,10 @@
+   av1_setup_dst_planes(xd->plane, cm->seq_params->sb_size, frame, 0, 0, 0,
+                        num_planes);
+ 
++  fprintf(stderr,"{\"h1\":\"frame_begin\",\"rows\":%d,\"workers\":1,\"width\":%d,\"height\":%d}\n",nvfb,cm->width,cm->height);
+   for (int fbr = 0; fbr < nvfb; fbr++)
+     av1_cdef_fb_row(cm, xd, cm->cdef_info.linebuf, cm->cdef_info.colbuf,
+                     cm->cdef_info.srcbuf, fbr, cdef_init_fb_row_fn, NULL,
+                     xd->error_info);
+-}
++  fprintf(stderr,"{\"h1\":\"frame_end\"}\n");
++}
+--- type_fix/av1/common/h1_audit.h
++++ type_fix_audit/av1/common/h1_audit.h
+@@ -0,0 +1,18 @@
++#ifndef H1_AUDIT_H
++#define H1_AUDIT_H
++#include <stdio.h>
++#include <stdlib.h>
++#include <stdint.h>
++#include <malloc/malloc.h>
++#include "aom_mem/aom_mem.h"
++static inline size_t h1_usable(void *p){return p?malloc_size((void*)(((size_t*)p)[-1])):0;}
++static inline int h1_env(const char*n,int f){const char*s=getenv(n);return s?atoi(s):f;}
++static inline void*h1_record(void*p,size_t n,int site){fprintf(stderr,"{\"h1\":\"alloc\",\"ptr\":\"%p\",\"requested\":%zu,\"usable\":%zu,\"site\":%d}\n",p,n,h1_usable(p),site);return p;}
++static inline void h1_free(void*p){if(p)fprintf(stderr,"{\"h1\":\"free\",\"ptr\":\"%p\"}\n",p);aom_free(p);}
++#define h1_malloc(n) h1_record(aom_malloc(n),(n),__LINE__)
++#define h1_calloc(n,s) h1_record(aom_calloc(n,s),(size_t)(n)*(s),__LINE__)
++#define h1_memalign(a,n) h1_record(aom_memalign(a,n),(n),__LINE__)
++static inline uint64_t h1_hash(const uint16_t*p,size_t n){uint64_t h=14695981039346656037ull;for(size_t i=0;i<n;i++){h=(h^(p[i]&255))*1099511628211ull;h=(h^(p[i]>>8))*1099511628211ull;}return h;}
++static inline void h1_copy(int row,int plane,int kind,const uint16_t*p,size_t n){fprintf(stderr,"{\"h1\":\"copy\",\"row\":%d,\"plane\":%d,\"kind\":%d,\"samples\":%zu,\"hash\":\"%016llx\"}\n",row,plane,kind,n,(unsigned long long)h1_hash(p,n));}
++static inline void h1_violation(const char*kind,int row){fprintf(stderr,"{\"h1\":\"violation\",\"kind\":\"%s\",\"row\":%d}\n",kind,row);abort();}
++#endif
+--- type_fix/av1/common/thread_common.c
++++ type_fix_audit/av1/common/thread_common.c
+@@ -11,6 +11,7 @@
+ 
+ #include "aom/aom_image.h"
+ #include "config/aom_config.h"
++#include "av1/common/h1_audit.h"
+ #include "config/aom_scale_rtcd.h"
+ 
+ #include "aom_dsp/aom_dsp_common.h"
+@@ -1063,6 +1064,13 @@
+   if (!cdef_sync->cdef_mt_exit && cdef_sync->end_of_frame == 0) {
+     do_next_row = 1;
+     *cur_fbr = cdef_sync->fbr;
++    if(cdef_sync->cdef_row_mt[*cur_fbr].gate_active)h1_violation("double_dispatch",*cur_fbr);
++    if (*cur_fbr<nvfb-1) {
++      const int b=*cur_fbr;
++      for(int r=0;r<nvfb-1;r++)if(cdef_sync->cdef_row_mt[r].gate_active && r==b)h1_violation("bottom_collision",*cur_fbr);
++    }
++    cdef_sync->cdef_row_mt[*cur_fbr].gate_active=1;
++    fprintf(stderr,"{\"h1\":\"dispatch\",\"row\":%d}\n",*cur_fbr);
+     update_cdef_row_next_job_info(cdef_sync, nvfb);
+   }
+ #if CONFIG_MULTITHREAD
+@@ -1073,6 +1081,29 @@
+ 
+ static void set_cdef_init_fb_row_done(AV1CdefSync *const cdef_sync, int nvfb) {
+   for (int fbr = 0; fbr < nvfb; fbr++) cdef_row_mt_sync_write(cdef_sync, fbr);
++}
++
++static void h1_fault(AV1CdefSync*s,int row,int stage){
++  if(h1_env("H1_FAULT_STAGE",0)!=stage || h1_env("H1_FAULT_ROW",1)!=row)return;
++#if CONFIG_MULTITHREAD
++  pthread_mutex_lock(s->mutex_);
++#endif
++  int fire=!s->gate_fault_fired;s->gate_fault_fired=1;
++#if CONFIG_MULTITHREAD
++  pthread_mutex_unlock(s->mutex_);
++#endif
++  if(fire){fprintf(stderr,"{\"h1\":\"fault\",\"row\":%d,\"stage\":%d}\n",row,stage);aom_internal_error(s->cdef_row_mt[row].gate_error,AOM_CODEC_ERROR,"H1 injected copy/worker fault %d",stage);}
++}
++static void h1_row_finish(AV1CdefSync*s,int row){
++#if CONFIG_MULTITHREAD
++ pthread_mutex_lock(s->mutex_);
++#endif
++ if(!s->cdef_row_mt[row].gate_active)h1_violation("double_release",row);
++ s->cdef_row_mt[row].gate_active=0;
++ fprintf(stderr,"{\"h1\":\"release\",\"row\":%d}\n",row);
++#if CONFIG_MULTITHREAD
++ pthread_mutex_unlock(s->mutex_);
++#endif
+ }
+ 
+ // Hook function for each thread in CDEF multi-threading.
+@@ -1110,10 +1141,16 @@
+   volatile int cur_fbr;
+   const int num_planes = av1_num_planes(cm);
+   while (get_cdef_row_next_job(cdef_sync, &cur_fbr, nvfb)) {
++    cdef_sync->cdef_row_mt[cur_fbr].gate_error=error_info;
++    h1_fault(cdef_sync,cur_fbr,1);
+     MACROBLOCKD *xd = cdef_worker->xd;
+     av1_cdef_fb_row(cm, xd, cdef_worker->linebuf, cdef_worker->colbuf,
+                     cdef_worker->srcbuf, cur_fbr,
+                     cdef_worker->cdef_init_fb_row_fn, cdef_sync, error_info);
++    fprintf(stderr,"{\"h1\":\"filter_done\",\"row\":%d}\n",(int)cur_fbr);
++    h1_fault(cdef_sync,cur_fbr,4);
++    h1_row_finish(cdef_sync,cur_fbr);
++    h1_fault(cdef_sync,cur_fbr,5);
+     if (cdef_worker->do_extend_border) {
+       for (int plane = 0; plane < num_planes; ++plane) {
+         const YV12_BUFFER_CONFIG *ybf = &cm->cur_frame->buf;
+@@ -1199,15 +1236,19 @@
+       const int top_offset = MI_SIZE_64X64 * (fbr + 1) << mi_high_l2;
+       const int bot_offset = MI_SIZE_64X64 * (fbr + 1) << mi_high_l2;
+ 
++      h1_fault(cdef_sync,fbr,7);
+       if (fbr != nvfb - 1)  // if (fbr != 0)  // top line buffer copy
+         av1_cdef_copy_sb8_16(
+             cm, &top_linebuf[(fbr + 1) * CDEF_VBORDER * stride], stride,
+             xd->plane[plane].dst.buf, top_offset - CDEF_VBORDER, 0,
+             xd->plane[plane].dst.stride, CDEF_VBORDER, stride);
++      if(fbr!=nvfb-1)h1_copy(fbr,plane,0,&top_linebuf[(fbr + 1) * CDEF_VBORDER * stride],(size_t)CDEF_VBORDER*stride);
++      h1_fault(cdef_sync,fbr,6);
+       if (fbr != nvfb - 1)  // bottom line buffer copy
+         av1_cdef_copy_sb8_16(cm, &bot_linebuf[fbr * CDEF_VBORDER * stride],
+                              stride, xd->plane[plane].dst.buf, bot_offset, 0,
+                              xd->plane[plane].dst.stride, CDEF_VBORDER, stride);
++      if(fbr!=nvfb-1)h1_copy(fbr,plane,1,&bot_linebuf[fbr * CDEF_VBORDER * stride],(size_t)CDEF_VBORDER*stride);
+     }
+ 
+     fb_info->top_linebuf[plane] = &linebuf[plane][fbr * CDEF_VBORDER * stride];
+@@ -1216,8 +1257,12 @@
+                 [nvfb * CDEF_VBORDER * stride + (fbr * CDEF_VBORDER * stride)];
+   }
+ 
++  h1_fault(cdef_sync,fbr,2);
++  fprintf(stderr,"{\"h1\":\"signal\",\"row\":%d}\n",fbr);
+   cdef_row_mt_sync_write(cdef_sync, fbr);
++  h1_fault(cdef_sync,fbr,3);
+   cdef_row_mt_sync_read(cdef_sync, fbr);
++  fprintf(stderr,"{\"h1\":\"wait_done\",\"row\":%d}\n",fbr);
+ }
+ 
+ // Implements multi-threading for CDEF.
+@@ -1239,12 +1284,16 @@
+   av1_setup_dst_planes(xd->plane, cm->seq_params->sb_size, frame, 0, 0, 0,
+                        num_planes);
+ 
++  for(int r=0;r<cm->cdef_info.allocated_mi_rows;r++)cdef_sync->cdef_row_mt[r].gate_active=0;
++  fprintf(stderr,"{\"h1\":\"frame_begin\",\"rows\":%d,\"workers\":%d,\"width\":%d,\"height\":%d}\n",cm->cdef_info.allocated_mi_rows,num_workers,cm->width,cm->height);
+   reset_cdef_job_info(cdef_sync);
+   prepare_cdef_frame_workers(cm, xd, cdef_worker, cdef_sb_row_worker_hook,
+                              workers, cdef_sync, num_workers,
+                              cdef_init_fb_row_fn, do_extend_border);
+   launch_cdef_workers(workers, num_workers);
+   sync_cdef_workers(workers, cm, num_workers);
++  for(int r=0;r<cm->cdef_info.allocated_mi_rows;r++)if(cdef_sync->cdef_row_mt[r].gate_active)h1_violation("unreleased_row",r);
++  fprintf(stderr,"{\"h1\":\"frame_end\"}\n");
+ }
+ 
+ int av1_get_intrabc_extra_top_right_sb_delay(const AV1_COMMON *cm) {
+--- type_fix/av1/common/thread_common.h
++++ type_fix_audit/av1/common/thread_common.h
+@@ -125,6 +125,8 @@
+   pthread_mutex_t *row_mutex_;
+   pthread_cond_t *row_cond_;
+ #endif  // CONFIG_MULTITHREAD
++  int gate_active;
++  struct aom_internal_error_info *gate_error;
+   int is_row_done;
+ } AV1CdefRowSync;
+ 
+@@ -144,6 +146,7 @@
+   int fbc;
+   // Initialized to false, set to true by the worker thread that encounters
+   // an error in order to abort the processing of other worker threads.
++  int gate_fault_fired;
+   bool cdef_mt_exit;
+ } AV1CdefSync;
+ 

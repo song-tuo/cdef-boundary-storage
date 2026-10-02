@@ -1,0 +1,296 @@
+[
+  {
+    "kind": "primary",
+    "workload": "timing_waves_1920x1080",
+    "threads": 2,
+    "median_ratio": 0.9980631526727965,
+    "ci95": [
+      0.9940775452274792,
+      1.003956175496395
+    ],
+    "min_ratio": 0.9887162102234092,
+    "status": "PASS"
+  },
+  {
+    "kind": "primary",
+    "workload": "timing_waves_1920x1080",
+    "threads": 8,
+    "median_ratio": 0.9987292844983535,
+    "ci95": [
+      0.9898820486853588,
+      1.006761411254494
+    ],
+    "min_ratio": 0.9788845977419689,
+    "status": "PASS"
+  },
+  {
+    "kind": "primary",
+    "workload": "timing_waves_1920x1080",
+    "threads": 16,
+    "median_ratio": 1.0012367471832246,
+    "ci95": [
+      0.9969485590592879,
+      1.0063345776965158
+    ],
+    "min_ratio": 0.9913956025382973,
+    "status": "PASS"
+  },
+  {
+    "kind": "primary",
+    "workload": "timing_waves_3840x2160",
+    "threads": 2,
+    "median_ratio": 0.9960756414958687,
+    "ci95": [
+      0.9871458692860049,
+      1.004003993453619
+    ],
+    "min_ratio": 0.9792986736009224,
+    "status": "PASS"
+  },
+  {
+    "kind": "primary",
+    "workload": "timing_waves_3840x2160",
+    "threads": 8,
+    "median_ratio": 1.002533131599919,
+    "ci95": [
+      0.995927673614413,
+      1.0073663528778012
+    ],
+    "min_ratio": 0.9500601131965442,
+    "status": "PASS"
+  },
+  {
+    "kind": "primary",
+    "workload": "timing_waves_3840x2160",
+    "threads": 16,
+    "median_ratio": 0.9979503773586348,
+    "ci95": [
+      0.9953269308927183,
+      1.003041940654452
+    ],
+    "min_ratio": 0.9910621813037404,
+    "status": "PASS"
+  },
+  {
+    "kind": "primary",
+    "workload": "timing_checker_1920x1080",
+    "threads": 2,
+    "median_ratio": 1.0029390279825292,
+    "ci95": [
+      0.9857914001447012,
+      1.006320082555272
+    ],
+    "min_ratio": 0.9532357713490345,
+    "status": "PASS"
+  },
+  {
+    "kind": "primary",
+    "workload": "timing_checker_1920x1080",
+    "threads": 8,
+    "median_ratio": 1.0010505969484373,
+    "ci95": [
+      0.9943907498532936,
+      1.011402435993571
+    ],
+    "min_ratio": 0.9776329833840468,
+    "status": "PASS"
+  },
+  {
+    "kind": "primary",
+    "workload": "timing_checker_1920x1080",
+    "threads": 16,
+    "median_ratio": 1.0026040432006924,
+    "ci95": [
+      0.9631796230021745,
+      1.0120853785728485
+    ],
+    "min_ratio": 0.9172636930899006,
+    "status": "PASS"
+  },
+  {
+    "kind": "primary",
+    "workload": "timing_checker_3840x2160",
+    "threads": 2,
+    "median_ratio": 0.9968945308494658,
+    "ci95": [
+      0.9925083231400338,
+      1.007430441870882
+    ],
+    "min_ratio": 0.9575486784428444,
+    "status": "PASS"
+  },
+  {
+    "kind": "primary",
+    "workload": "timing_checker_3840x2160",
+    "threads": 8,
+    "median_ratio": 0.9820373804563434,
+    "ci95": [
+      0.9624847388255442,
+      1.0076915373044861
+    ],
+    "min_ratio": 0.9500151042936931,
+    "status": "PASS"
+  },
+  {
+    "kind": "primary",
+    "workload": "timing_checker_3840x2160",
+    "threads": 16,
+    "median_ratio": 1.002441329547863,
+    "ci95": [
+      0.9882082267171677,
+      1.0150375823147428
+    ],
+    "min_ratio": 0.9659167508109491,
+    "status": "PASS"
+  },
+  {
+    "kind": "primary",
+    "workload": "timing_texture_1920x1080",
+    "threads": 2,
+    "median_ratio": 0.9970837110040991,
+    "ci95": [
+      0.9808772764109086,
+      1.0053517735871151
+    ],
+    "min_ratio": 0.9641448663471851,
+    "status": "PASS"
+  },
+  {
+    "kind": "primary",
+    "workload": "timing_texture_1920x1080",
+    "threads": 8,
+    "median_ratio": 0.9883571391099363,
+    "ci95": [
+      0.9762996258434558,
+      1.0011193839640395
+    ],
+    "min_ratio": 0.9579078630325528,
+    "status": "PASS"
+  },
+  {
+    "kind": "primary",
+    "workload": "timing_texture_1920x1080",
+    "threads": 16,
+    "median_ratio": 1.0045419683386476,
+    "ci95": [
+      0.9709035819970405,
+      1.0179188741534557
+    ],
+    "min_ratio": 0.9538995390831511,
+    "status": "PASS"
+  },
+  {
+    "kind": "primary",
+    "workload": "timing_texture_3840x2160",
+    "threads": 2,
+    "median_ratio": 1.0035801593504088,
+    "ci95": [
+      1.0003460071164487,
+      1.0137568427312447
+    ],
+    "min_ratio": 0.981900335328511,
+    "status": "PASS"
+  },
+  {
+    "kind": "primary",
+    "workload": "timing_texture_3840x2160",
+    "threads": 8,
+    "median_ratio": 1.004827776481649,
+    "ci95": [
+      0.9791723239472985,
+      1.0153835988561273
+    ],
+    "min_ratio": 0.9611078652462519,
+    "status": "PASS"
+  },
+  {
+    "kind": "primary",
+    "workload": "timing_texture_3840x2160",
+    "threads": 16,
+    "median_ratio": 1.0006066006510497,
+    "ci95": [
+      0.9942773669157792,
+      1.0066357523840734
+    ],
+    "min_ratio": 0.9832009848042873,
+    "status": "PASS"
+  },
+  {
+    "kind": "sensitivity",
+    "workload": "timing_waves_1920x1080",
+    "threads": 8,
+    "median_ratio": 24.365716241997625,
+    "ci95": [
+      24.237220463042313,
+      24.425361898243587
+    ],
+    "min_ratio": 24.051834319526627,
+    "dose_accounting": 1.0542513550135502,
+    "status": "PASS"
+  },
+  {
+    "kind": "sensitivity",
+    "workload": "timing_waves_3840x2160",
+    "threads": 8,
+    "median_ratio": 7.534905936340575,
+    "ci95": [
+      7.4694949791878456,
+      7.556379300658731
+    ],
+    "min_ratio": 7.350592177669728,
+    "dose_accounting": 1.0556195799457995,
+    "status": "PASS"
+  },
+  {
+    "kind": "sensitivity",
+    "workload": "timing_checker_1920x1080",
+    "threads": 8,
+    "median_ratio": 4.6668044452772435,
+    "ci95": [
+      4.64789910176879,
+      4.690782519906108
+    ],
+    "min_ratio": 4.583908395329506,
+    "dose_accounting": 1.0565989159891598,
+    "status": "PASS"
+  },
+  {
+    "kind": "sensitivity",
+    "workload": "timing_checker_3840x2160",
+    "threads": 8,
+    "median_ratio": 1.9382421840483475,
+    "ci95": [
+      1.9313349572340384,
+      1.9461291069817954
+    ],
+    "min_ratio": 1.9157267629226589,
+    "dose_accounting": 1.0520477642276422,
+    "status": "PASS"
+  },
+  {
+    "kind": "sensitivity",
+    "workload": "timing_texture_1920x1080",
+    "threads": 8,
+    "median_ratio": 4.022393621816894,
+    "ci95": [
+      4.019808165079639,
+      4.0337233443882745
+    ],
+    "min_ratio": 3.959502626178235,
+    "dose_accounting": 1.052669376693767,
+    "status": "PASS"
+  },
+  {
+    "kind": "sensitivity",
+    "workload": "timing_texture_3840x2160",
+    "threads": 8,
+    "median_ratio": 1.7702868329270807,
+    "ci95": [
+      1.761257228301156,
+      1.7850912530076057
+    ],
+    "min_ratio": 1.7525344082233665,
+    "dose_accounting": 1.0762330623306233,
+    "status": "PASS"
+  }
+]

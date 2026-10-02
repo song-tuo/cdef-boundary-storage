@@ -1,0 +1,18 @@
+[
+  {
+    "filename": "CDEF_full_source_gate_return.zip",
+    "bytes": 196385139,
+    "sha256": "c7413e41262d07bf90b72a1e16a9fb3bb4b82cf6eb09c88b9b1addb9a50813e1",
+    "verified_existing_sha256": true,
+    "purpose": "Original full-source gate: source trees, builds, inputs, commands and results",
+    "embedded_in_companion_zip": false
+  },
+  {
+    "filename": "cdef_h1_20261001T091045Z_results.zip",
+    "bytes": 1252293581,
+    "sha256": "9beba113bf719fa1c4ce68f59519a9b63cb7e29a79bc3166d28c8b596a6555e8",
+    "verified_existing_sha256": true,
+    "purpose": "Original H1: complete source/build trees, fixed inputs, command logs and results",
+    "embedded_in_companion_zip": false
+  }
+]

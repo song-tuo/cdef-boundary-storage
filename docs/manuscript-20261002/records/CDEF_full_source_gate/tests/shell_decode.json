@@ -1,0 +1,53 @@
+[
+  {
+    "variant": "baseline",
+    "exit": 0,
+    "command": [
+      "sh",
+      "${WORKSPACE}/CDEF_full_source_gate/src/baseline/test/aomdec.sh",
+      "--bin-path",
+      "${WORKSPACE}/CDEF_full_source_gate/builds/baseline_release",
+      "--config-path",
+      "${WORKSPACE}/CDEF_full_source_gate/builds/baseline_release",
+      "--test-data-path",
+      "${WORKSPACE}/CDEF_full_source_gate/testdata",
+      "--show-program-output",
+      "--verbose"
+    ],
+    "tarball_version_workaround": "${WORKSPACE}/CDEF_full_source_gate/scripts/tarball_no_git/git"
+  },
+  {
+    "variant": "type_fix",
+    "exit": 0,
+    "command": [
+      "sh",
+      "${WORKSPACE}/CDEF_full_source_gate/src/type_fix/test/aomdec.sh",
+      "--bin-path",
+      "${WORKSPACE}/CDEF_full_source_gate/builds/type_fix_release",
+      "--config-path",
+      "${WORKSPACE}/CDEF_full_source_gate/builds/type_fix_release",
+      "--test-data-path",
+      "${WORKSPACE}/CDEF_full_source_gate/testdata",
+      "--show-program-output",
+      "--verbose"
+    ],
+    "tarball_version_workaround": "${WORKSPACE}/CDEF_full_source_gate/scripts/tarball_no_git/git"
+  },
+  {
+    "variant": "token",
+    "exit": 0,
+    "command": [
+      "sh",
+      "${WORKSPACE}/CDEF_full_source_gate/src/token/test/aomdec.sh",
+      "--bin-path",
+      "${WORKSPACE}/CDEF_full_source_gate/builds/token_release",
+      "--config-path",
+      "${WORKSPACE}/CDEF_full_source_gate/builds/token_release",
+      "--test-data-path",
+      "${WORKSPACE}/CDEF_full_source_gate/testdata",
+      "--show-program-output",
+      "--verbose"
+    ],
+    "tarball_version_workaround": "${WORKSPACE}/CDEF_full_source_gate/scripts/tarball_no_git/git"
+  }
+]

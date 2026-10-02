@@ -1,0 +1,3 @@
+#!/bin/sh
+# Upstream source_version() must use CMake version for a source tarball.
+exit 127

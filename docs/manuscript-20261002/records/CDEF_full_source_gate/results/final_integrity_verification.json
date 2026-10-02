@@ -1,0 +1,40 @@
+{
+  "verified_utc": "2026-09-29T15:51:26.313205+00:00",
+  "protocol_hash_matches": true,
+  "all_frozen_inputs_binaries_scripts_patches_match": true,
+  "source_trees": {
+    "baseline": {
+      "files": 1371,
+      "staged_copy_identical": true,
+      "writable": true
+    },
+    "type_fix": {
+      "files": 1371,
+      "staged_copy_identical": true,
+      "writable": true
+    },
+    "token": {
+      "files": 1371,
+      "staged_copy_identical": true,
+      "writable": true
+    },
+    "baseline_audit": {
+      "files": 1372,
+      "staged_copy_identical": true,
+      "writable": true
+    },
+    "type_fix_audit": {
+      "files": 1372,
+      "staged_copy_identical": true,
+      "writable": true
+    },
+    "token_audit": {
+      "files": 1372,
+      "staged_copy_identical": true,
+      "writable": true
+    }
+  },
+  "primary_timing_cells_pass": 18,
+  "sensitivity_cells_pass": 6,
+  "no_paper_or_outline_created": true
+}

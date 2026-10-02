@@ -1,0 +1,9 @@
+# CDEF-H1 frozen protocol
+
+The machine-readable protocol is protocol/protocol.json. It is frozen before the first H1 semantic or timing run. Source preparation and compilation are engineering preflight, not test evidence. Timing is a new 18-cell, 12-block-per-cell design; each block contains all three implementations in a prospectively balanced order and is the sole resampling unit. No historical token timing CI is reused. A 1.02 margin describes only this frozen local workload; missing or inconclusive evidence is not a PASS.
+
+The finite-capacity implementation/accounting gate follows the requested Stage 4 W=2,8,16 row-MT configurations. W=1 retains the existing serial ping-pong path, as the verified dual-token implementation does, and is checked for pixel/behavior compatibility. The theoretical formula includes W=1; this experiment does not relabel the untouched serial allocation as achieving it. The user explicitly confirmed this scope before the first semantic/timing execution.
+
+Every semantic input, capacity regime, fault stage, safety path, official content ID/hash, timing block and output/stop rule is retained. R and W in audit/accounting are actual frame rows and CDEF workers; CLI thread count alone does not establish admission. Test groups, skipped cases and unsupported tools are reported explicitly. Faults must be reached; unreachable cases cannot count as successful injection. Three official real-content sources are fixed at three operating qualities before decoding, with actual CDEF activation measured independently of timing.
+
+Only CDEF-H1 is authorized. U and AL remain stopped and all old results are read-only. No failed scientific condition is repaired by changing capacity, content, code semantics or thresholds after inspection. Engineering fixes remain transparent with original failures preserved.

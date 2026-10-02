@@ -1,0 +1,55 @@
+{
+  "candidate": "CDEF",
+  "stage": "H1 SIMPLE-BOTTOM / HYBRID CONFIRMATORY GATE",
+  "final_state": "KEEP_DUAL_TOKEN_HYBRID_NOT_SUFFICIENT",
+  "reasons": [
+    "prospective_local_block_noninferiority_not_established_in_all_18_cells"
+  ],
+  "source_drift_resolved": false,
+  "semantic_gate": true,
+  "safety_gate": true,
+  "capacity_gate": true,
+  "timing_gate": false,
+  "read_only_prior_results": true,
+  "U_permanently_stopped": true,
+  "AL_not_resumed": true,
+  "serial_W1": "unchanged compatibility only, user confirmed",
+  "counts": {
+    "semantic_unique_configurations": 432,
+    "semantic_records": 2592,
+    "hybrid_debug_asan_tsan_records": 1296,
+    "fault_and_recovery_records": 1260,
+    "allocation_records": 27,
+    "real_content_records": 81,
+    "official_mkv_records": 64,
+    "native_leak_records": 36,
+    "timing_cells": 18,
+    "timing_blocks": 216,
+    "timed_processes": 648,
+    "upstream_selected_tests_by_profile_group": {
+      "release/core": 208,
+      "debug/core": 208,
+      "asan/core": 208,
+      "tsan/core": 208,
+      "release/conformance": 3899,
+      "asan/conformance": 3899,
+      "tsan/conformance": 3899,
+      "release/row_tiles": 508,
+      "release/resize_error": 389
+    },
+    "fpmt_sanitizer_tests": 6,
+    "fpmt_tests": 45
+  },
+  "timing_scope": "frozen host/workload only; no universal 2% or speedup claim",
+  "paper_disposition": {
+    "old_paper_modified": false,
+    "no_hybrid_main_implementation_promotion": true
+  },
+  "timing_status_counts": {
+    "INCONCLUSIVE_LOCAL_NONINFERIORITY": 12,
+    "PASS_LOCAL_NONINFERIORITY": 6,
+    "EXPLICIT_LOCAL_REGRESSION": 0
+  },
+  "explicit_local_timing_regression_detected": false,
+  "interpretation": "Hybrid attains the finite-frame strip bound and passes the executed semantic/safety checks. Promotion is withheld because the prospective all-cell local noninferiority gate is not established; no cell has an explicit local regression."
+}

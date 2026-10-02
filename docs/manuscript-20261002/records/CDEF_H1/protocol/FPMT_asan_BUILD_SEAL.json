@@ -1,0 +1,20 @@
+{
+  "files": [
+    {
+      "path": "builds/hybrid_audit_fpmt_asan/test_libaom",
+      "sha256": "f8efe8ad87a829bd2efd93a907392c13d972f8c5f817c15daa154e4835423845"
+    },
+    {
+      "path": "builds/hybrid_audit_fpmt_asan/libaom.a",
+      "sha256": "4e8be2ad82da776bb06b16d1a2470f65284a2f11caa3443b0d658a4a9d1c1c2e"
+    },
+    {
+      "path": "builds/hybrid_audit_fpmt_asan/compile_commands.json",
+      "sha256": "850ec841d95437c50c7c999b0afb15892a4d34903a0786af2b2a96e671a5d39d"
+    },
+    {
+      "path": "builds/hybrid_audit_fpmt_asan/CMakeCache.txt",
+      "sha256": "10aaab9d3337c17f69f4f8841aeec29b14bf0ec6a9b1fcad935f43d66855ed2a"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "file": "av1/common/alloccommon.c",
+    "added": 24,
+    "removed": 2
+  },
+  {
+    "file": "av1/common/thread_common.c",
+    "added": 83,
+    "removed": 10
+  },
+  {
+    "file": "av1/common/thread_common.h",
+    "added": 8,
+    "removed": 0
+  }
+]

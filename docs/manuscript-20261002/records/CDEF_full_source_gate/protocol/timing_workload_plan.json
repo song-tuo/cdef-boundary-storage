@@ -1,0 +1,74 @@
+[
+  {
+    "id": "timing_waves_1920x1080",
+    "width": 1920,
+    "height": 1080,
+    "frames": 18,
+    "depth": 8,
+    "chroma": "420",
+    "family": "waves",
+    "seed": 19293,
+    "tiles": 1,
+    "parallel": 1
+  },
+  {
+    "id": "timing_waves_3840x2160",
+    "width": 3840,
+    "height": 2160,
+    "frames": 18,
+    "depth": 8,
+    "chroma": "420",
+    "family": "waves",
+    "seed": 19293,
+    "tiles": 1,
+    "parallel": 1
+  },
+  {
+    "id": "timing_checker_1920x1080",
+    "width": 1920,
+    "height": 1080,
+    "frames": 18,
+    "depth": 8,
+    "chroma": "420",
+    "family": "checker",
+    "seed": 19294,
+    "tiles": 1,
+    "parallel": 1
+  },
+  {
+    "id": "timing_checker_3840x2160",
+    "width": 3840,
+    "height": 2160,
+    "frames": 18,
+    "depth": 8,
+    "chroma": "420",
+    "family": "checker",
+    "seed": 19294,
+    "tiles": 1,
+    "parallel": 1
+  },
+  {
+    "id": "timing_texture_1920x1080",
+    "width": 1920,
+    "height": 1080,
+    "frames": 18,
+    "depth": 8,
+    "chroma": "420",
+    "family": "texture",
+    "seed": 19295,
+    "tiles": 1,
+    "parallel": 1
+  },
+  {
+    "id": "timing_texture_3840x2160",
+    "width": 3840,
+    "height": 2160,
+    "frames": 18,
+    "depth": 8,
+    "chroma": "420",
+    "family": "texture",
+    "seed": 19295,
+    "tiles": 1,
+    "parallel": 1
+  }
+]

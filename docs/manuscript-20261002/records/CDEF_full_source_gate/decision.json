@@ -1,0 +1,46 @@
+{
+  "state": "PASS_TO_PAPER_OUTLINE",
+  "time_utc": "2026-09-29T15:50:49.782188+00:00",
+  "reasons": [
+    "All required source integration, correctness, safety, memory, frozen timing/sensitivity, and maintainability gates pass within the recorded platform/workload scope."
+  ],
+  "gates": {
+    "source_identity_and_separation": "PASS",
+    "three_full_source_release_builds": "PASS",
+    "debug_and_whole_library_sanitizer_builds": "PASS",
+    "relevant_upstream_and_conformance": "PASS",
+    "paired_correctness": "PASS",
+    "fault_destroy_and_same_instance_recovery": "PASS",
+    "leak_checks": "PASS",
+    "boundary_allocation_materiality": "PASS",
+    "timing_noninferiority": "PASS",
+    "injected_delay_sensitivity": "PASS",
+    "maintainability": "CREDIBLE_SELF_REVIEW"
+  },
+  "counts": {
+    "correctness_release.json": 540,
+    "correctness_debug.json": 180,
+    "correctness_asan.json": 180,
+    "correctness_tsan.json": 180,
+    "invalid_input_comparison.json": 750,
+    "fault_injection.json": 156,
+    "fault_injection_tsan.json": 156,
+    "same_instance_recovery_asan.json": 99,
+    "same_instance_recovery_tsan.json": 99,
+    "leak_checks.json": 36,
+    "mkv_conformance.json": 100
+  },
+  "primary_material_slowdown_cells": [],
+  "primary_inconclusive_cells": [],
+  "sensitivity_failed_cells": [],
+  "paper_started": false,
+  "reference_gate": "ACCEPTED_CLOSED; no further literature search",
+  "scope": [
+    "Native macOS arm64 Apple M5 Pro, Clang 21; no pooling of previous Debian archive evidence.",
+    "Three deterministic synthetic content families at 1080p and 4K; timing repetitions are technical repeats.",
+    "All 286 libaom archive object members compiled with ASan+UBSan or TSan flags. Whole-library instrumentation does not imply exhaustive path coverage.",
+    "Unoptimized broad encoder stress under sanitizers was interrupted; focused decoder conformance, faults and recovery passed. All 45 FPMT tests passed in a separate release configuration.",
+    "WebM CLI support disabled in the three primary builds; both official MKV vector payloads were extracted with the bundled parser and checked against official per-frame MD5 in 100 supplemental runs.",
+    "Upstream acceptance and external maintainability review are not claimed."
+  ]
+}

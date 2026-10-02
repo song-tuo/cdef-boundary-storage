@@ -1,0 +1,15 @@
+{
+  "648_timed_processes": true,
+  "216_complete_blocks": true,
+  "all_timing_hashes_match": true,
+  "all_timing_exits_zero": true,
+  "frozen_order_exact": true,
+  "all_timing_input_hashes_preserved": true,
+  "prior_sources_read_only": true,
+  "prior_572_official_fixtures_read_only": true,
+  "source_input_binary_seal_unchanged": true,
+  "independent_pixel_byte_formula": true,
+  "FPMT_multithread_reached": true,
+  "FPMT_full_library_instrumented": true,
+  "requested_artifacts_before_package": true
+}

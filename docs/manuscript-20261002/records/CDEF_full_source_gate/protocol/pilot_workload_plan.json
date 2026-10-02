@@ -1,0 +1,38 @@
+[
+  {
+    "id": "pilot_waves_960x540",
+    "width": 960,
+    "height": 540,
+    "frames": 6,
+    "depth": 8,
+    "chroma": "420",
+    "family": "waves",
+    "seed": 19393,
+    "tiles": 1,
+    "parallel": 1
+  },
+  {
+    "id": "pilot_checker_960x540",
+    "width": 960,
+    "height": 540,
+    "frames": 6,
+    "depth": 8,
+    "chroma": "420",
+    "family": "checker",
+    "seed": 19394,
+    "tiles": 1,
+    "parallel": 1
+  },
+  {
+    "id": "pilot_texture_960x540",
+    "width": 960,
+    "height": 540,
+    "frames": 6,
+    "depth": 8,
+    "chroma": "420",
+    "family": "texture",
+    "seed": 19395,
+    "tiles": 1,
+    "parallel": 1
+  }
+]

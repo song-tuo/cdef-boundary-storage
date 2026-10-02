@@ -1,0 +1,2 @@
+category,profile,exit_code,status,command_log,source_version_note
+upstream_decoder_shell,release,0,PASS,shell_aomdec_hybrid,tarball source has no .git; helper disables git version query only

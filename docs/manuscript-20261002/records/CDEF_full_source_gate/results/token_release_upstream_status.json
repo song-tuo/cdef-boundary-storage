@@ -1,0 +1,22 @@
+[
+  {
+    "group": "row_tiles",
+    "command": [
+      "${WORKSPACE}/CDEF_full_source_gate/builds/token_release/test_libaom",
+      "--gtest_filter=*DecodeMultiThreaded*:*ExtTileTest*:*TileIndependence*:*TileGroup*:*UniformTileConfig*",
+      "--gtest_output=xml:${WORKSPACE}/CDEF_full_source_gate/results/token_release_upstream_row_tiles.xml"
+    ],
+    "exit": 1,
+    "seconds": 578.6513180732727
+  },
+  {
+    "group": "resize_error",
+    "command": [
+      "${WORKSPACE}/CDEF_full_source_gate/builds/token_release/test_libaom",
+      "--gtest_filter=*Resize*:*Superres*:*FrameSize*:*ErrorResilience*",
+      "--gtest_output=xml:${WORKSPACE}/CDEF_full_source_gate/results/token_release_upstream_resize_error.xml"
+    ],
+    "exit": 0,
+    "seconds": 1098.4619839191437
+  }
+]

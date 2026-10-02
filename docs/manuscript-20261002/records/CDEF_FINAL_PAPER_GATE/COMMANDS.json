@@ -1,0 +1,1764 @@
+{
+  "scope": "Logged execution commands and retrieval batches. Interactive file reads, web searches, visual inspections and apply_patch operations also occurred; not a claim of a complete UI tool transcript.",
+  "executions": [
+    {
+      "record": "logs/001_lock.command.json",
+      "argv": [
+        "python3",
+        "CDEF_FINAL_PAPER_GATE/scripts/lock_evidence.py"
+      ],
+      "cwd": "${WORKSPACE}",
+      "start_utc": "2026-10-01T13:12:52.406092+00:00",
+      "end_utc": "2026-10-01T13:13:07.583813+00:00",
+      "exit_code": 1
+    },
+    {
+      "record": "logs/002_timing_reanalysis.command.json",
+      "argv": [
+        "python3",
+        "CDEF_FINAL_PAPER_GATE/scripts/reanalyze.py"
+      ],
+      "cwd": "${WORKSPACE}",
+      "start_utc": "2026-10-01T13:13:53.182912+00:00",
+      "end_utc": "2026-10-01T13:13:53.745435+00:00",
+      "exit_code": 0
+    },
+    {
+      "record": "logs/003_lock_retry.command.json",
+      "argv": [
+        "python3",
+        "CDEF_FINAL_PAPER_GATE/scripts/lock_evidence.py"
+      ],
+      "cwd": "${WORKSPACE}",
+      "start_utc": "2026-10-01T13:14:30.819098+00:00",
+      "end_utc": "2026-10-01T13:14:47.310914+00:00",
+      "exit_code": 1
+    },
+    {
+      "record": "logs/004_lock_correct_field.command.json",
+      "argv": [
+        "python3",
+        "CDEF_FINAL_PAPER_GATE/scripts/lock_evidence.py"
+      ],
+      "cwd": "${WORKSPACE}",
+      "start_utc": "2026-10-01T13:14:47.615910+00:00",
+      "end_utc": "2026-10-01T13:15:03.995057+00:00",
+      "exit_code": 0
+    },
+    {
+      "record": "logs/005_primary_retrieval.command.json",
+      "argv": [
+        "python3",
+        "CDEF_FINAL_PAPER_GATE/scripts/fetch.py",
+        "CDEF_FINAL_PAPER_GATE/prior/fetch_batch1.json"
+      ],
+      "cwd": "${WORKSPACE}",
+      "start_utc": "2026-10-01T13:15:27.599976+00:00",
+      "end_utc": "2026-10-01T13:15:27.810315+00:00",
+      "exit_code": 0
+    },
+    {
+      "record": "logs/006_primary_retrieval_network.command.json",
+      "argv": [
+        "python3",
+        "CDEF_FINAL_PAPER_GATE/scripts/fetch.py",
+        "CDEF_FINAL_PAPER_GATE/prior/fetch_batch1.json"
+      ],
+      "cwd": "${WORKSPACE}",
+      "start_utc": "2026-10-01T13:15:51.803617+00:00",
+      "end_utc": "2026-10-01T13:15:53.604072+00:00",
+      "exit_code": 0
+    },
+    {
+      "record": "logs/007_lock_finalstate.command.json",
+      "argv": [
+        "python3",
+        "CDEF_FINAL_PAPER_GATE/scripts/lock_evidence.py"
+      ],
+      "cwd": "${WORKSPACE}",
+      "start_utc": "2026-10-01T13:15:52.977911+00:00",
+      "end_utc": "2026-10-01T13:16:09.314899+00:00",
+      "exit_code": 0
+    },
+    {
+      "record": "logs/008_system_tls_retrieval.command.json",
+      "argv": [
+        "python3",
+        "CDEF_FINAL_PAPER_GATE/scripts/fetch_curl.py",
+        "CDEF_FINAL_PAPER_GATE/prior/fetch_batch1.json"
+      ],
+      "cwd": "${WORKSPACE}",
+      "start_utc": "2026-10-01T13:16:46.940645+00:00",
+      "end_utc": "2026-10-01T13:16:52.263603+00:00",
+      "exit_code": 0
+    },
+    {
+      "record": "logs/009_source_check.command.json",
+      "argv": [
+        "python3",
+        "CDEF_FINAL_PAPER_GATE/scripts/source_check.py"
+      ],
+      "cwd": "${WORKSPACE}",
+      "start_utc": "2026-10-01T13:18:13.553756+00:00",
+      "end_utc": "2026-10-01T13:18:13.863656+00:00",
+      "exit_code": 0
+    },
+    {
+      "record": "logs/010_more_primary_sources.command.json",
+      "argv": [
+        "python3",
+        "CDEF_FINAL_PAPER_GATE/scripts/fetch_curl.py",
+        "CDEF_FINAL_PAPER_GATE/prior/fetch_batch2.json"
+      ],
+      "cwd": "${WORKSPACE}",
+      "start_utc": "2026-10-01T13:18:13.909746+00:00",
+      "end_utc": "2026-10-01T13:18:21.622888+00:00",
+      "exit_code": 0
+    },
+    {
+      "record": "logs/011_source_diffs.command.json",
+      "argv": [
+        "python3",
+        "CDEF_FINAL_PAPER_GATE/scripts/fetch_curl.py",
+        "CDEF_FINAL_PAPER_GATE/prior/fetch_batch3.json"
+      ],
+      "cwd": "${WORKSPACE}",
+      "start_utc": "2026-10-01T13:19:15.161957+00:00",
+      "end_utc": "2026-10-01T13:19:18.101959+00:00",
+      "exit_code": 0
+    },
+    {
+      "record": "logs/012_original_pdfs.command.json",
+      "argv": [
+        "python3",
+        "CDEF_FINAL_PAPER_GATE/scripts/fetch_curl.py",
+        "CDEF_FINAL_PAPER_GATE/prior/fetch_batch4.json"
+      ],
+      "cwd": "${WORKSPACE}",
+      "start_utc": "2026-10-01T13:19:51.706163+00:00",
+      "end_utc": "2026-10-01T13:19:56.581404+00:00",
+      "exit_code": 0
+    },
+    {
+      "record": "logs/013_closest_changes.command.json",
+      "argv": [
+        "python3",
+        "CDEF_FINAL_PAPER_GATE/scripts/fetch_curl.py",
+        "CDEF_FINAL_PAPER_GATE/prior/fetch_batch5.json"
+      ],
+      "cwd": "${WORKSPACE}",
+      "start_utc": "2026-10-01T13:20:20.094319+00:00",
+      "end_utc": "2026-10-01T13:20:27.961030+00:00",
+      "exit_code": 0
+    },
+    {
+      "record": "logs/015_shape_export.command.json",
+      "argv": [
+        "env",
+        "TEXINPUTS=${WORKSPACE}/CDEF_FINAL_PAPER_GATE/shape:",
+        "${HOME}/Library/texlive/2026basic/bin/universal-darwin/pdflatex",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "-output-directory",
+        "CDEF_FINAL_PAPER_GATE/shape",
+        "CDEF_FINAL_PAPER_GATE/shape/paper_shape.tex"
+      ],
+      "cwd": "${WORKSPACE}",
+      "start_utc": "2026-10-01T13:29:19.576211+00:00",
+      "end_utc": "2026-10-01T13:29:19.708875+00:00",
+      "exit_code": 0
+    },
+    {
+      "record": "logs/016_fetch.command.json",
+      "argv": [
+        "python3",
+        "CDEF_FINAL_PAPER_GATE/scripts/fetch_curl.py",
+        "CDEF_FINAL_PAPER_GATE/prior/fetch_batch6.json"
+      ],
+      "cwd": "${WORKSPACE}",
+      "start_utc": "2026-10-01T13:30:53.571670+00:00",
+      "end_utc": "2026-10-01T13:30:56.659590+00:00",
+      "exit_code": 0
+    },
+    {
+      "record": "logs/017_reports.command.json",
+      "argv": [
+        "python3",
+        "CDEF_FINAL_PAPER_GATE/scripts/write_reports.py"
+      ],
+      "cwd": "${WORKSPACE}",
+      "start_utc": "2026-10-01T13:38:39.915828+00:00",
+      "end_utc": "2026-10-01T13:38:39.974313+00:00",
+      "exit_code": 0
+    },
+    {
+      "record": "logs/018_shape_final_export.command.json",
+      "argv": [
+        "env",
+        "TEXINPUTS=${WORKSPACE}/CDEF_FINAL_PAPER_GATE/shape:",
+        "${HOME}/Library/texlive/2026basic/bin/universal-darwin/pdflatex",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "-output-directory",
+        "CDEF_FINAL_PAPER_GATE/shape",
+        "CDEF_FINAL_PAPER_GATE/shape/paper_shape.tex"
+      ],
+      "cwd": "${WORKSPACE}",
+      "start_utc": "2026-10-01T13:39:14.438834+00:00",
+      "end_utc": "2026-10-01T13:39:14.543254+00:00",
+      "exit_code": 0
+    },
+    {
+      "record": "logs/019_reports_final.command.json",
+      "argv": [
+        "python3",
+        "CDEF_FINAL_PAPER_GATE/scripts/write_reports.py"
+      ],
+      "cwd": "${WORKSPACE}",
+      "start_utc": "2026-10-01T13:39:47.124597+00:00",
+      "end_utc": "2026-10-01T13:39:47.177007+00:00",
+      "exit_code": 0
+    },
+    {
+      "record": "logs/020_shape_export.command.json",
+      "argv": [
+        "env",
+        "TEXINPUTS=${WORKSPACE}/CDEF_FINAL_PAPER_GATE/shape:",
+        "${HOME}/Library/texlive/2026basic/bin/universal-darwin/pdflatex",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "-output-directory",
+        "CDEF_FINAL_PAPER_GATE/shape",
+        "CDEF_FINAL_PAPER_GATE/shape/paper_shape.tex"
+      ],
+      "cwd": "${WORKSPACE}",
+      "start_utc": "2026-10-01T13:39:47.206532+00:00",
+      "end_utc": "2026-10-01T13:39:47.315545+00:00",
+      "exit_code": 0
+    },
+    {
+      "record": "logs/021_final_integrity.command.json",
+      "argv": [
+        "python3",
+        "CDEF_FINAL_PAPER_GATE/scripts/final_checks.py"
+      ],
+      "cwd": "${WORKSPACE}",
+      "start_utc": "2026-10-01T13:41:23.474734+00:00",
+      "end_utc": "2026-10-01T13:41:24.731644+00:00",
+      "exit_code": 0
+    }
+  ],
+  "retrieval_batches": [
+    {
+      "record": "prior/fetch_batch1_curl_results.json",
+      "results": [
+        {
+          "id": "US11997298",
+          "url": "https://patents.google.com/patent/US11997298B2/en",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/US11997298.html",
+            "https://patents.google.com/patent/US11997298B2/en"
+          ],
+          "utc": "2026-10-01T13:16:50.008235+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "US11997298.html",
+          "bytes": 859624,
+          "sha256": "828b5eb7c0df8aa4c83e74ba7096f0de72d7fb1250225e9263891571f3ccaa6f"
+        },
+        {
+          "id": "CN122205106",
+          "url": "https://patents.google.com/patent/CN122205106A/zh",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/CN122205106.html",
+            "https://patents.google.com/patent/CN122205106A/zh"
+          ],
+          "utc": "2026-10-01T13:16:49.159487+00:00",
+          "exit_code": 56,
+          "stdout": "",
+          "stderr": "curl: (56) The requested URL returned error: 404\n"
+        },
+        {
+          "id": "WO2024026163",
+          "url": "https://patents.google.com/patent/WO2024026163A1/en",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/WO2024026163.html",
+            "https://patents.google.com/patent/WO2024026163A1/en"
+          ],
+          "utc": "2026-10-01T13:16:50.028894+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "WO2024026163.html",
+          "bytes": 596948,
+          "sha256": "28158ac855ca52432afbfe18b7a356897a2ae1fe0d9c62e60a2d4c8e20244a63"
+        },
+        {
+          "id": "CDEF_original",
+          "url": "https://arxiv.org/pdf/1602.05975v3",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/CDEF_original.pdf",
+            "https://arxiv.org/pdf/1602.05975v3"
+          ],
+          "utc": "2026-10-01T13:16:49.146972+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "CDEF_original.pdf",
+          "bytes": 581216,
+          "sha256": "3aa7162231147397c9631a38017e0e0bc8adfdacf92fccfee901bfdfe8958085"
+        },
+        {
+          "id": "SVT_decoder_design",
+          "url": "https://gitlab.com/AOMediaCodec/SVT-AV1/-/raw/v0.8.7/Docs/svt-av1-decoder-design.md",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/svt_decoder_design.md",
+            "https://gitlab.com/AOMediaCodec/SVT-AV1/-/raw/v0.8.7/Docs/svt-av1-decoder-design.md"
+          ],
+          "utc": "2026-10-01T13:16:49.285972+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "svt_decoder_design.md",
+          "bytes": 32800,
+          "sha256": "a9d07423e257a522208b437362f102bb1cb4cf4bc2a7a5400b83f40ec03c600e"
+        },
+        {
+          "id": "SVT_decoder_cdef",
+          "url": "https://gitlab.com/AOMediaCodec/SVT-AV1/-/raw/v0.8.7/Source/Lib/Decoder/Codec/EbDecCdef.c",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/svt_decoder_cdef.c",
+            "https://gitlab.com/AOMediaCodec/SVT-AV1/-/raw/v0.8.7/Source/Lib/Decoder/Codec/EbDecCdef.c"
+          ],
+          "utc": "2026-10-01T13:16:49.041213+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "svt_decoder_cdef.c",
+          "bytes": 28853,
+          "sha256": "1628ffd4393d385c559999170aac6610b1e5c8e593600c3ce392a602be2f409c"
+        },
+        {
+          "id": "SVT_4.2_release",
+          "url": "https://gitlab.com/AOMediaCodec/SVT-AV1/-/raw/v4.2.0/CHANGELOG.md",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/svt42_changelog.md",
+            "https://gitlab.com/AOMediaCodec/SVT-AV1/-/raw/v4.2.0/CHANGELOG.md"
+          ],
+          "utc": "2026-10-01T13:16:50.820996+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "svt42_changelog.md",
+          "bytes": 39540,
+          "sha256": "93355d106f385257121f42e1aae31d082446e6e577d40fc1b8a0a83196addd3e"
+        },
+        {
+          "id": "libaom_log",
+          "url": "https://aomedia.googlesource.com/aom/+log/ae410fe8b7bd45f3cf61dc8f112dc783e2a08089/av1/common/thread_common.c?format=JSON&n=100",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/libaom_thread_log.json",
+            "https://aomedia.googlesource.com/aom/+log/ae410fe8b7bd45f3cf61dc8f112dc783e2a08089/av1/common/thread_common.c?format=JSON&n=100"
+          ],
+          "utc": "2026-10-01T13:16:51.455608+00:00",
+          "exit_code": 56,
+          "stdout": "",
+          "stderr": "curl: (56) The requested URL returned error: 429\n"
+        },
+        {
+          "id": "gerrit_cdef_linebuf",
+          "url": "https://aomedia-review.googlesource.com/changes/?q=project:aom%20CDEF%20linebuf&n=100",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/gerrit_cdef_linebuf.json",
+            "https://aomedia-review.googlesource.com/changes/?q=project:aom%20CDEF%20linebuf&n=100"
+          ],
+          "utc": "2026-10-01T13:16:52.250067+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "gerrit_cdef_linebuf.json",
+          "bytes": 6139,
+          "sha256": "dd1118ba65d127b0c376e7edccef5aa06d175c8369b02043b542143363dfcedb"
+        }
+      ]
+    },
+    {
+      "record": "prior/fetch_batch1_results.json",
+      "results": [
+        {
+          "id": "US11997298",
+          "url": "https://patents.google.com/patent/US11997298B2/en",
+          "utc": "2026-10-01T13:15:51.848084+00:00",
+          "status": "ERROR",
+          "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)'))"
+        },
+        {
+          "id": "CN122205106",
+          "url": "https://patents.google.com/patent/CN122205106A/zh",
+          "utc": "2026-10-01T13:15:51.848484+00:00",
+          "status": "ERROR",
+          "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)'))"
+        },
+        {
+          "id": "WO2024026163",
+          "url": "https://patents.google.com/patent/WO2024026163A1/en",
+          "utc": "2026-10-01T13:15:51.848674+00:00",
+          "status": "ERROR",
+          "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)'))"
+        },
+        {
+          "id": "CDEF_original",
+          "url": "https://arxiv.org/pdf/1602.05975v3",
+          "utc": "2026-10-01T13:15:51.848834+00:00",
+          "status": "ERROR",
+          "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)'))"
+        },
+        {
+          "id": "SVT_decoder_design",
+          "url": "https://gitlab.com/AOMediaCodec/SVT-AV1/-/raw/v0.8.7/Docs/svt-av1-decoder-design.md",
+          "utc": "2026-10-01T13:15:51.848981+00:00",
+          "status": "ERROR",
+          "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)'))"
+        },
+        {
+          "id": "SVT_decoder_cdef",
+          "url": "https://gitlab.com/AOMediaCodec/SVT-AV1/-/raw/v0.8.7/Source/Lib/Decoder/Codec/EbDecCdef.c",
+          "utc": "2026-10-01T13:15:51.849310+00:00",
+          "status": "ERROR",
+          "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)'))"
+        },
+        {
+          "id": "SVT_4.2_release",
+          "url": "https://gitlab.com/AOMediaCodec/SVT-AV1/-/raw/v4.2.0/CHANGELOG.md",
+          "utc": "2026-10-01T13:15:52.462087+00:00",
+          "status": "ERROR",
+          "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)'))"
+        },
+        {
+          "id": "libaom_log",
+          "url": "https://aomedia.googlesource.com/aom/+log/ae410fe8b7bd45f3cf61dc8f112dc783e2a08089/av1/common/thread_common.c?format=JSON&n=100",
+          "utc": "2026-10-01T13:15:52.462289+00:00",
+          "status": "ERROR",
+          "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)'))"
+        },
+        {
+          "id": "gerrit_cdef_linebuf",
+          "url": "https://aomedia-review.googlesource.com/changes/?q=project:aom%20CDEF%20linebuf&n=100",
+          "utc": "2026-10-01T13:15:52.462423+00:00",
+          "status": "ERROR",
+          "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)'))"
+        }
+      ]
+    },
+    {
+      "record": "prior/fetch_batch2_curl_results.json",
+      "results": [
+        {
+          "id": "CNfull",
+          "url": "https://eureka.patsnap.com/patent/CN122205106A",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/CN_patsnap.html",
+            "https://eureka.patsnap.com/patent/CN122205106A"
+          ],
+          "utc": "2026-10-01T13:18:16.104308+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "CN_patsnap.html",
+          "bytes": 219928,
+          "sha256": "06f5906ae4e6df49ddbb0d85128e2512f519732e652facf758c4b58b0de61da8"
+        },
+        {
+          "id": "D_SWIM",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8320917/",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/D_SWIM.html",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC8320917/"
+          ],
+          "utc": "2026-10-01T13:18:15.751117+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "D_SWIM.html",
+          "bytes": 287381,
+          "sha256": "8d2dec55305df17820fcca21bffe382531b979d5c71f036d1aac02d592bfeaf3"
+        },
+        {
+          "id": "SLRF2023",
+          "url": "https://jics.org.br/ojs/index.php/JICS/article/view/667",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/SLRF2023.html",
+            "https://jics.org.br/ojs/index.php/JICS/article/view/667"
+          ],
+          "utc": "2026-10-01T13:18:15.290073+00:00",
+          "exit_code": 56,
+          "stdout": "",
+          "stderr": "curl: (56) The requested URL returned error: 403\n"
+        },
+        {
+          "id": "Halide_async",
+          "url": "https://halide-lang.org/docs/tutorial/lesson_24_async.html",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/Halide_async.html",
+            "https://halide-lang.org/docs/tutorial/lesson_24_async.html"
+          ],
+          "utc": "2026-10-01T13:18:15.463773+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "Halide_async.html",
+          "bytes": 101568,
+          "sha256": "d9a1b168d9c132a11e207ddd184a418af63d3285b5b2b3275ba43a5ec7c5ca1b"
+        },
+        {
+          "id": "Halide_fold",
+          "url": "https://halide-lang.org/docs/api/generated/Func.html",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/Halide_func.html",
+            "https://halide-lang.org/docs/api/generated/Func.html"
+          ],
+          "utc": "2026-10-01T13:18:16.786124+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "Halide_func.html",
+          "bytes": 498724,
+          "sha256": "6f91cf4a8430f6e7a6180356a9eec8b62f551fedab95d526bc8889e1ff482c0a"
+        },
+        {
+          "id": "Boost_pool",
+          "url": "https://www.boost.org/doc/libs/latest/libs/pool/doc/html/boost_pool/pool/pooling.html",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/Boost_pool.html",
+            "https://www.boost.org/doc/libs/latest/libs/pool/doc/html/boost_pool/pool/pooling.html"
+          ],
+          "utc": "2026-10-01T13:18:15.791763+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "Boost_pool.html",
+          "bytes": 65977,
+          "sha256": "77177f81701b6d834feb25969417547f1cc79c5f517a0d2c8d06aa7863b3785b"
+        },
+        {
+          "id": "SVT_tag",
+          "url": "https://gitlab.com/api/v4/projects/AOMediaCodec%2FSVT-AV1/repository/tags/v0.8.7",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/SVT_tag.json",
+            "https://gitlab.com/api/v4/projects/AOMediaCodec%2FSVT-AV1/repository/tags/v0.8.7"
+          ],
+          "utc": "2026-10-01T13:18:16.464179+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "SVT_tag.json",
+          "bytes": 2231,
+          "sha256": "51a929d17b2de6d6d2444163aa6a105a4ae21e5456c98e37edae3c3cec1704a1"
+        },
+        {
+          "id": "gerrit_136381",
+          "url": "https://aomedia-review.googlesource.com/changes/136381/detail?o=CURRENT_REVISION&o=CURRENT_COMMIT",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/gerrit_136381.json",
+            "https://aomedia-review.googlesource.com/changes/136381/detail?o=CURRENT_REVISION&o=CURRENT_COMMIT"
+          ],
+          "utc": "2026-10-01T13:18:17.119014+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "gerrit_136381.json",
+          "bytes": 94595,
+          "sha256": "dd3674c1aa73b2e71c490f193e3b7ff7571710af431aa0bee791c64c29096137"
+        },
+        {
+          "id": "gerrit_134864",
+          "url": "https://aomedia-review.googlesource.com/changes/134864/detail?o=CURRENT_REVISION&o=CURRENT_COMMIT",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/gerrit_134864.json",
+            "https://aomedia-review.googlesource.com/changes/134864/detail?o=CURRENT_REVISION&o=CURRENT_COMMIT"
+          ],
+          "utc": "2026-10-01T13:18:18.444652+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "gerrit_134864.json",
+          "bytes": 51724,
+          "sha256": "bb6a92271a90b81458d7e6c6b9411c78e41cb0160d7bd3fb6f066a972d494b33"
+        },
+        {
+          "id": "gerrit_134862",
+          "url": "https://aomedia-review.googlesource.com/changes/134862/detail?o=CURRENT_REVISION&o=CURRENT_COMMIT",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/gerrit_134862.json",
+            "https://aomedia-review.googlesource.com/changes/134862/detail?o=CURRENT_REVISION&o=CURRENT_COMMIT"
+          ],
+          "utc": "2026-10-01T13:18:18.186777+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "gerrit_134862.json",
+          "bytes": 59868,
+          "sha256": "470210c2425c865f936effc7767c690fdd9bafe10fd9f2855a242fe2948600d6"
+        },
+        {
+          "id": "gerrit_135142",
+          "url": "https://aomedia-review.googlesource.com/changes/135142/detail?o=CURRENT_REVISION&o=CURRENT_COMMIT",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/gerrit_135142.json",
+            "https://aomedia-review.googlesource.com/changes/135142/detail?o=CURRENT_REVISION&o=CURRENT_COMMIT"
+          ],
+          "utc": "2026-10-01T13:18:19.145177+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "gerrit_135142.json",
+          "bytes": 70075,
+          "sha256": "c1cc342f0c30d4068fee3d299679b4cd8e0f4e830fbffb15590ed7627931e5f9"
+        },
+        {
+          "id": "gerrit_134681",
+          "url": "https://aomedia-review.googlesource.com/changes/134681/detail?o=CURRENT_REVISION&o=CURRENT_COMMIT",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/gerrit_134681.json",
+            "https://aomedia-review.googlesource.com/changes/134681/detail?o=CURRENT_REVISION&o=CURRENT_COMMIT"
+          ],
+          "utc": "2026-10-01T13:18:19.114282+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "gerrit_134681.json",
+          "bytes": 55749,
+          "sha256": "b1c657fa6f4dc5566b778d7b942ec69073b989cac622a5a9884cf0ede7ae2315"
+        },
+        {
+          "id": "gerrit_CDEF_buffer",
+          "url": "https://aomedia-review.googlesource.com/changes/?q=project%3Aaom%20CDEF%20buffer&n=100",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/gerrit_CDEF_buffer.json",
+            "https://aomedia-review.googlesource.com/changes/?q=project%3Aaom%20CDEF%20buffer&n=100"
+          ],
+          "utc": "2026-10-01T13:18:21.594738+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "gerrit_CDEF_buffer.json",
+          "bytes": 39012,
+          "sha256": "a8e5bbb81b4c95b7e046153f53c928fbd33d60fd751a3f645508ebcd3a6933b9"
+        },
+        {
+          "id": "gerrit_CDEF_memory",
+          "url": "https://aomedia-review.googlesource.com/changes/?q=project%3Aaom%20CDEF%20memory&n=100",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/gerrit_CDEF_memory.json",
+            "https://aomedia-review.googlesource.com/changes/?q=project%3Aaom%20CDEF%20memory&n=100"
+          ],
+          "utc": "2026-10-01T13:18:19.006138+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "gerrit_CDEF_memory.json",
+          "bytes": 36624,
+          "sha256": "c408557b63cf93db06c926742dc538a66d893c46afabe42f5d05c58f69f73358"
+        },
+        {
+          "id": "gerrit_CDEF_row_multi_threading",
+          "url": "https://aomedia-review.googlesource.com/changes/?q=project%3Aaom%20CDEF%20row%20multi%20threading&n=100",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/gerrit_CDEF_row_multi_threading.json",
+            "https://aomedia-review.googlesource.com/changes/?q=project%3Aaom%20CDEF%20row%20multi%20threading&n=100"
+          ],
+          "utc": "2026-10-01T13:18:21.602898+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "gerrit_CDEF_row_multi_threading.json",
+          "bytes": 8024,
+          "sha256": "e31b7ad80324ac01b82acec34b2ac6c467074deaef1a21927f8ef5127f0961f0"
+        },
+        {
+          "id": "gerrit_CDEF_linebuf_after_2023-01-01",
+          "url": "https://aomedia-review.googlesource.com/changes/?q=project%3Aaom%20CDEF%20linebuf%20after%3A2023-01-01&n=100",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/gerrit_CDEF_linebuf_after_2023-01-01.json",
+            "https://aomedia-review.googlesource.com/changes/?q=project%3Aaom%20CDEF%20linebuf%20after%3A2023-01-01&n=100"
+          ],
+          "utc": "2026-10-01T13:18:21.610937+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "gerrit_CDEF_linebuf_after_2023-01-01.json",
+          "bytes": 8,
+          "sha256": "7b12556b22ae3ff4569f2143eeda2f1be10f0a74f18368bab7b620db80ff22b3"
+        }
+      ]
+    },
+    {
+      "record": "prior/fetch_batch3_curl_results.json",
+      "results": [
+        {
+          "id": "SVT_tree",
+          "url": "https://gitlab.com/api/v4/projects/AOMediaCodec%2FSVT-AV1/repository/tree?path=Source/Lib/Decoder/Codec&ref=v0.8.7&per_page=100",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/SVT_decoder_tree.json",
+            "https://gitlab.com/api/v4/projects/AOMediaCodec%2FSVT-AV1/repository/tree?path=Source/Lib/Decoder/Codec&ref=v0.8.7&per_page=100"
+          ],
+          "utc": "2026-10-01T13:19:16.504558+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "SVT_decoder_tree.json",
+          "bytes": 7527,
+          "sha256": "12c9d231baa60fab40c41907e5f463a75b3359e29eabbbb1e4f25deae37f268f"
+        },
+        {
+          "id": "SLRF2023_pdf",
+          "url": "https://jics.org.br/ojs/index.php/JICS/article/download/667/513",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/SLRF2023.pdf",
+            "https://jics.org.br/ojs/index.php/JICS/article/download/667/513"
+          ],
+          "utc": "2026-10-01T13:19:16.257706+00:00",
+          "exit_code": 56,
+          "stdout": "",
+          "stderr": "curl: (56) The requested URL returned error: 403\n"
+        },
+        {
+          "id": "SLRF2023_doi",
+          "url": "https://api.crossref.org/works/10.29292/jics.v18i1.667",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/SLRF2023_crossref.json",
+            "https://api.crossref.org/works/10.29292/jics.v18i1.667"
+          ],
+          "utc": "2026-10-01T13:19:17.497514+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "SLRF2023_crossref.json",
+          "bytes": 4298,
+          "sha256": "9a60e754e781fe5efdc0ee2e8ef8f1db64fe6549b366057aa12cf32924c3c789"
+        },
+        {
+          "id": "patch_136381",
+          "url": "https://aomedia-review.googlesource.com/changes/136381/revisions/current/patch?download",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/gerrit_136381_patch.b64",
+            "https://aomedia-review.googlesource.com/changes/136381/revisions/current/patch?download"
+          ],
+          "utc": "2026-10-01T13:19:17.359850+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "gerrit_136381_patch.b64",
+          "bytes": 16268,
+          "sha256": "28be1c66626870d95d390d99c1af1ba139bf01628ac2f07555ca264752ef1413"
+        },
+        {
+          "id": "patch_134864",
+          "url": "https://aomedia-review.googlesource.com/changes/134864/revisions/current/patch?download",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/gerrit_134864_patch.b64",
+            "https://aomedia-review.googlesource.com/changes/134864/revisions/current/patch?download"
+          ],
+          "utc": "2026-10-01T13:19:17.193244+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "gerrit_134864_patch.b64",
+          "bytes": 6312,
+          "sha256": "2400fbe906a4a06a0bd5b6749a2e6e84e6ec0c840d853e5a8b595cd0b799f6af"
+        },
+        {
+          "id": "patch_134862",
+          "url": "https://aomedia-review.googlesource.com/changes/134862/revisions/current/patch?download",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/gerrit_134862_patch.b64",
+            "https://aomedia-review.googlesource.com/changes/134862/revisions/current/patch?download"
+          ],
+          "utc": "2026-10-01T13:19:17.193116+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "gerrit_134862_patch.b64",
+          "bytes": 13872,
+          "sha256": "0287c88d68fbc4009e81140584bc8d7373bb5f7d0ce8124c97c973e8a194ae31"
+        },
+        {
+          "id": "patch_135142",
+          "url": "https://aomedia-review.googlesource.com/changes/135142/revisions/current/patch?download",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/gerrit_135142_patch.b64",
+            "https://aomedia-review.googlesource.com/changes/135142/revisions/current/patch?download"
+          ],
+          "utc": "2026-10-01T13:19:17.609597+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "gerrit_135142_patch.b64",
+          "bytes": 7300,
+          "sha256": "4e6a6caf6f3dd6eb97b890e95e004ab8c22c3544dba4ccdff2fdf6f220e801ff"
+        },
+        {
+          "id": "patch_134681",
+          "url": "https://aomedia-review.googlesource.com/changes/134681/revisions/current/patch?download",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/gerrit_134681_patch.b64",
+            "https://aomedia-review.googlesource.com/changes/134681/revisions/current/patch?download"
+          ],
+          "utc": "2026-10-01T13:19:18.092999+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "gerrit_134681_patch.b64",
+          "bytes": 27404,
+          "sha256": "ec7dce0f45dc42b730a46ba5a66b55d7ddb6fdc3f9a6aaabd6702397ea1db75b"
+        }
+      ]
+    },
+    {
+      "record": "prior/fetch_batch4_curl_results.json",
+      "results": [
+        {
+          "id": "CN_original_pdf",
+          "url": "https://data-pdf.patsnap.com/CN/A/12/22/05/10/6/1781276575666/CN122205106A.pdf?sign=q-sign-algorithm%3Dsha1%26q-ak%3DAKIDz31lFbrtH8mIbFyaxA70x49IRP7lLiCT%26q-sign-time%3D1782693288%3B1782725688%26q-key-time%3D1782693288%3B1782725688%26q-header-list%3Dhost%26q-url-param-list%3Dresponse-cache-control%3Bresponse-expires%26q-signature%3D0c9ff380f90a655c9f071a6a0dd7887bf10204ea&response-cache-control=no-cache&response-expires=Mon%2C%2029%20Jun%202026%2009%3A34%3A48%20GMT",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/CN122205106A.pdf",
+            "https://data-pdf.patsnap.com/CN/A/12/22/05/10/6/1781276575666/CN122205106A.pdf?sign=q-sign-algorithm%3Dsha1%26q-ak%3DAKIDz31lFbrtH8mIbFyaxA70x49IRP7lLiCT%26q-sign-time%3D1782693288%3B1782725688%26q-key-time%3D1782693288%3B1782725688%26q-header-list%3Dhost%26q-url-param-list%3Dresponse-cache-control%3Bresponse-expires%26q-signature%3D0c9ff380f90a655c9f071a6a0dd7887bf10204ea&response-cache-control=no-cache&response-expires=Mon%2C%2029%20Jun%202026%2009%3A34%3A48%20GMT"
+          ],
+          "utc": "2026-10-01T13:19:54.447792+00:00",
+          "exit_code": 56,
+          "stdout": "",
+          "stderr": "curl: (56) The requested URL returned error: 403\n"
+        },
+        {
+          "id": "US11997298_pdf",
+          "url": "https://patentimages.storage.googleapis.com/fc/2e/4c/bf34d4333f729f/US11997298.pdf",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/US11997298.pdf",
+            "https://patentimages.storage.googleapis.com/fc/2e/4c/bf34d4333f729f/US11997298.pdf"
+          ],
+          "utc": "2026-10-01T13:19:56.565652+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "US11997298.pdf",
+          "bytes": 3568658,
+          "sha256": "d0a884ee638872e5e3d2fc34678786cff4243306ecc53d562693fcec10630f8f"
+        },
+        {
+          "id": "WO2024026163_pdf",
+          "url": "https://patentimages.storage.googleapis.com/65/7c/07/c499a1061d9606/WO2024026163A1.pdf",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/WO2024026163.pdf",
+            "https://patentimages.storage.googleapis.com/65/7c/07/c499a1061d9606/WO2024026163A1.pdf"
+          ],
+          "utc": "2026-10-01T13:19:55.403460+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "WO2024026163.pdf",
+          "bytes": 4338331,
+          "sha256": "08b1374bda04647f50f9568b29905ff6a162b42330f6a2ee10aa83c8526f9fe1"
+        },
+        {
+          "id": "SLRF_source0",
+          "url": "https://jics.org.br/ojs/index.php/JICS/article/download/667/440",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/SLRF_source0.pdf",
+            "https://jics.org.br/ojs/index.php/JICS/article/download/667/440"
+          ],
+          "utc": "2026-10-01T13:19:52.732677+00:00",
+          "exit_code": 56,
+          "stdout": "",
+          "stderr": "curl: (56) The requested URL returned error: 403\n"
+        },
+        {
+          "id": "SLRF_source1",
+          "url": "https://jics.org.br/ojs/index.php/JICS/article/download/667/440",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/SLRF_source1.pdf",
+            "https://jics.org.br/ojs/index.php/JICS/article/download/667/440"
+          ],
+          "utc": "2026-10-01T13:19:53.139876+00:00",
+          "exit_code": 56,
+          "stdout": "",
+          "stderr": "curl: (56) The requested URL returned error: 403\n"
+        },
+        {
+          "id": "EbDecMemInit.c",
+          "url": "https://gitlab.com/AOMediaCodec/SVT-AV1/-/raw/v0.8.7/Source/Lib/Decoder/Codec/EbDecMemInit.c",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/EbDecMemInit.c",
+            "https://gitlab.com/AOMediaCodec/SVT-AV1/-/raw/v0.8.7/Source/Lib/Decoder/Codec/EbDecMemInit.c"
+          ],
+          "utc": "2026-10-01T13:19:55.562926+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "EbDecMemInit.c",
+          "bytes": 22937,
+          "sha256": "8f2fa4c946aa2ec504c9328677766a24dd1d0b48368c7dfbf487bc912ae4d8f2"
+        },
+        {
+          "id": "EbDecMemInit.h",
+          "url": "https://gitlab.com/AOMediaCodec/SVT-AV1/-/raw/v0.8.7/Source/Lib/Decoder/Codec/EbDecMemInit.h",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/EbDecMemInit.h",
+            "https://gitlab.com/AOMediaCodec/SVT-AV1/-/raw/v0.8.7/Source/Lib/Decoder/Codec/EbDecMemInit.h"
+          ],
+          "utc": "2026-10-01T13:19:55.039973+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "EbDecMemInit.h",
+          "bytes": 6809,
+          "sha256": "3df1ed42a96d399ff9b55a29aef0ea771256ed74ebf0d1840384a6cb5c1d78b7"
+        }
+      ]
+    },
+    {
+      "record": "prior/fetch_batch5_curl_results.json",
+      "results": [
+        {
+          "id": "detail_108943",
+          "url": "https://aomedia-review.googlesource.com/changes/108943/detail?o=CURRENT_REVISION&o=CURRENT_COMMIT",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/gerrit_108943.json",
+            "https://aomedia-review.googlesource.com/changes/108943/detail?o=CURRENT_REVISION&o=CURRENT_COMMIT"
+          ],
+          "utc": "2026-10-01T13:20:21.762090+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "gerrit_108943.json",
+          "bytes": 55004,
+          "sha256": "90dc9ca333cbdad5dfc27168639f3d71dd2810a51af5c0f362e42d03be6b3e3c"
+        },
+        {
+          "id": "patch_108943",
+          "url": "https://aomedia-review.googlesource.com/changes/108943/revisions/current/patch?download",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/gerrit_108943_patch.b64",
+            "https://aomedia-review.googlesource.com/changes/108943/revisions/current/patch?download"
+          ],
+          "utc": "2026-10-01T13:20:21.629773+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "gerrit_108943_patch.b64",
+          "bytes": 18120,
+          "sha256": "95b7e243138e55d32c714687007329d3590f5053f619f86bb16c0e940336d943"
+        },
+        {
+          "id": "detail_107701",
+          "url": "https://aomedia-review.googlesource.com/changes/107701/detail?o=CURRENT_REVISION&o=CURRENT_COMMIT",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/gerrit_107701.json",
+            "https://aomedia-review.googlesource.com/changes/107701/detail?o=CURRENT_REVISION&o=CURRENT_COMMIT"
+          ],
+          "utc": "2026-10-01T13:20:21.734193+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "gerrit_107701.json",
+          "bytes": 26143,
+          "sha256": "e236621615cfe2c40dd3178e38314aa56e42029ef30209adb6e5353de20d33c7"
+        },
+        {
+          "id": "patch_107701",
+          "url": "https://aomedia-review.googlesource.com/changes/107701/revisions/current/patch?download",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/gerrit_107701_patch.b64",
+            "https://aomedia-review.googlesource.com/changes/107701/revisions/current/patch?download"
+          ],
+          "utc": "2026-10-01T13:20:21.589347+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "gerrit_107701_patch.b64",
+          "bytes": 18344,
+          "sha256": "28af3d1356988b9f4fbb9ae7554859366e104106b2065f6355ec5b60fbbbe07d"
+        },
+        {
+          "id": "detail_132621",
+          "url": "https://aomedia-review.googlesource.com/changes/132621/detail?o=CURRENT_REVISION&o=CURRENT_COMMIT",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/gerrit_132621.json",
+            "https://aomedia-review.googlesource.com/changes/132621/detail?o=CURRENT_REVISION&o=CURRENT_COMMIT"
+          ],
+          "utc": "2026-10-01T13:20:21.760064+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "gerrit_132621.json",
+          "bytes": 44745,
+          "sha256": "501a0e67c9af55823a2319ff08ebb02356f0fe46c60551f6e775af286bcf9c52"
+        },
+        {
+          "id": "patch_132621",
+          "url": "https://aomedia-review.googlesource.com/changes/132621/revisions/current/patch?download",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/gerrit_132621_patch.b64",
+            "https://aomedia-review.googlesource.com/changes/132621/revisions/current/patch?download"
+          ],
+          "utc": "2026-10-01T13:20:21.542209+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "gerrit_132621_patch.b64",
+          "bytes": 1324,
+          "sha256": "183719cda8458b4c6f5f4f5c0c522d4f090f3516c30935d0d43b4161915ceee0"
+        },
+        {
+          "id": "detail_135643",
+          "url": "https://aomedia-review.googlesource.com/changes/135643/detail?o=CURRENT_REVISION&o=CURRENT_COMMIT",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/gerrit_135643.json",
+            "https://aomedia-review.googlesource.com/changes/135643/detail?o=CURRENT_REVISION&o=CURRENT_COMMIT"
+          ],
+          "utc": "2026-10-01T13:20:23.131513+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "gerrit_135643.json",
+          "bytes": 46068,
+          "sha256": "45e341ccd86d773bb4d8b4e25f25bb45d8b3fa02c7d2bb72bec48ce27ca1e6b2"
+        },
+        {
+          "id": "patch_135643",
+          "url": "https://aomedia-review.googlesource.com/changes/135643/revisions/current/patch?download",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/gerrit_135643_patch.b64",
+            "https://aomedia-review.googlesource.com/changes/135643/revisions/current/patch?download"
+          ],
+          "utc": "2026-10-01T13:20:22.977932+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "gerrit_135643_patch.b64",
+          "bytes": 55412,
+          "sha256": "b5eca6138cf8a121bea535432c20a93d064d7580ed3ff119fff054696133d601"
+        },
+        {
+          "id": "detail_157981",
+          "url": "https://aomedia-review.googlesource.com/changes/157981/detail?o=CURRENT_REVISION&o=CURRENT_COMMIT",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/gerrit_157981.json",
+            "https://aomedia-review.googlesource.com/changes/157981/detail?o=CURRENT_REVISION&o=CURRENT_COMMIT"
+          ],
+          "utc": "2026-10-01T13:20:23.115048+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "gerrit_157981.json",
+          "bytes": 53639,
+          "sha256": "3cbef84171c835a3b6df468238d5251dfeca23a22541ca80ae92155ad6399853"
+        },
+        {
+          "id": "patch_157981",
+          "url": "https://aomedia-review.googlesource.com/changes/157981/revisions/current/patch?download",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/gerrit_157981_patch.b64",
+            "https://aomedia-review.googlesource.com/changes/157981/revisions/current/patch?download"
+          ],
+          "utc": "2026-10-01T13:20:22.896812+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "gerrit_157981_patch.b64",
+          "bytes": 5252,
+          "sha256": "e223e5e3b6b621aa73dd73e24f923a4a14e6dfb9c425bdc7307463a18be4e1b6"
+        },
+        {
+          "id": "detail_180981",
+          "url": "https://aomedia-review.googlesource.com/changes/180981/detail?o=CURRENT_REVISION&o=CURRENT_COMMIT",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/gerrit_180981.json",
+            "https://aomedia-review.googlesource.com/changes/180981/detail?o=CURRENT_REVISION&o=CURRENT_COMMIT"
+          ],
+          "utc": "2026-10-01T13:20:23.153546+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "gerrit_180981.json",
+          "bytes": 71237,
+          "sha256": "a262fd11c8fd4a007f333e8228ea03281ea329befcc8757eaa85a6ec59af88a9"
+        },
+        {
+          "id": "patch_180981",
+          "url": "https://aomedia-review.googlesource.com/changes/180981/revisions/current/patch?download",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/gerrit_180981_patch.b64",
+            "https://aomedia-review.googlesource.com/changes/180981/revisions/current/patch?download"
+          ],
+          "utc": "2026-10-01T13:20:23.066004+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "gerrit_180981_patch.b64",
+          "bytes": 15940,
+          "sha256": "2c942f32c2cfab13e68577ee8af23136d37430c486e228b43cc02adc029d9ce8"
+        },
+        {
+          "id": "detail_181521",
+          "url": "https://aomedia-review.googlesource.com/changes/181521/detail?o=CURRENT_REVISION&o=CURRENT_COMMIT",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/gerrit_181521.json",
+            "https://aomedia-review.googlesource.com/changes/181521/detail?o=CURRENT_REVISION&o=CURRENT_COMMIT"
+          ],
+          "utc": "2026-10-01T13:20:25.192392+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "gerrit_181521.json",
+          "bytes": 77520,
+          "sha256": "db9d21c8c525814b817d930d6cbb8921fa37da9570106dcc37289b1da8e52c53"
+        },
+        {
+          "id": "patch_181521",
+          "url": "https://aomedia-review.googlesource.com/changes/181521/revisions/current/patch?download",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/gerrit_181521_patch.b64",
+            "https://aomedia-review.googlesource.com/changes/181521/revisions/current/patch?download"
+          ],
+          "utc": "2026-10-01T13:20:25.168639+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "gerrit_181521_patch.b64",
+          "bytes": 11884,
+          "sha256": "07f13914235f2bc832ad4ec37b3c73475ce983248fdfbdc0909df68a28af2594"
+        },
+        {
+          "id": "detail_20360",
+          "url": "https://aomedia-review.googlesource.com/changes/20360/detail?o=CURRENT_REVISION&o=CURRENT_COMMIT",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/gerrit_20360.json",
+            "https://aomedia-review.googlesource.com/changes/20360/detail?o=CURRENT_REVISION&o=CURRENT_COMMIT"
+          ],
+          "utc": "2026-10-01T13:20:27.946827+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "gerrit_20360.json",
+          "bytes": 110123,
+          "sha256": "57f8c5a1ed8fa76112a20e766438115cedd2997c4dbc468a377369bbf28bdf4c"
+        },
+        {
+          "id": "patch_20360",
+          "url": "https://aomedia-review.googlesource.com/changes/20360/revisions/current/patch?download",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/gerrit_20360_patch.b64",
+            "https://aomedia-review.googlesource.com/changes/20360/revisions/current/patch?download"
+          ],
+          "utc": "2026-10-01T13:20:27.461888+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "gerrit_20360_patch.b64",
+          "bytes": 63628,
+          "sha256": "c4410143393591743fbe2f4dfa908e1d60644076fc08772f348a09faca686cf8"
+        },
+        {
+          "id": "detail_8656",
+          "url": "https://aomedia-review.googlesource.com/changes/8656/detail?o=CURRENT_REVISION&o=CURRENT_COMMIT",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/gerrit_8656.json",
+            "https://aomedia-review.googlesource.com/changes/8656/detail?o=CURRENT_REVISION&o=CURRENT_COMMIT"
+          ],
+          "utc": "2026-10-01T13:20:27.452739+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "gerrit_8656.json",
+          "bytes": 37063,
+          "sha256": "4371751688e6fba7ca348b8c8c9fdb7e198593123737b8dfe281bc78a29500b3"
+        },
+        {
+          "id": "patch_8656",
+          "url": "https://aomedia-review.googlesource.com/changes/8656/revisions/current/patch?download",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/gerrit_8656_patch.b64",
+            "https://aomedia-review.googlesource.com/changes/8656/revisions/current/patch?download"
+          ],
+          "utc": "2026-10-01T13:20:27.276794+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "gerrit_8656_patch.b64",
+          "bytes": 12452,
+          "sha256": "696c7061751b532a2e9687d6f35cfae760b1b78269460c9767be02c87eaf9826"
+        }
+      ]
+    },
+    {
+      "record": "prior/fetch_batch6_curl_results.json",
+      "results": [
+        {
+          "id": "SVT_processframe",
+          "url": "https://gitlab.com/AOMediaCodec/SVT-AV1/-/raw/3971c982311d49f9355dc8dccdcf8d21b70fa624/Source/Lib/Decoder/Codec/EbDecProcessFrame.c",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/svt_decoder_processframe.c",
+            "https://gitlab.com/AOMediaCodec/SVT-AV1/-/raw/3971c982311d49f9355dc8dccdcf8d21b70fa624/Source/Lib/Decoder/Codec/EbDecProcessFrame.c"
+          ],
+          "utc": "2026-10-01T13:30:54.696677+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "svt_decoder_processframe.c",
+          "bytes": 8240,
+          "sha256": "e66003439e7129f12938660a17d64bd286dee37683e0edd0564eaf565779b90a"
+        },
+        {
+          "id": "SVT_process",
+          "url": "https://gitlab.com/AOMediaCodec/SVT-AV1/-/raw/3971c982311d49f9355dc8dccdcf8d21b70fa624/Source/Lib/Decoder/Codec/EbDecProcess.c",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/svt_decoder_process.c",
+            "https://gitlab.com/AOMediaCodec/SVT-AV1/-/raw/3971c982311d49f9355dc8dccdcf8d21b70fa624/Source/Lib/Decoder/Codec/EbDecProcess.c"
+          ],
+          "utc": "2026-10-01T13:30:54.859995+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "svt_decoder_process.c",
+          "bytes": 60625,
+          "sha256": "b0e18335aff07472cb3ba887ffc36d08fca873065d6d91950727908d2306b329"
+        },
+        {
+          "id": "Electronics2024",
+          "url": "https://mdpi-res.com/d_attachment/electronics/electronics-13-02422/article_deploy/electronics-13-02422.pdf",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/Electronics2024.pdf",
+            "https://mdpi-res.com/d_attachment/electronics/electronics-13-02422/article_deploy/electronics-13-02422.pdf"
+          ],
+          "utc": "2026-10-01T13:30:56.639684+00:00",
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "file": "Electronics2024.pdf",
+          "bytes": 9156659,
+          "sha256": "6363bc19bc7c3cbb1b271207ad7131e28e5008111455db4b3d2979d64de67e83"
+        },
+        {
+          "id": "aom_issue3276",
+          "url": "https://issues.aomedia.org/issues/40243033",
+          "argv": [
+            "/usr/bin/curl",
+            "--fail",
+            "--location",
+            "--max-time",
+            "45",
+            "--silent",
+            "--show-error",
+            "--output",
+            "CDEF_FINAL_PAPER_GATE/prior/aom_issue_probe.html",
+            "https://issues.aomedia.org/issues/40243033"
+          ],
+          "utc": "2026-10-01T13:30:54.302661+00:00",
+          "exit_code": 35,
+          "stdout": "",
+          "stderr": "curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to issues.aomedia.org:443 \n"
+        }
+      ]
+    }
+  ],
+  "packaging_argv": [
+    "CDEF_FINAL_PAPER_GATE/scripts/package_results.py"
+  ],
+  "reanalysis_reproduction": "final_checks.py subprocess; stdout/stderr in logs/reanalysis_reproduction.*",
+  "other_verified_actions": [
+    "Read-only Git blob checks for 27 libaom files and 3 SVT files",
+    "Built-in LaTeX compiler success",
+    "Four-page PDF rendered and visually inspected",
+    "Existing private PDF identities and architecture figures checked"
+  ],
+  "computer_use_attempt": "Codex app GUI selection denied by computer-use policy; no GUI interaction or bypass performed. PDF exported with existing TeX CLI instead."
+}

@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-10-01T08:05:27.057234+00:00",
+  "files": [
+    {
+      "path": "scripts/run_timing.py",
+      "sha256": "080e7adbb16aa9bcb8b896d2851bf65ccdf93f2f726502e20c0e3ed1e4bd6173"
+    },
+    {
+      "path": "protocol/timing_cells.json",
+      "sha256": "7e5f86c0ecd8350d1580f293ea2bb3a1f7aae6ed78a4843e6cea2780e9ff348c"
+    },
+    {
+      "path": "protocol/timing_schedule.json",
+      "sha256": "ddb5c150a617723928449bc4366814457c94d6c8157a14ce2544b6bc3a8e1cc4"
+    },
+    {
+      "path": "protocol/protocol.json",
+      "sha256": "6a1d4669647f592e27ff4d7e9423ee1740a83fff48da1334959b4cf5fb598885"
+    },
+    {
+      "path": "builds/type_fix_release/ivf_gate",
+      "sha256": "0cea3913c01633a975d35b67fc16d3cabfdc6a7a4b5eeecfea41cfd8079432fc"
+    },
+    {
+      "path": "builds/dual_token_release/ivf_gate",
+      "sha256": "f1eb85522a1d26d887cb63abfb34792994d7f237752525268e29f11d6a81a1c7"
+    },
+    {
+      "path": "builds/hybrid_release/ivf_gate",
+      "sha256": "5d3af29c52a2cea9c01c8c3b3a4b2f3449a74921023f766c6c72a4533a333297"
+    }
+  ]
+}

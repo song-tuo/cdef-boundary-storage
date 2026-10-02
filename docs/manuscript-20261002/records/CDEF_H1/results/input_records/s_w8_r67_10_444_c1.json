@@ -1,0 +1,25 @@
+{
+  "id": "s_w8_r67_10_444_c1",
+  "width": 512,
+  "height": 4287,
+  "R": 67,
+  "W_requested": 8,
+  "regime": "R_much_larger_W",
+  "depth": 10,
+  "chroma": "444",
+  "cdef_enabled": 1,
+  "frames": 3,
+  "seed": 310110,
+  "family": "checker",
+  "cq": 44,
+  "cpu_used": 8,
+  "tile_columns": 1,
+  "row_mt": [
+    0,
+    1
+  ],
+  "raw_sha256": "5a13bb7c9e39de33b65154662b5e971b076366a19f7bee2c9de4cff9ab5200d0",
+  "encode_exit": 0,
+  "sha256": "f691b51cbd98a6dfb9a26af783ccb45fd96666b4d723f4272cebb3816af050a8",
+  "bytes": 1921799
+}

@@ -1,0 +1,42 @@
+{
+  "official_commit": "10aece4157eb79315da205f39e19bf6ab3ee30d0",
+  "official_files": 1347,
+  "changed": [
+    "CMakeLists.txt",
+    "aom_dsp/butteraugli.c",
+    "apps/aomdec.c",
+    "apps/aomenc.c",
+    "av1/common/alloccommon.c",
+    "common/webmdec.cc",
+    "common/webmenc.cc",
+    "libs.doxy_template",
+    "test/test.cmake"
+  ],
+  "missing": [],
+  "extra_packaging_files": [
+    "debian/aomenc.1",
+    "debian/changelog",
+    "debian/libaom3.install",
+    "debian/libaom-dev.install",
+    "debian/libaom-doc.docs",
+    "debian/aomdec.1",
+    "debian/libaom-doc.doc-base",
+    "debian/rules",
+    "debian/watch",
+    "debian/copyright",
+    "debian/aom-tools.install",
+    "debian/aom-tools.manpages",
+    "debian/libaom3.symbols",
+    "debian/libaom-doc.examples",
+    "debian/control",
+    "debian/patches/series",
+    "debian/patches/0003-use-system-libwebm.patch",
+    "debian/patches/0002-use-system-libyuv.patch",
+    "debian/patches/0001-doc-Use-libjs-mathjax-rather-than-cloudflare-copy.patch",
+    "debian/source/format",
+    "debian/tests/library-build.c",
+    "debian/tests/library-build",
+    "debian/tests/encode-decode",
+    "debian/tests/control"
+  ]
+}

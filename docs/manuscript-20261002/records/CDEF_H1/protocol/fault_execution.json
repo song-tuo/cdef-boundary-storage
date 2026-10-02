@@ -1,0 +1,86 @@
+{
+  "input_R": 19,
+  "source_inputs": "s_w2_r19_{depth}_{chroma}_c1.ivf",
+  "cases": [
+    [
+      "stage1",
+      {
+        "H1_FAULT_STAGE": "1"
+      }
+    ],
+    [
+      "stage2",
+      {
+        "H1_FAULT_STAGE": "2"
+      }
+    ],
+    [
+      "stage3",
+      {
+        "H1_FAULT_STAGE": "3"
+      }
+    ],
+    [
+      "stage4",
+      {
+        "H1_FAULT_STAGE": "4"
+      }
+    ],
+    [
+      "stage5",
+      {
+        "H1_FAULT_STAGE": "5"
+      }
+    ],
+    [
+      "stage6",
+      {
+        "H1_FAULT_STAGE": "6"
+      }
+    ],
+    [
+      "stage7",
+      {
+        "H1_FAULT_STAGE": "7"
+      }
+    ],
+    [
+      "plane0",
+      {
+        "H1_ALLOC_PLANE": "0"
+      }
+    ],
+    [
+      "plane1",
+      {
+        "H1_ALLOC_PLANE": "1"
+      }
+    ],
+    [
+      "plane2",
+      {
+        "H1_ALLOC_PLANE": "2"
+      }
+    ],
+    [
+      "owner",
+      {
+        "H1_ALLOC_OWNER": "1"
+      }
+    ],
+    [
+      "negative_stage",
+      {
+        "H1_FAULT_STAGE": "99"
+      }
+    ],
+    [
+      "negative_row",
+      {
+        "H1_FAULT_STAGE": "2",
+        "H1_FAULT_ROW": "9999"
+      }
+    ]
+  ],
+  "rationale": "frozen generated inputs; R>W for every tested W, target row 1 exists; no production changes"
+}

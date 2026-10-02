@@ -1,0 +1,10 @@
+{
+  "profiles": [
+    "asan",
+    "tsan"
+  ],
+  "source": "hybrid_audit (same implementation seal)",
+  "filter": "*FrameParallelThreadEncode*:-*Large*",
+  "reason": "independent sanitizer check of the changed per-worker state on encoder frame-parallel path; supplement to all 45 clean Release tests",
+  "frozen_before_build_utc": "2026-10-01T08:15:17.550290+00:00"
+}

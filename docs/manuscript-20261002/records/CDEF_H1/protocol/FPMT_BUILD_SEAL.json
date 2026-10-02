@@ -1,0 +1,21 @@
+{
+  "source_seal": "IMPLEMENTATION_SEAL.json",
+  "files": [
+    {
+      "path": "builds/hybrid_fpmt/test_libaom",
+      "sha256": "949fcb4dfd774f8427fd60e974056af5f9c444eb04480a364497184d336d0969"
+    },
+    {
+      "path": "builds/hybrid_fpmt/libaom.a",
+      "sha256": "896187922f17add242f96f3970f2809bb46aba9a51c73faa98db16d2e1253429"
+    },
+    {
+      "path": "builds/hybrid_fpmt/compile_commands.json",
+      "sha256": "5e37d188dbffdc2fc453c1acff3db860336ce8349ccf0c4004f02c28d8780a10"
+    },
+    {
+      "path": "builds/hybrid_fpmt/CMakeCache.txt",
+      "sha256": "ab086a9976d62d3354b0eaff5ecd7fd333d99adb7e135ecc16b91362b7301732"
+    }
+  ]
+}

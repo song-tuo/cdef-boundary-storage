@@ -1,0 +1,3 @@
+#!/bin/sh
+# Only source_version() lookup: use the CMake-generated tarball version.
+exit 127

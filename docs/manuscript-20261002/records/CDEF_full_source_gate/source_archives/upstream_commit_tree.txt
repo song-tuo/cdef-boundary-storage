@@ -1,0 +1,41 @@
+tag v3.12.1
+Tagger: Wan-Teh Chang <wtc@google.com>
+
+Release v3.12.1
+
+2025-04-11 v3.12.1
+  This release includes several bug fixes. This release is ABI
+  compatible with the last release. See
+  https://aomedia.googlesource.com/aom/+log/v3.12.0..v3.12.1 for all the
+  commits in this release.
+
+  - Bug Fixes
+    * b:396169342: Assertion
+      `av1_is_subpelmv_in_range(&ms_params.mv_limits, start_mv)' failed.
+    * b:401671154: typo in void init_src_params(...)
+    * Coverity defect 323670: Uninitialized scalar variable in
+      encode_with_and_without_superres()
+    * cmake: bump minimum version to 3.16
+    * cfl_ppc: fix subtract_average_vsx
+    * Fix an incorrect index in av1_highbd_pixel_proj_error_neon
+
+Bug: 409848651
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAABCgAdFiEEsALwi3ShSNqgH3EjpI6G2wuDBJgFAmf9XUgACgkQpI6G2wuD
+BJhKqhAAo1zQrXDhc5IuAne/lWGbdiB/3p27CWav8lprT1jmCbv3/l/uf4BUHNu0
+IzTsfVfPcNOpf5wmiLeaKmj32P+IvHMKrOxUrwhLkksD9rYY1KTdTHcfMRPmhA4t
+CaXAIOU0t7WxS9tx4+3hUfcWXe99Th3LSxjFMbQYi0p/wyypx3byRANa8Fwmqzov
+bV/mhLIXlngfuZ8cB0dl+8e7N1FiBj/R5ht9vnq7Sy1xS2QtfrqAVhsNyy9EqRfP
+jPM1oeV8hqvfqfWq5U9HH3Ca9vbDmKwZpJEhqWi+2+TD5MLLXXComxkfkLwOEzCo
+KIxrDeYkagF/BEb1tXTCe/vNBHLPfFGjzvC9wrHLliG+vHL5ks9DpeF21KJZ6w01
+j0pkd8ao8UtBTNb4ylbkOP3hHvFBU/aN2U36gVubqnU6Qas6WfE/9CClenm1hunR
+QSRhlhEc+W8xMvJCln3EmNde8BJPdLds5xYjlp9wRYpajsPZtYCPpZZ2VyBAu1pl
+9Gst097Is+uJVbNsELoBClgLfG0JZs6HMbm6aIwkPgsjxdpoGCNJIrFQd4bvAVZI
+z5geuGaFTJAZnFIMGJdvB3BQcR4gRGBcL2g0198tQ42e67PlOAgHrgbejsL6hzjK
+chKb32VXQkk2FIR6UkeQsWAL9j29obB/SpkU/Ue3Y8t+5tGs9Js=
+=8Akz
+-----END PGP SIGNATURE-----
+10aece4157eb79315da205f39e19bf6ab3ee30d0
+f401599b7be4c53cbcc2735969a4970c744dd372
+v3.12.1: Update AUTHORS,CHANGELOG,CMakeLists.txt

@@ -1,0 +1,12 @@
+[
+  {
+    "group": "conformance",
+    "command": [
+      "${WORKSPACE}/CDEF_full_source_gate/builds/type_fix_release/test_libaom",
+      "--gtest_filter=*TestVectorTest*:*InvalidFileTest*:*ExternalFrameBuffer*:*DecodeScalabilityTest*",
+      "--gtest_output=xml:${WORKSPACE}/CDEF_full_source_gate/results/type_fix_release_upstream_conformance.xml"
+    ],
+    "exit": 0,
+    "seconds": 17.85956120491028
+  }
+]

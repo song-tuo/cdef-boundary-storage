@@ -1,0 +1,15 @@
+{
+  "baseline_manifest_matches": true,
+  "variant_changes": {
+    "type_fix": [
+      "av1/common/alloccommon.c"
+    ],
+    "token": [
+      "av1/common/alloccommon.c",
+      "av1/common/thread_common.c",
+      "av1/common/thread_common.h"
+    ]
+  },
+  "external_symbol_replacement": false,
+  "baseline_file_count": 1371
+}

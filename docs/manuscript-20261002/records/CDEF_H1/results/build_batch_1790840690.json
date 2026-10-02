@@ -1,0 +1,57 @@
+[
+  {
+    "variant": "type_fix_audit",
+    "profile": "release",
+    "exit_code": 0
+  },
+  {
+    "variant": "dual_token_audit",
+    "profile": "release",
+    "exit_code": 0
+  },
+  {
+    "variant": "hybrid_audit",
+    "profile": "release",
+    "exit_code": 0
+  },
+  {
+    "variant": "hybrid",
+    "profile": "debug",
+    "exit_code": 0
+  },
+  {
+    "variant": "hybrid",
+    "profile": "asan",
+    "exit_code": 0
+  },
+  {
+    "variant": "hybrid",
+    "profile": "tsan",
+    "exit_code": 0
+  },
+  {
+    "variant": "hybrid_audit",
+    "profile": "asan",
+    "exit_code": 0
+  },
+  {
+    "variant": "hybrid_audit",
+    "profile": "tsan",
+    "exit_code": 0
+  },
+  {
+    "variant": "type_fix_account",
+    "profile": "release",
+    "exit_code": 0
+  },
+  {
+    "variant": "dual_token_account",
+    "profile": "release",
+    "exit_code": 0
+  },
+  {
+    "variant": "hybrid_account",
+    "profile": "release",
+    "exit_code": 0
+  }
+]

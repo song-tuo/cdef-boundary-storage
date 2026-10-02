@@ -1,0 +1,20 @@
+[
+  {
+    "direction": "sizeup",
+    "official_source": "${WORKSPACE}/CDEF_full_source_gate/testdata/av1-1-b8-03-sizeup.mkv",
+    "official_sha256": "919bc6e93d1127a6bd98d413dd6c3a227bd2f4f6149ea32a2b455eec380b2b9f",
+    "derived_payload_ivf": "inputs/conformance_sizeup.ivf",
+    "ivf_sha256": "cdb76eacab493b93eaa4afd31b1e6e06f94ff1cad7e5aae992bc494dd5d4bfb4",
+    "official_expected_frame_md5_sha256": "9f849b305c137d989512220d5701c49a67683736b19f620e76677a0d41c4016a",
+    "derivation": "read-only prior demux of unchanged official MKV payload; independently compare every new decode to official frame MD5"
+  },
+  {
+    "direction": "sizedown",
+    "official_source": "${WORKSPACE}/CDEF_full_source_gate/testdata/av1-1-b8-03-sizedown.mkv",
+    "official_sha256": "64f4e78cca42acbb0a9e25bd4a5c2ff2f96e3e911595902b60d2266a93f2c08f",
+    "derived_payload_ivf": "inputs/conformance_sizedown.ivf",
+    "ivf_sha256": "9a088b5cdf20664752af2ec28bcc6bc382ce94b58617a1b620c96409d24e8ffd",
+    "official_expected_frame_md5_sha256": "59876b6e7d61043abb939d2dd9d34b4f8333f33b1ef52d0e36dd02c12801e70b",
+    "derivation": "read-only prior demux of unchanged official MKV payload; independently compare every new decode to official frame MD5"
+  }
+]

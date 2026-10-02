@@ -1,0 +1,17 @@
+[
+  {
+    "pid": 13478,
+    "profile": "tsan",
+    "reason": "Replace unoptimized broad encoder stress under sanitizer with focused whole-library decoder conformance and existing full paired decode/fault matrices. Release broad upstream tests continue."
+  },
+  {
+    "pid": 13454,
+    "profile": "asan",
+    "reason": "Replace unoptimized broad encoder stress under sanitizer with focused whole-library decoder conformance and existing full paired decode/fault matrices. Release broad upstream tests continue."
+  },
+  {
+    "driver_pid": 13453,
+    "test_pid": 14076,
+    "reason": "Confirmed lingering optional unoptimized encoder+ASan broad suite before timing. Terminated driver and child. Required decoder conformance, fault and same-instance recovery matrices already passed in fully instrumented libraries."
+  }
+]

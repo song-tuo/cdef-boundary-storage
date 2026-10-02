@@ -1,0 +1,15 @@
+{
+  "id": "alloc_2560x1440",
+  "width": 2560,
+  "height": 1440,
+  "depth": 8,
+  "chroma": "420",
+  "cdef_enabled": 1,
+  "frames": 3,
+  "seed": 310108,
+  "family": "checker",
+  "raw_sha256": "c8a0a44bd2e2467395901d26d973b97c181373375450419edcb2f759a05d8d5d",
+  "encode_exit": 0,
+  "sha256": "5ef0f9661a4984a0f6734d39ef95c11865ecb22088538a94fabc21382b615f01",
+  "bytes": 2115788
+}

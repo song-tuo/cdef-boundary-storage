@@ -1,0 +1,17 @@
+[
+  {
+    "variant": "type_fix",
+    "profile": "release",
+    "exit_code": 0
+  },
+  {
+    "variant": "dual_token",
+    "profile": "release",
+    "exit_code": 0
+  },
+  {
+    "variant": "hybrid",
+    "profile": "release",
+    "exit_code": 0
+  }
+]

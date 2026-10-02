@@ -1,0 +1,22 @@
+{
+  "variant": "type_fix_audit",
+  "profile": "release",
+  "configure": [
+    "cmake",
+    "-S",
+    "${WORKSPACE}/CDEF_full_source_gate/src/type_fix_audit",
+    "-B",
+    "${WORKSPACE}/CDEF_full_source_gate/builds/type_fix_audit_release",
+    "-DCMAKE_POLICY_VERSION_MINIMUM=3.5",
+    "-DENABLE_DOCS=OFF",
+    "-DCONFIG_LIBYUV=0",
+    "-DCONFIG_WEBM_IO=0",
+    "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+    "-DCMAKE_BUILD_TYPE=Release"
+  ],
+  "started": 1790693838.418625,
+  "configure_exit": 0,
+  "build_exit": 0,
+  "harness_exit": 0,
+  "finished": 1790693905.869385
+}

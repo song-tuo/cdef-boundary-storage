@@ -1,0 +1,15 @@
+{
+  "zip": "${WORKSPACE}/cdef_h1_20261001T091045Z_results.zip",
+  "bytes": 1252293581,
+  "sha256": "9beba113bf719fa1c4ce68f59519a9b63cb7e29a79bc3166d28c8b596a6555e8",
+  "CRC": "PASS",
+  "manifest_files_verified": 40412,
+  "zip_members": 40413,
+  "state": "KEEP_DUAL_TOKEN_HYBRID_NOT_SUFFICIENT",
+  "exclusions": [
+    "disposable build object files and dSYM caches",
+    "bare Git objects (official archive snapshots and blob ledger included)",
+    "read-only upstream fixture cache (all 572 URLs and verified hashes supplied)",
+    "packager wrapper logs, still running at snapshot; final wrapper result delivered beside ZIP"
+  ]
+}

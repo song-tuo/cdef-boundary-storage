@@ -1,0 +1,15 @@
+{
+  "id": "alloc_1920x1080",
+  "width": 1920,
+  "height": 1080,
+  "depth": 8,
+  "chroma": "420",
+  "cdef_enabled": 1,
+  "frames": 3,
+  "seed": 310108,
+  "family": "checker",
+  "raw_sha256": "e69f6065fe7ae0773e8c30ae53da7cd0ec715802e0039a653df91e78a2c8bb03",
+  "encode_exit": 0,
+  "sha256": "2a534b1b1c3b7a5a1458cd1e970997949c6a298d7bf02552f1e1fd8902639860",
+  "bytes": 1200112
+}

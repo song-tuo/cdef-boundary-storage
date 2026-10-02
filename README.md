@@ -1,3 +1,15 @@
+# CDEF boundary-storage research artifacts
+
+## Current manuscript: artifact-v3
+
+For **An Exact Storage Bound for Row-Parallel CDEF in the AV1 Decoder** (2026-10-02), start with [the manuscript-specific evidence map](docs/manuscript-20261002/README.md). It identifies the exact manuscript hashes, Table I safety coverage, Table II four-row allocation table, Table III source comparison and Section IV-C H1 timing. The [artifact-v3 release](https://github.com/song-tuo/cdef-boundary-storage/releases/tag/artifact-v3) supplies the complete exported command logs.
+
+This update publishes existing evidence and corrects the version correspondence; it runs no new experiment or analysis. H1 remains KEEP_DUAL_TOKEN_HYBRID_NOT_SUFFICIENT (6/18 primary passes, 12/18 inconclusive). The owner-pool comparison remains secondary/descriptive.
+
+The instructions and table descriptions below belong to **artifact-v2**, a different manuscript snapshot. Its 8K projections and natural-video timing are not the current manuscript's tables. The immutable [v2 tag](https://github.com/song-tuo/cdef-boundary-storage/tree/artifact-v2) preserves those original files. The current root SHA256SUMS covers this checkout; the older checksum file is retained as provenance/artifact-v2-SHA256SUMS.
+
+---
+
 # Worker-Bounded Boundary Storage for Row-Parallel AV1 CDEF Decoding
 
 This research artifact provides the two separate libaom v3.12.1 patches, the recorded measurements behind the two paper tables, and tools for recalculation and new core correctness/allocation runs. It preserves the strong comparison: **type-fix versus token**. The pointer-size correction is a separate baseline change.

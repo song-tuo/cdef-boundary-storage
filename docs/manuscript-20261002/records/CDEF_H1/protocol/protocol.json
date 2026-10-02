@@ -1,0 +1,175 @@
+{
+  "stage": "CDEF-H1 SIMPLE-BOTTOM / HYBRID CONFIRMATORY GATE",
+  "frozen_utc": "2026-10-01T07:41:45.506046+00:00",
+  "source": "v3.12.1",
+  "commit": "10aece4157eb79315da205f39e19bf6ab3ee30d0",
+  "upstream_drift_resolved": false,
+  "variants": [
+    "type_fix",
+    "dual_token",
+    "hybrid"
+  ],
+  "arithmetic_copy_sites_DSP_row_issue_order": "unchanged",
+  "hybrid": {
+    "top": "dynamic owner array of min(R-1,W+1), existing job mutex",
+    "bottom": "persistent worker slot if R-1>=W; otherwise direct row index",
+    "bottom_owner_array": false,
+    "bottom_free_slot_scan": false,
+    "bottom_capacity_wait": false,
+    "new_condvar_or_barrier": false,
+    "serial": "existing W=1 serial path retained as in dual_token; no claim that its legacy allocation reaches row-MT bound",
+    "capacity_acceptance_workers": [
+      2,
+      8,
+      16
+    ],
+    "theoretical_bound": "top=min(R-1,W+1), bottom=min(R-1,W), total=min(2R-2,2W+1)"
+  },
+  "semantics": {
+    "spec_count": 192,
+    "row_mt": [
+      0,
+      1
+    ],
+    "expected_primary_cases_per_variant": 384,
+    "R_uses_actual_mi_rows": true,
+    "W_uses_actual_CDEF_workers_not_CLI_only": true,
+    "hash": "SHA256 visible bytes per plane/frame plus aggregate; normalized per-frame/row/plane copy-site sequence hash; global worker interleaving separately retained but not required identical",
+    "same_instance_sequence": "for every depth/chroma, concatenate R=3,67,3,131,1 enabled; R=17 disabled; R=17 enabled; same codec instance, requested W=1,2,8,16 and row_mt=0,1",
+    "mismatch_decision": "STOP_CDEF_HYBRID_SEMANTICS"
+  },
+  "safety": {
+    "profiles": [
+      "Release",
+      "Debug/assert",
+      "ASan+UBSan",
+      "TSan"
+    ],
+    "whole_library": true,
+    "upstream_groups": [
+      "core CDEF/decode/memory",
+      "TestVectorTest / InvalidFileTest / ExternalFrameBuffer / DecodeScalabilityTest",
+      "DecodeMultiThreaded / ExtTile / TileIndependence / TileGroup / UniformTileConfig",
+      "Resize / Superres / FrameSize / ErrorResilience",
+      "AV1 encoder FPMT shared-worker path"
+    ],
+    "conformance": "same official upstream vectors and separate two MKV payload routes used previously, independent new hybrid execution",
+    "faults": {
+      "stages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "row": 1,
+      "allocations": [
+        "Y",
+        "U",
+        "V",
+        "top_owner"
+      ],
+      "depths": [
+        8,
+        10,
+        12
+      ],
+      "chroma": [
+        "420",
+        "444"
+      ],
+      "workers": [
+        2,
+        8,
+        16
+      ],
+      "profiles": [
+        "ASan+UBSan",
+        "TSan"
+      ],
+      "normal_negative_controls": [
+        "stage99",
+        "row9999"
+      ],
+      "recovery": [
+        "destroy/recreate",
+        "same-instance replay after fault disabled"
+      ],
+      "timeout_seconds": 60
+    },
+    "leaks": "macOS leaks --atExit on new hybrid Release audit binary, including clean and fault cases; unsupported is not PASS",
+    "failure_decision": "KEEP_DUAL_TOKEN_HYBRID_NOT_SUFFICIENT",
+    "skipped_unsupported": "explicit, never PASS; missing required supported coverage prevents PROCEED"
+  },
+  "allocation": {
+    "sizes": [
+      [
+        1920,
+        1080
+      ],
+      [
+        2560,
+        1440
+      ],
+      [
+        3840,
+        2160
+      ]
+    ],
+    "workers": [
+      2,
+      8,
+      16
+    ],
+    "variants": [
+      "type_fix",
+      "dual_token",
+      "hybrid"
+    ],
+    "metric": "actual requested and backing-block malloc_size bytes from dedicated allocation-only builds; separated pixel, owner/index, worker structure, allocator padding; not RSS/SRAM/area/power/energy",
+    "new_stream": "checker, 8bit420, enabled, 3 frames, cpu8 cq44"
+  },
+  "timing": {
+    "cells": 18,
+    "independent_run_unit": "one fresh-process 3-variant block; all bootstrap indices resample whole blocks within a cell",
+    "blocks_per_cell": 12,
+    "within_block_order": "six permutations, each twice per cell, prospectively randomized seed 310031",
+    "between_blocks": "2-second quiet interval; cells interleaved by blocked schedule; no other task build/test launched during timing",
+    "warmups": "one decode per variant/cell, retained but excluded prospectively",
+    "primary": "median of within-block hybrid/type_fix decode-time ratios; decode API calls and flush, preload/hash excluded",
+    "secondary": "dual_token/hybrid, descriptive complexity contrast",
+    "bootstrap": "50000 whole-block resamples, seeded 311000+cell, percentile 95% CI of median",
+    "local_margin": 1.02,
+    "pass": "every local hybrid/type_fix upper CI<=1.02; no missing blocks, matching frames/hash, measured CDEF activity",
+    "explicit_regression": "lower CI>1.02; otherwise unestablished noninferiority is KEEP, not PASS",
+    "scope": "only frozen local workload/host; no universal <=2% or speedup claim; technical blocks are not independent content samples; no pooling old token CI",
+    "timeout_seconds_per_decode": 180,
+    "no_post_outcome_extension_or_dropping": true
+  },
+  "real_content": {
+    "inputs": "protocol/real_content_inputs.json",
+    "encode": "fixed official raw input IDs/hashes; first 10 frames; cq 0(lossless),24,56; same encoder settings and all contents retained",
+    "activation": "actual source-level filtered luma blocks and strengths; cq levels are prospective low/moderate/high operating settings, not guaranteed measured strata; failure to span activity must be recorded as incomplete, no content replacement",
+    "workers": [
+      2,
+      8,
+      16
+    ],
+    "row_mt": 1,
+    "no_timing_based_selection": true
+  },
+  "decision_priority": [
+    "STOP_CDEF_UPSTREAM_ALREADY_RESOLVED",
+    "STOP_CDEF_HYBRID_SEMANTICS",
+    "KEEP_DUAL_TOKEN_HYBRID_NOT_SUFFICIENT",
+    "PROCEED_CDEF_HYBRID_AS_MINIMAL_REALIZATION"
+  ],
+  "read_only_prior_roots": [
+    "${WORKSPACE}/CDEF_full_source_gate",
+    "${WORKSPACE}/CDEF_paper_pipeline",
+    "${WORKSPACE}/ISCAS_U_R3_RESOURCE"
+  ],
+  "paper": "only if PROCEED, record new main-implementation/contribution disposition in new H1 package; do not overwrite old paper/results"
+}

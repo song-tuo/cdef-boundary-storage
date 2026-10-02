@@ -1,0 +1,25 @@
+{
+  "id": "s_w16_r17_8_420_c0",
+  "width": 512,
+  "height": 1087,
+  "R": 17,
+  "W_requested": 16,
+  "regime": "R_eq_W_plus_1",
+  "depth": 8,
+  "chroma": "420",
+  "cdef_enabled": 0,
+  "frames": 3,
+  "seed": 310108,
+  "family": "checker",
+  "cq": 44,
+  "cpu_used": 8,
+  "tile_columns": 1,
+  "row_mt": [
+    0,
+    1
+  ],
+  "raw_sha256": "13f4a8127ad5845e4c99e4a15716764824d810b9aad7c152c84b876e1fc26ad5",
+  "encode_exit": 0,
+  "sha256": "49cbccc8a84eebd2092d2a15c8f0848a0bc3624d73cfa2160aea7d40cacf947a",
+  "bytes": 331414
+}

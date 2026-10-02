@@ -1,0 +1,12 @@
+[
+  {
+    "group": "conformance",
+    "command": [
+      "${WORKSPACE}/CDEF_full_source_gate/builds/token_tsan/test_libaom",
+      "--gtest_filter=*TestVectorTest*:*InvalidFileTest*:*ExternalFrameBuffer*:*DecodeScalabilityTest*",
+      "--gtest_output=xml:${WORKSPACE}/CDEF_full_source_gate/results/token_tsan_upstream_conformance.xml"
+    ],
+    "exit": 0,
+    "seconds": 819.9498059749603
+  }
+]

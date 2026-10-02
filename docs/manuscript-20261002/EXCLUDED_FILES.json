@@ -1,0 +1,44 @@
+[
+  {
+    "path": "records/CDEF_H1/results/shell_work/av1.error-resilient.ivf",
+    "bytes": 8798,
+    "sha256": "b77be6d8e83d4a4f27e48a61302182fc3e3697e59228b1ef470cc215db1f1ef8",
+    "reason": "media or complete upstream source distribution; identity retained"
+  },
+  {
+    "path": "records/CDEF_full_source_gate/results/shell_baseline/av1.error-resilient.ivf",
+    "bytes": 8798,
+    "sha256": "b77be6d8e83d4a4f27e48a61302182fc3e3697e59228b1ef470cc215db1f1ef8",
+    "reason": "media or complete upstream source distribution; identity retained"
+  },
+  {
+    "path": "records/CDEF_full_source_gate/results/shell_token/av1.error-resilient.ivf",
+    "bytes": 8798,
+    "sha256": "b77be6d8e83d4a4f27e48a61302182fc3e3697e59228b1ef470cc215db1f1ef8",
+    "reason": "media or complete upstream source distribution; identity retained"
+  },
+  {
+    "path": "records/CDEF_full_source_gate/results/shell_type_fix/av1.error-resilient.ivf",
+    "bytes": 8798,
+    "sha256": "b77be6d8e83d4a4f27e48a61302182fc3e3697e59228b1ef470cc215db1f1ef8",
+    "reason": "media or complete upstream source distribution; identity retained"
+  },
+  {
+    "path": "records/CDEF_full_source_gate/source_archives/aom_3.12.1-1.debian.tar.xz",
+    "bytes": 20464,
+    "sha256": "ac01db2f3d78d8ba39d5d7546ce4fcc1fa827e7b92387d7234d140d8d9afa5f9",
+    "reason": "media or complete upstream source distribution; identity retained"
+  },
+  {
+    "path": "records/CDEF_full_source_gate/source_archives/aom_3.12.1-1.dsc",
+    "bytes": 2552,
+    "sha256": "696b9e32b3fe787e8598811e8b680b829b93e65781e0328f8b5056619454b408",
+    "reason": "media or complete upstream source distribution; identity retained"
+  },
+  {
+    "path": "records/CDEF_full_source_gate/source_archives/aom_3.12.1.orig.tar.gz",
+    "bytes": 5504164,
+    "sha256": "40c929a41b2a59c24319a699c358351422829b3ae646de31b18cbabed0191962",
+    "reason": "media or complete upstream source distribution; identity retained"
+  }
+]

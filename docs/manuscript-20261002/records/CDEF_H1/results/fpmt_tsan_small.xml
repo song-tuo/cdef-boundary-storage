@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="3" failures="0" disabled="0" errors="0" time="336.737" timestamp="2026-10-01T16:16:16.291" name="AllTests">
+  <testsuite name="AV1/AVxFrameParallelThreadEncodeLowResTest" tests="3" failures="0" disabled="0" skipped="0" errors="0" time="336.728" timestamp="2026-10-01T16:16:16.321">
+    <testcase name="FrameParallelThreadEncodeTest/0" value_param="(0x107672718, 4, 1, 0)" file="${WORKSPACE}/CDEF_H1/src/hybrid_audit/test/frame_parallel_enc_test.cc" line="177" status="run" result="completed" time="210.923" timestamp="2026-10-01T16:16:16.321" classname="AV1/AVxFrameParallelThreadEncodeLowResTest" />
+    <testcase name="FrameParallelThreadEncodeTest/1" value_param="(0x107672718, 5, 1, 0)" file="${WORKSPACE}/CDEF_H1/src/hybrid_audit/test/frame_parallel_enc_test.cc" line="177" status="run" result="completed" time="69.757" timestamp="2026-10-01T16:19:47.244" classname="AV1/AVxFrameParallelThreadEncodeLowResTest" />
+    <testcase name="FrameParallelThreadEncodeTest/2" value_param="(0x107672718, 6, 1, 0)" file="${WORKSPACE}/CDEF_H1/src/hybrid_audit/test/frame_parallel_enc_test.cc" line="177" status="run" result="completed" time="56.047" timestamp="2026-10-01T16:20:57.001" classname="AV1/AVxFrameParallelThreadEncodeLowResTest" />
+  </testsuite>
+</testsuites>
