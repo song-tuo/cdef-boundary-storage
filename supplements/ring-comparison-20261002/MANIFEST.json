@@ -7835,6 +7835,10 @@
     "sha256": "2ff8f3cf0597d3edee5729de485ad509f5b84898b44424dbaefbb65db853ae91",
     "bytes": 1402
   },
+  "protocol/host_version_after.json": {
+    "sha256": "2e99426cb363badea99e24e388243d2e30653b58b4fb03267dd769323340d189",
+    "bytes": 731
+  },
   "protocol/libaom_source_identity.json": {
     "sha256": "81e59409d5ada8d1421a5dfb5bef314b2ea1f14f28d81b230b4fddd89dcdf923",
     "bytes": 2903
@@ -7848,8 +7852,8 @@
     "bytes": 308790
   },
   "README.md": {
-    "sha256": "b161d5e7cd55aeaba08818e3bc9e8c203ade2e13417838d8565b72aad02ae4f4",
-    "bytes": 6139
+    "sha256": "f7bee0bbd58f15c484a13bf6b20aa5a0adaf07f33deb479ddadcb5e419a84d00",
+    "bytes": 6510
   },
   "libaom_LICENSE": {
     "sha256": "4764a286d8b2faeaf42f4418e7d7a28d58fc8fd4d00a3d0a7f44b0a4099de7f2",

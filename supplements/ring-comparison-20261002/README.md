@@ -6,7 +6,7 @@ This is a separately frozen October 2, 2026 supplementary experiment. It compare
 
 Both full-source libaom v3.12.1 implementations keep the original copy sites, filtering arithmetic and consumer-return release. They allocate the same boundary-pixel capacity: min(R-1,W+1) top slots and min(R-1,W) bottom slots. The ring maps top T_j to (j-1) modulo the top count and bottom B_j to j modulo the bottom count. Before dispatch it waits, using a condition variable that releases the existing job mutex, until both required slots are free. Ring error exit wakes all waiting dispatchers. Extra condition-variable/waiter metadata is not included in the boundary-pixel count.
 
-The experiment uses Beauty, Jockey and HoneyBee, each 60 frames of 3840x2160 8-bit 4:2:0, at W=8 and 16. Input generation and source licensing are described in the original artifact. Videos are not redistributed in this supplement. The measured host is Apple M5 Pro / arm64 macOS 26.6.2 with Apple clang 21.0.0. No cross-platform timing claim is made.
+The experiment uses Beauty, Jockey and HoneyBee, each 60 frames of 3840x2160 8-bit 4:2:0, at W=8 and 16. Input generation and source licensing are described in the original artifact. Videos are not redistributed in this supplement. The measured host is Apple M5 Pro / arm64, Darwin 27.0.0 (recorded before timing), with macOS 27.0.1 and Apple clang 21.0.0 (clang-2100.3.34.2) recorded immediately after the run. The new build logs independently record AppleClang 21.0.0.21000334. This differs from the earlier campaign environment in the historical source-identity file. No cross-platform timing claim is made.
 
 ## Evidence layout
 
@@ -53,4 +53,4 @@ This supplement is published separately as `ring-comparison-20261002`: https://g
 
 ## Licensing
 
-The libaom license, patents notice and author list accompany the patches. No blanket open-source license is asserted for the author research scripts or data; the repository LICENSING.md applies. No video, binary, complete third-party source tree or desktop process inventory is distributed. Original machine paths are retained only in experiment provenance; no credentials or account tokens are included.
+The libaom license, patents notice and author list accompany the patches. No blanket open-source license is asserted for the author research scripts or data; the repository LICENSING.md applies. No video, binary, complete third-party source tree or full desktop process inventory is distributed. The pre/post host summaries retain only the short busy-process lists, alongside load and version metadata. Original machine paths are retained only in experiment provenance; no credentials or account tokens are included.

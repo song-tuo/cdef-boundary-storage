@@ -1,0 +1,9 @@
+{
+  "recorded_unix": 1790951112.6832352,
+  "recording_scope": "Recorded after completed timing; retained pre-run uname already identifies Darwin 27.0.0. No measured observations or freeze bytes changed.",
+  "sw_vers": "ProductName:\t\tmacOS\nProductVersion:\t\t27.0.1\nBuildVersion:\t\t26A434\n",
+  "clang": "Apple clang version 21.0.0 (clang-2100.3.34.2)\nTarget: arm64-apple-darwin27.0.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+  "build_log_identification": "AppleClang 21.0.0.21000334",
+  "original_source_identity_scope": "libaom_source_identity.json is historical Sep29 source provenance, not this supplementary run environment.",
+  "cpu_model_verified_after_run": "Apple M5 Pro"
+}
