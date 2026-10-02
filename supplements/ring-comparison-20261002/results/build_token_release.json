@@ -1,0 +1,47 @@
+{
+  "build": "token_release",
+  "commands": [
+    [
+      "cmake",
+      "-S",
+      "/Users/songdong/Desktop/iscas/idea2/CDEF_ring_comparison_20261002/src/token",
+      "-B",
+      "/Users/songdong/Desktop/iscas/idea2/CDEF_ring_comparison_20261002/builds/token_release",
+      "-DCMAKE_POLICY_VERSION_MINIMUM=3.5",
+      "-DENABLE_DOCS=OFF",
+      "-DCONFIG_LIBYUV=0",
+      "-DCONFIG_WEBM_IO=0",
+      "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+      "-DCMAKE_BUILD_TYPE=Release"
+    ],
+    [
+      "cmake",
+      "--build",
+      "/Users/songdong/Desktop/iscas/idea2/CDEF_ring_comparison_20261002/builds/token_release",
+      "--target",
+      "aom",
+      "-j",
+      "6"
+    ],
+    [
+      "clang",
+      "-O2",
+      "-g",
+      "-Wno-deprecated-declarations",
+      "-I/Users/songdong/Desktop/iscas/idea2/CDEF_ring_comparison_20261002/src/token",
+      "/Users/songdong/Desktop/iscas/idea2/CDEF_ring_comparison_20261002/scripts/ivf_gate.c",
+      "/Users/songdong/Desktop/iscas/idea2/CDEF_ring_comparison_20261002/builds/token_release/libaom.a",
+      "-lm",
+      "-lpthread",
+      "-o",
+      "/Users/songdong/Desktop/iscas/idea2/CDEF_ring_comparison_20261002/builds/token_release/ivf_gate"
+    ]
+  ],
+  "start": 1790948327.239989,
+  "results": [
+    0,
+    0,
+    0
+  ],
+  "end": 1790948352.223518
+}

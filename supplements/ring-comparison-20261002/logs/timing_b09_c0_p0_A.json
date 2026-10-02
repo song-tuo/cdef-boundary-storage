@@ -1,0 +1,35 @@
+{
+  "id": "timing_b09_c0_p0_A",
+  "variant": "token_release",
+  "command": [
+    "/Users/songdong/Desktop/iscas/idea2/CDEF_ring_comparison_20261002/builds/token_release/ivf_gate",
+    "/Users/songdong/Desktop/iscas/idea2/CDEF_paper_pipeline/revision_20260930/natural/media/Beauty_3840x2160_first60.ivf",
+    "8",
+    "1"
+  ],
+  "start_unix": 1790950274.310038,
+  "end_unix": 1790950277.372447,
+  "exit_code": 0,
+  "load_average": [
+    5.138671875,
+    4.9453125,
+    4.99658203125
+  ],
+  "output": {
+    "status": 0,
+    "destroy_status": 0,
+    "input_packets": 60,
+    "decoded_packets": 60,
+    "output_frames": 60,
+    "output_bytes": 746496000,
+    "pixel_sha256": "5b9d44200dc82821e3caa6c97bd0b9363a25074845698633bf7d4c7795dbbf45",
+    "decode_ns": 2812539000,
+    "elapsed_with_hash_ns": 3039089000,
+    "peak_rss_bytes": 420151296,
+    "truncated_input": 0,
+    "bit_depth": 8,
+    "subsampling_x": 1,
+    "subsampling_y": 1,
+    "monochrome": 0
+  }
+}

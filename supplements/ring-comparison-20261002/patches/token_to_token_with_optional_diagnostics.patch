@@ -1,0 +1,111 @@
+--- a/av1/common/thread_common.c
++++ b/av1/common/thread_common.c
+@@ -996,6 +996,27 @@
+ }
+ #endif  // !CONFIG_REALTIME_ONLY || CONFIG_AV1_DECODER
+ 
++
++#ifdef CDEF_POOL_DIAGNOSTICS
++#include <stdio.h>
++#include <stdlib.h>
++#include <time.h>
++#include <errno.h>
++static uint64_t cdef_pool_now(void) {
++  struct timespec t;
++  clock_gettime(CLOCK_MONOTONIC, &t);
++  return (uint64_t)t.tv_sec * 1000000000ULL + t.tv_nsec;
++}
++static int cdef_pool_env(const char *key, int fallback) {
++  const char *s = getenv(key);
++  return s ? atoi(s) : fallback;
++}
++static void cdef_pool_hold(int ms) {
++  struct timespec t = { ms / 1000, (ms % 1000) * 1000000L };
++  while (nanosleep(&t, &t) != 0 && errno == EINTR) {}
++}
++#endif
++
+ // Initializes cdef_sync parameters.
+ static inline void reset_cdef_job_info(AV1CdefSync *const cdef_sync) {
+   cdef_sync->end_of_frame = 0;
+@@ -1115,6 +1136,9 @@
+         cdef_sync->cdef_row_mt[*cur_fbr].bottom_slot = bottom;
+       }
+     }
++#ifdef CDEF_POOL_DIAGNOSTICS
++    ++cdef_sync->pool_dispatch_rows;
++#endif
+     update_cdef_row_next_job_info(cdef_sync, nvfb);
+   }
+ #if CONFIG_MULTITHREAD
+@@ -1169,6 +1193,12 @@
+     av1_cdef_fb_row(cm, xd, cdef_worker->linebuf, cdef_worker->colbuf,
+                     cdef_worker->srcbuf, cur_fbr,
+                     cdef_worker->cdef_init_fb_row_fn, cdef_sync, error_info);
++#ifdef CDEF_POOL_DIAGNOSTICS
++    if (cur_fbr == cdef_sync->diag_hold_row && cdef_sync->diag_hold_ms > 0)
++      cdef_pool_hold(cdef_sync->diag_hold_ms);
++    if (cur_fbr == cdef_sync->diag_fault_row)
++      aom_internal_error(error_info, AOM_CODEC_ERROR, "CDEF pool test fault");
++#endif
+     cdef_release_boundaries(cdef_sync, cur_fbr, nvfb);
+     if (cdef_worker->do_extend_border) {
+       for (int plane = 0; plane < num_planes; ++plane) {
+@@ -1308,12 +1338,33 @@
+     cdef_sync->cdef_row_mt[i].bottom_slot = -1;
+     cdef_sync->cdef_row_mt[i].is_row_done = 0;
+   }
++#ifdef CDEF_POOL_DIAGNOSTICS
++  cdef_sync->pool_wait_ns = 0;
++  cdef_sync->pool_wait_calls = cdef_sync->pool_wait_rows = 0;
++  cdef_sync->pool_dispatch_rows = 0;
++  cdef_sync->diag_hold_row = cdef_pool_env("CDEF_POOL_HOLD_ROW", -1);
++  cdef_sync->diag_hold_ms = cdef_pool_env("CDEF_POOL_HOLD_MS", 0);
++  cdef_sync->diag_fault_row = cdef_pool_env("CDEF_POOL_FAULT_ROW", -1);
++  for (int i = 0; i < rows; ++i) cdef_sync->cdef_row_mt[i].capacity_wait_seen = 0;
++#endif
+   reset_cdef_job_info(cdef_sync);
+   prepare_cdef_frame_workers(cm, xd, cdef_worker, cdef_sb_row_worker_hook,
+                              workers, cdef_sync, num_workers,
+                              cdef_init_fb_row_fn, do_extend_border);
+   launch_cdef_workers(workers, num_workers);
+   sync_cdef_workers(workers, cm, num_workers);
++#ifdef CDEF_POOL_DIAGNOSTICS
++  size_t bytes = 0;
++  for (int p = 0; p < av1_num_planes(cm); ++p)
++    bytes += cm->cdef_info.allocated_linebuf_size[p];
++  fprintf(stderr, "{\"event\":\"cdef_pool_diag\",\"variant\":\"token\","
++          "\"workers\":%d,\"rows\":%d,\"top_slots\":%d,\"bottom_slots\":%d,"
++          "\"requested_bytes\":%zu,\"dispatch_rows\":%u,\"wait_rows\":%u,"
++          "\"wait_calls\":%u,\"worker_wait_ns\":%llu}\n",
++          num_workers, rows, cdef_sync->top_slots, cdef_sync->bottom_slots,
++          bytes, cdef_sync->pool_dispatch_rows, cdef_sync->pool_wait_rows,
++          cdef_sync->pool_wait_calls, (unsigned long long)cdef_sync->pool_wait_ns);
++#endif
+ #ifndef NDEBUG
+   for (int i = 0; i < cdef_sync->top_slots + cdef_sync->bottom_slots; ++i)
+     assert(cdef_sync->boundary_owner[i] == -1);
+--- a/av1/common/thread_common.h
++++ b/av1/common/thread_common.h
+@@ -129,6 +129,9 @@
+   // Assigned under the job mutex before dispatch; immutable for this frame.
+   int top_slot;
+   int bottom_slot;
++#ifdef CDEF_POOL_DIAGNOSTICS
++  int capacity_wait_seen;
++#endif
+ } AV1CdefRowSync;
+ 
+ // Data related to CDEF search multi-thread synchronization.
+@@ -144,6 +147,11 @@
+   int *boundary_owner;
+   int top_slots;
+   int bottom_slots;
++#ifdef CDEF_POOL_DIAGNOSTICS
++  uint64_t pool_wait_ns;
++  unsigned pool_wait_calls, pool_wait_rows, pool_dispatch_rows;
++  int diag_hold_row, diag_hold_ms, diag_fault_row;
++#endif
+   // Flag to indicate all blocks are processed and end of frame is reached
+   int end_of_frame;
+   // Row index in units of 64x64 block

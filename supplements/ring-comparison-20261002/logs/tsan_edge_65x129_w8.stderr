@@ -1,0 +1,2 @@
+{"event":"cdef_pool_diag","variant":"ring","workers":8,"rows":3,"top_slots":2,"bottom_slots":2,"requested_bytes":2560,"dispatch_rows":3,"wait_rows":0,"wait_calls":0,"worker_wait_ns":0}
+{"event":"cdef_pool_diag","variant":"ring","workers":8,"rows":3,"top_slots":2,"bottom_slots":2,"requested_bytes":2560,"dispatch_rows":3,"wait_rows":0,"wait_calls":0,"worker_wait_ns":0}

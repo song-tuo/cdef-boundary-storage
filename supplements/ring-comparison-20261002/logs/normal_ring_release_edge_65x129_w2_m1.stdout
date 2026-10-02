@@ -1,0 +1,1 @@
+{"status":0,"destroy_status":0,"input_packets":3,"decoded_packets":3,"output_frames":3,"output_bytes":38025,"pixel_sha256":"35641c925bc92ae5f85d1f73ac5dc8292ba6d9a97a570fec1be1e0b12f62115c","decode_ns":609000,"elapsed_with_hash_ns":626000,"peak_rss_bytes":7143424,"truncated_input":0,"bit_depth":8,"subsampling_x":1,"subsampling_y":1,"monochrome":0}

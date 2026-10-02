@@ -1,0 +1,35 @@
+{
+  "id": "timing_b09_c4_p0_B",
+  "variant": "ring_release",
+  "command": [
+    "/Users/songdong/Desktop/iscas/idea2/CDEF_ring_comparison_20261002/builds/ring_release/ivf_gate",
+    "/Users/songdong/Desktop/iscas/idea2/CDEF_paper_pipeline/revision_20260930/natural/media/HoneyBee_3840x2160_first60.ivf",
+    "8",
+    "1"
+  ],
+  "start_unix": 1790950265.829685,
+  "end_unix": 1790950266.941105,
+  "exit_code": 0,
+  "load_average": [
+    5.2587890625,
+    4.9609375,
+    5.00341796875
+  ],
+  "output": {
+    "status": 0,
+    "destroy_status": 0,
+    "input_packets": 60,
+    "decoded_packets": 60,
+    "output_frames": 60,
+    "output_bytes": 746496000,
+    "pixel_sha256": "e162c43519d065e57a24747c40d2279d394fad25eb1015608580480635958ff2",
+    "decode_ns": 868528000,
+    "elapsed_with_hash_ns": 1097591000,
+    "peak_rss_bytes": 382566400,
+    "truncated_input": 0,
+    "bit_depth": 8,
+    "subsampling_x": 1,
+    "subsampling_y": 1,
+    "monochrome": 0
+  }
+}

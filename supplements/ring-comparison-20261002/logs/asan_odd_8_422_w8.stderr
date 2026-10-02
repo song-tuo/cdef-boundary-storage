@@ -1,0 +1,5 @@
+{"event":"cdef_pool_diag","variant":"ring","workers":8,"rows":5,"top_slots":4,"bottom_slots":4,"requested_bytes":21504,"dispatch_rows":5,"wait_rows":0,"wait_calls":0,"worker_wait_ns":0}
+{"event":"cdef_pool_diag","variant":"ring","workers":8,"rows":5,"top_slots":4,"bottom_slots":4,"requested_bytes":21504,"dispatch_rows":5,"wait_rows":0,"wait_calls":0,"worker_wait_ns":0}
+{"event":"cdef_pool_diag","variant":"ring","workers":8,"rows":5,"top_slots":4,"bottom_slots":4,"requested_bytes":21504,"dispatch_rows":5,"wait_rows":0,"wait_calls":0,"worker_wait_ns":0}
+{"event":"cdef_pool_diag","variant":"ring","workers":8,"rows":5,"top_slots":4,"bottom_slots":4,"requested_bytes":21504,"dispatch_rows":5,"wait_rows":0,"wait_calls":0,"worker_wait_ns":0}
+{"event":"cdef_pool_diag","variant":"ring","workers":8,"rows":5,"top_slots":4,"bottom_slots":4,"requested_bytes":21504,"dispatch_rows":5,"wait_rows":0,"wait_calls":0,"worker_wait_ns":0}

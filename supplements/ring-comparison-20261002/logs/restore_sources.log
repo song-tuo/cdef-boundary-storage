@@ -1,0 +1,13 @@
+patching file 'av1/common/alloccommon.c'
+patching file 'av1/common/alloccommon.c'
+patching file 'av1/common/thread_common.c'
+patching file 'av1/common/thread_common.h'
+patching file 'av1/common/thread_common.c'
+patching file 'av1/common/thread_common.h'
+patching file 'av1/common/alloccommon.c'
+patching file 'av1/common/alloccommon.c'
+patching file 'av1/common/thread_common.c'
+patching file 'av1/common/thread_common.h'
+patching file 'av1/common/thread_common.c'
+patching file 'av1/common/thread_common.h'
+Both reconstructed implementation trees match the measured core source hashes.

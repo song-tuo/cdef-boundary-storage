@@ -1,0 +1,58 @@
+{
+  "created_utc": "2026-09-29T14:48:16.315617+00:00",
+  "package": "Debian aom 3.12.1-1",
+  "tag": "v3.12.1",
+  "upstream_commit": "10aece4157eb79315da205f39e19bf6ab3ee30d0",
+  "upstream_commit_status": "Verified with official git ls-remote peeled v3.12.1 tag",
+  "source_urls": [
+    "https://deb.debian.org/debian/pool/main/a/aom/aom_3.12.1-1.dsc",
+    "https://deb.debian.org/debian/pool/main/a/aom/aom_3.12.1.orig.tar.gz",
+    "https://snapshot.debian.org/file/6ce64fefd095b32a8918748eb3e96723cd07397c"
+  ],
+  "archive_sha256": {
+    "aom_3.12.1.orig.tar.gz": "40c929a41b2a59c24319a699c358351422829b3ae646de31b18cbabed0191962",
+    "aom_3.12.1-1.debian.tar.xz": "ac01db2f3d78d8ba39d5d7546ce4fcc1fa827e7b92387d7234d140d8d9afa5f9"
+  },
+  "dsc_signature_status": "not verified; SHA256 matched HTTPS-fetched Debian dsc",
+  "baseline_tree_manifest_sha256": "aec84fa98c63bbfc9a202811d210e297dbc49fa578764493e5622f30dffa3e0d",
+  "baseline_file_count": 1371,
+  "debian_patches": [
+    "0001-doc-Use-libjs-mathjax-rather-than-cloudflare-copy.patch",
+    "0002-use-system-libyuv.patch",
+    "0003-use-system-libwebm.patch"
+  ],
+  "os": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+  "comparison_scope": "new macOS arm64 full-source experiment; no mixing with earlier Debian archive timings",
+  "cpu_memory_record": [
+    "Apple M5 Pro",
+    "51539607552",
+    "18",
+    "18"
+  ],
+  "build_options": [
+    "CMAKE_BUILD_TYPE=Release (primary)",
+    "CMAKE_POLICY_VERSION_MINIMUM=3.5",
+    "ENABLE_DOCS=OFF",
+    "CONFIG_LIBYUV=0",
+    "CONFIG_WEBM_IO=0",
+    "CMAKE_EXPORT_COMPILE_COMMANDS=ON",
+    "all other upstream defaults"
+  ],
+  "configuration_limits": [
+    "WebM demux and libyuv image resizing in CLI disabled identically on all primary variants; core AV1 superres/resize and all bit depths remain enabled. The two official MKV vectors excluded by this upstream configuration were separately demuxed with the bundled libwebm parser and their exact video payloads checked against official per-frame MD5 in 100 supplemental runs, all passing.",
+    "Encoder and decoder are both built in every libaom archive.",
+    "No Debian packaging binary reproduction is claimed on macOS."
+  ],
+  "upstream_tag_object": "fc5cf6a132697487fbaa9965b249012e0238768f",
+  "upstream_tree": "f401599b7be4c53cbcc2735969a4970c744dd372",
+  "upstream_orig_tree_comparison": {
+    "upstream_commit": "10aece4157eb79315da205f39e19bf6ab3ee30d0",
+    "upstream_tree": "f401599b7be4c53cbcc2735969a4970c744dd372",
+    "matched_blobs": 1347,
+    "different": [],
+    "missing": [],
+    "gitlinks": [],
+    "comparison": "Debian orig tar contents before packaging patches vs official tag blobs; debian/ added by source-package extraction is excluded."
+  }
+}

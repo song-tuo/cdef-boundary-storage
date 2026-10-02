@@ -1,5 +1,9 @@
 # CDEF boundary-storage research artifacts
 
+## Separate waiting-ring supplement (October 2, 2026)
+
+For **Worker-Bounded Boundary Storage for Row-Parallel AV1 CDEF Decoding**, a new [ring/token supplement](supplements/ring-comparison-20261002/README.md) compares six 4K natural-video cells at matched boundary-pixel capacity. It preserves the original artifact-v2 results, adds independently frozen timing and wait diagnostics, and includes raw logs and offline recomputation. See the dedicated [ring-comparison-20261002 release](https://github.com/song-tuo/cdef-boundary-storage/releases/tag/ring-comparison-20261002). This supplement does not replace the manuscript maps below.
+
 ## Current manuscript: artifact-v5
 
 The four-page Polished manuscript with corrected references is identified by [the v5 manuscript map](docs/manuscript-polished-20261002/README.md). It maps Table I validation, the combined recorded/analytical Table II, Table III related sources and the secondary descriptive owner-pool timing comparison. Exact PDF/TeX identities are recorded; the manuscript itself is not published here. All experimental evidence remains unchanged.

@@ -1,0 +1,7 @@
+{
+  "go_unix": 1790949799.7492402,
+  "all_486_gates_pass": true,
+  "own_build_sanitizer_render_download_jobs_finished": true,
+  "background_note": "Interactive desktop remains open. WindowServer, Chrome and Codex CPU activity recorded in host_before.json; host is not claimed otherwise idle. No unrelated processes stopped.",
+  "concurrent_work_policy": "No builds, sanitizers, downloads or PDF rendering during timing; only light document edits and progress checks."
+}

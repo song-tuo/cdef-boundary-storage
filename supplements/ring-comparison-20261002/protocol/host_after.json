@@ -1,0 +1,40 @@
+{
+  "unix_time": 1790950439.0422778,
+  "load": [
+    3.75634765625,
+    4.79296875,
+    4.94921875
+  ],
+  "busy": [
+    {
+      "pid": 419,
+      "cpu": 41.1,
+      "command": "/System/Library/PrivateFrameworks/SkyLight.framework/Resources/WindowServer"
+    },
+    {
+      "pid": 1510,
+      "cpu": 46.7,
+      "command": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/154.0.8037.92/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper"
+    },
+    {
+      "pid": 4815,
+      "cpu": 5.7,
+      "command": "/Applications/WeChat.app/Contents/MacOS/WeChatAppEx.app/Contents/Frameworks/WeChatAppEx Framework.framework/Versions/C/Helpers/WeChatAppEx Helper (Renderer).app/Contents/MacOS/WeChatAppEx Helper (Renderer)"
+    },
+    {
+      "pid": 20554,
+      "cpu": 6.9,
+      "command": "/Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/154.0.8037.57/Helpers/Codex (Service).app/Contents/MacOS/Codex (Service)"
+    },
+    {
+      "pid": 20587,
+      "cpu": 7.4,
+      "command": "/Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/154.0.8037.57/Helpers/Codex (Renderer).app/Contents/MacOS/Codex (Renderer)"
+    },
+    {
+      "pid": 90542,
+      "cpu": 38.0,
+      "command": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/154.0.8037.92/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)"
+    }
+  ]
+}

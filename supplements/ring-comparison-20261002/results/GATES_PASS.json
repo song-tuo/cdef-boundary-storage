@@ -1,0 +1,10 @@
+{
+  "passed": 486,
+  "new_timing_campaign_started": false,
+  "groups": {
+    "synthetic_release": 360,
+    "synthetic_sanitizers": 72,
+    "natural": 36,
+    "stress_fault_recovery": 18
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "status": "PASS",
+  "timing": [
+    {
+      "cell": 0,
+      "median_ratio": 0.9979372713286141,
+      "ci95": [
+        0.9930775660068657,
+        1.0012172833195372
+      ]
+    },
+    {
+      "cell": 1,
+      "median_ratio": 0.9984924034493312,
+      "ci95": [
+        0.9929822936931688,
+        1.0017834935429546
+      ]
+    },
+    {
+      "cell": 2,
+      "median_ratio": 1.006300748933567,
+      "ci95": [
+        0.998791707342167,
+        1.010618112621913
+      ]
+    },
+    {
+      "cell": 3,
+      "median_ratio": 1.0043843326139394,
+      "ci95": [
+        0.9983022117986866,
+        1.0109302858256557
+      ]
+    },
+    {
+      "cell": 4,
+      "median_ratio": 1.0062595335897067,
+      "ci95": [
+        0.9973636301912707,
+        1.0112453132544061
+      ]
+    },
+    {
+      "cell": 5,
+      "median_ratio": 1.0053557814668124,
+      "ci95": [
+        1.0002695379370485,
+        1.009743875637191
+      ]
+    }
+  ],
+  "diagnostic": [
+    {
+      "id": "natural_Beauty_w8_ring_diag",
+      "frames": 60,
+      "dispatch_rows": 2040,
+      "wait_rows": 391,
+      "wait_calls": 1681,
+      "worker_wait_ns": 35897000,
+      "allocation_values": [
+        522240
+      ]
+    },
+    {
+      "id": "natural_Beauty_w16_ring_diag",
+      "frames": 60,
+      "dispatch_rows": 2040,
+      "wait_rows": 248,
+      "wait_calls": 2037,
+      "worker_wait_ns": 50156000,
+      "allocation_values": [
+        1013760
+      ]
+    },
+    {
+      "id": "natural_Jockey_w8_ring_diag",
+      "frames": 60,
+      "dispatch_rows": 2040,
+      "wait_rows": 295,
+      "wait_calls": 956,
+      "worker_wait_ns": 25021000,
+      "allocation_values": [
+        522240
+      ]
+    },
+    {
+      "id": "natural_Jockey_w16_ring_diag",
+      "frames": 60,
+      "dispatch_rows": 2040,
+      "wait_rows": 278,
+      "wait_calls": 1933,
+      "worker_wait_ns": 57809000,
+      "allocation_values": [
+        1013760
+      ]
+    },
+    {
+      "id": "natural_HoneyBee_w8_ring_diag",
+      "frames": 60,
+      "dispatch_rows": 2040,
+      "wait_rows": 393,
+      "wait_calls": 1135,
+      "worker_wait_ns": 32732000,
+      "allocation_values": [
+        522240
+      ]
+    },
+    {
+      "id": "natural_HoneyBee_w16_ring_diag",
+      "frames": 60,
+      "dispatch_rows": 2040,
+      "wait_rows": 243,
+      "wait_calls": 1865,
+      "worker_wait_ns": 71042000,
+      "allocation_values": [
+        1013760
+      ]
+    }
+  ]
+}

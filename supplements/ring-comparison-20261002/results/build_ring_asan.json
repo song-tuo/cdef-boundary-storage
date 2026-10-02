@@ -1,0 +1,52 @@
+{
+  "build": "ring_asan",
+  "commands": [
+    [
+      "cmake",
+      "-S",
+      "/Users/songdong/Desktop/iscas/idea2/CDEF_ring_comparison_20261002/src/ring",
+      "-B",
+      "/Users/songdong/Desktop/iscas/idea2/CDEF_ring_comparison_20261002/builds/ring_asan",
+      "-DCMAKE_POLICY_VERSION_MINIMUM=3.5",
+      "-DENABLE_DOCS=OFF",
+      "-DCONFIG_LIBYUV=0",
+      "-DCONFIG_WEBM_IO=0",
+      "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+      "-DCMAKE_BUILD_TYPE=Debug",
+      "-DCMAKE_C_FLAGS=-DCDEF_POOL_DIAGNOSTICS=1",
+      "-DCMAKE_CXX_FLAGS=-DCDEF_POOL_DIAGNOSTICS=1",
+      "-DSANITIZE=address,undefined"
+    ],
+    [
+      "cmake",
+      "--build",
+      "/Users/songdong/Desktop/iscas/idea2/CDEF_ring_comparison_20261002/builds/ring_asan",
+      "--target",
+      "aom",
+      "-j",
+      "6"
+    ],
+    [
+      "clang",
+      "-O2",
+      "-g",
+      "-Wno-deprecated-declarations",
+      "-I/Users/songdong/Desktop/iscas/idea2/CDEF_ring_comparison_20261002/src/ring",
+      "/Users/songdong/Desktop/iscas/idea2/CDEF_ring_comparison_20261002/scripts/ivf_gate.c",
+      "/Users/songdong/Desktop/iscas/idea2/CDEF_ring_comparison_20261002/builds/ring_asan/libaom.a",
+      "-lm",
+      "-lpthread",
+      "-o",
+      "/Users/songdong/Desktop/iscas/idea2/CDEF_ring_comparison_20261002/builds/ring_asan/ivf_gate",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer"
+    ]
+  ],
+  "start": 1790948377.630653,
+  "results": [
+    0,
+    0,
+    0
+  ],
+  "end": 1790948402.622747
+}
