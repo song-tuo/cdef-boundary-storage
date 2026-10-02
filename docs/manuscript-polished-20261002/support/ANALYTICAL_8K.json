@@ -1,0 +1,46 @@
+{
+  "strides_samples": [
+    7680,
+    3840,
+    3840
+  ],
+  "sample_bytes": 2,
+  "rows": [
+    {
+      "width": 7680,
+      "height": 4320,
+      "R": 68,
+      "W": 4,
+      "K": 9,
+      "L_bytes": 61440,
+      "corrected_reference_KiB": 8160,
+      "owner_KiB": 540,
+      "reduction_percent": 93.4,
+      "evidence_type": "analytical illustration; no 8K decode or allocation measurement"
+    },
+    {
+      "width": 7680,
+      "height": 4320,
+      "R": 68,
+      "W": 8,
+      "K": 17,
+      "L_bytes": 61440,
+      "corrected_reference_KiB": 8160,
+      "owner_KiB": 1020,
+      "reduction_percent": 87.5,
+      "evidence_type": "analytical illustration; no 8K decode or allocation measurement"
+    },
+    {
+      "width": 7680,
+      "height": 4320,
+      "R": 68,
+      "W": 16,
+      "K": 33,
+      "L_bytes": 61440,
+      "corrected_reference_KiB": 8160,
+      "owner_KiB": 1980,
+      "reduction_percent": 75.7,
+      "evidence_type": "analytical illustration; no 8K decode or allocation measurement"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "source": "CDEF_FINAL_PAPER_GATE/TIMING_REANALYSIS.csv",
+  "row": {
+    "cell_id": "2",
+    "family": "waves",
+    "width": "1920",
+    "height": "1080",
+    "W": "16",
+    "contrast": "dual_token/type_fix",
+    "analysis_role": "secondary_descriptive",
+    "blocks": "12",
+    "median_ratio": "0.9880763447989551",
+    "ci95_low": "0.8277059974184895",
+    "ci95_high": "1.22494479925941",
+    "min_block_ratio": "0.8125175092321406",
+    "max_block_ratio": "1.2411559932258671",
+    "bootstrap_seed": "311002",
+    "bootstrap_resamples": "50000",
+    "status": "SECONDARY_DESCRIPTIVE_NO_GATE"
+  },
+  "operation": "read existing interval; no bootstrap or re-estimation"
+}

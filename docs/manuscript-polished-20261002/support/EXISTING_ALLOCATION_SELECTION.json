@@ -1,0 +1,42 @@
+[
+  {
+    "width": 1920,
+    "W": 8,
+    "baseline_KiB": 2040,
+    "baseline_supporting_rows": 3,
+    "type_fix_KiB": 510,
+    "type_fix_supporting_rows": 3,
+    "token_KiB": 255,
+    "token_supporting_rows": 3
+  },
+  {
+    "width": 1920,
+    "W": 16,
+    "baseline_KiB": 2040,
+    "baseline_supporting_rows": 3,
+    "type_fix_KiB": 510,
+    "type_fix_supporting_rows": 3,
+    "token_KiB": 480,
+    "token_supporting_rows": 3
+  },
+  {
+    "width": 3840,
+    "W": 8,
+    "baseline_KiB": 8160,
+    "baseline_supporting_rows": 3,
+    "type_fix_KiB": 2040,
+    "type_fix_supporting_rows": 3,
+    "token_KiB": 510,
+    "token_supporting_rows": 3
+  },
+  {
+    "width": 3840,
+    "W": 16,
+    "baseline_KiB": 8160,
+    "baseline_supporting_rows": 3,
+    "type_fix_KiB": 2040,
+    "type_fix_supporting_rows": 3,
+    "token_KiB": 990,
+    "token_supporting_rows": 3
+  }
+]

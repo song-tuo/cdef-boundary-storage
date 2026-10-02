@@ -1,6 +1,10 @@
 # CDEF boundary-storage research artifacts
 
-## Current manuscript: artifact-v4
+## Current manuscript: artifact-v5
+
+The four-page Polished manuscript with corrected references is identified by [the v5 manuscript map](docs/manuscript-polished-20261002/README.md). It maps Table I validation, the combined recorded/analytical Table II, Table III related sources and the secondary descriptive owner-pool timing comparison. Exact PDF/TeX identities are recorded; the manuscript itself is not published here. All experimental evidence remains unchanged.
+
+## Previous wording: artifact-v4
 
 The final wording of **An Exact Storage Bound for Row-Parallel CDEF in the AV1 Decoder** is identified by [this manuscript map](docs/manuscript-final-20261002/README.md). It clarifies fixed-address motivation and hybrid definitions, adds the existing dav1d contract comparison, and groups Table I by the property checked. All scientific evidence and decisions are unchanged. The small v4 mapping capsule references the exact full evidence ZIP from v3; no new experiment or analysis was run.
 
